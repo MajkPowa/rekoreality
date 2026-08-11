@@ -47,6 +47,55 @@ patkovou antikvou.
   `#738D7E` sage, `#E86E4D` terracotta) jsou v souboru k dispozici jako `--terracotta` a `--sage`;
   hlavní paleta ale záměrně sleduje referenční makety. Změna na brand paletu = úprava tokenů, ne šablon.
 
+## 3D modely domů
+
+Domy nejsou obrázky, ale procedurální 3D scény (Three.js, WebGL).
+
+```
+assets/js/houses3d.js         engine — sdílený renderer, kamera, časová osa, boot
+assets/js/houses3d.lib.js     materiály (M), stavební pomocníci (U), časová osa
+assets/js/houses3d.models.js  jednotlivé modely + registr MODELS
+dev/preview.mjs               vývojový ASCII náhled (žádná stránka ho nelinkuje)
+```
+
+**Jeden WebGL kontext pro všechny sloty.** Engine renderuje do jednoho offscreen
+framebufferu a výsledek přenáší do 2D canvasu každého slotu (`drawImage`). Renderuje
+se jen to, co je právě ve výřezu; při skryté kartě se smyčka zastaví.
+
+**Plovoucí diorama.** Scény nemají nekonečný terén — stojí na zaobleném pozemku
+(`U.plot`) s měkkým stínem (`U.softShadow`) a průhledným pozadím, takže prosvítá
+gradient karty. Bez toho se trávník přepaloval a vyplnil 70 % plochy.
+
+**Fallback.** Každý slot obsahuje původní SVG jako poster. Když chybí WebGL, selže
+CDN nebo prohlížeč neumí ES moduly, zůstane viditelný obrázek a nic se nerozbije.
+Model se vykreslí až po prvním úspěšném snímku (`.is-live`).
+
+**Cena:** three.js z CDN ≈ 257 kB (gzip). Verze je připnutá v importmapě v `index.html`.
+
+### Simulace „před → po" v hero
+
+Hero model má dvě fáze označené `userData.phase = 'old' | 'new'`. Engine je prolíná
+vlnou, která postupuje zleva doprava — každý prvek se mění podle své pozice na ose X.
+Původní dům z konce 70. let se sedlovou střechou se promění v dvoupodlažní vilu
+s terasou a bazénem.
+
+Cyklus: rozjezd 7,5 s → výdrž 3,4 s na hotovém stavu → přetočení 1,1 s. Posuvník
+v hero umožňuje fázi přetáhnout ručně (tím se přehrávání pozastaví).
+Při `prefers-reduced-motion` se rovnou zobrazí hotový stav a nic se nehýbe.
+
+Obě skleněné karty jsou na simulaci navázané (`house3d:progress`):
+
+| Postup | Hodnota | Investice | Vytvořená hodnota |
+|---|---|---|---|
+| 0 % | 6 500 000 Kč | 0 Kč | 0 Kč |
+| 50 % | 8 000 000 Kč | 750 000 Kč | 458 500 Kč |
+| 100 % | 9 500 000 Kč | 1 500 000 Kč | 1 148 500 Kč |
+
+Čísla používají stejný vzorec jako kalkulačka (externí náklady 3,7 % z ceny), takže
+hero a `kalkulacka.html` nemohou ukázat rozdílný výsledek. Karta je označená
+**„Modelový příklad"** — nejde o příslib zhodnocení, což by odporovalo kapitole 12
+blueprintu.
+
 ## Obrázky
 
 `assets/img/*.svg` jsou vektorové architektonické vizuály, aby web fungoval offline a bez externích

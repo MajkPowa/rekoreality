@@ -544,28 +544,136 @@ body.nav-open .navsheet { opacity: 1; visibility: visible; transform: none; }
 }
 .glasscard__head span:last-child { color: var(--ink-mute); font-weight: 600; }
 
-.glasscard--donut { top: 20%; left: 3.5%; width: 268px; }
-.glasscard--agent { top: 44%; right: 2.5%; width: 330px; }
+.glasscard--phase { top: 17%; left: 3.5%; width: 262px; }
+.glasscard--value { top: 40%; right: 2.5%; width: 300px; }
 
-.donut { display: flex; align-items: center; gap: 14px; }
-.donut__chart { position: relative; width: 96px; height: 96px; flex: none; }
-.donut__chart svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.donut__val {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  line-height: 1;
+.glasscard__tag {
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: rgba(20, 22, 26, 0.08);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
-.donut__val b { font-family: var(--font-display); font-size: 26px; font-weight: 500; letter-spacing: -0.03em; }
-.donut__val i { font-style: normal; font-size: 8.5px; color: var(--ink-mute); letter-spacing: 0.04em; }
 
-.donut__legend { display: grid; gap: 7px; flex: 1; min-width: 0; }
-.donut__legend li { display: flex; align-items: center; gap: 7px; font-size: 11px; }
-.donut__legend i { width: 7px; height: 7px; border-radius: 50%; flex: none; }
-.donut__legend span { color: var(--ink-soft); }
-.donut__legend b { margin-left: auto; font-weight: 700; font-size: 11.5px; }
+/* --- karta: fáze projektu --- */
+.phase { display: flex; align-items: center; gap: 14px; }
+.phase__ring { position: relative; width: 64px; height: 64px; flex: none; }
+.phase__ring svg { width: 100%; height: 100%; }
+.phase__ring #simRing { transition: stroke-dashoffset 0.18s linear; }
+.phase__ring b {
+  position: absolute; inset: 0;
+  display: grid; place-content: center;
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 500; letter-spacing: -0.03em;
+}
+.phase__meta { min-width: 0; }
+.phase__meta strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 14.5px; font-weight: 500; letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.phase__meta span { display: block; margin-top: 4px; font-size: 11px; line-height: 1.4; color: var(--ink-soft); }
+
+/* --- karta: růst hodnoty --- */
+.value__num {
+  margin-top: 2px;
+  font-family: var(--font-display);
+  font-size: 27px; font-weight: 500; letter-spacing: -0.04em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.value__num span { font-variant-numeric: tabular-nums; }
+.value__delta { display: flex; align-items: center; gap: 8px; margin-top: 7px; font-size: 10.5px; }
+.value__delta b {
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: var(--mint);
+  color: var(--mint-ink);
+  font-size: 10.5px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.value__delta span { color: var(--ink-soft); }
+.value__chart { width: 100%; height: 56px; margin-top: 10px; overflow: visible; }
+.value__legend {
+  display: flex; justify-content: space-between; gap: 10px;
+  margin-top: 8px;
+  font-size: 10px; color: var(--ink-soft);
+}
+.value__legend b { display: block; margin-top: 2px; font-size: 11.5px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* --- ovládání simulace --- */
+.simbar {
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(440px, calc(100% - 40px));
+  padding: 9px 16px 9px 9px;
+  border-radius: var(--r-pill);
+  background: rgba(18, 20, 24, 0.5);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+.simbar[hidden] { display: none; }
+
+.simbar__btn {
+  display: grid; place-items: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  flex: none;
+  transition: transform 0.2s, background 0.2s;
+}
+.simbar__btn:hover { transform: scale(1.06); background: #fff; }
+.simbar__ico { width: 13px; height: 13px; fill: currentColor; }
+.simbar__ico--play { display: none; }
+.simbar.is-paused .simbar__ico--pause { display: none; }
+.simbar.is-paused .simbar__ico--play { display: block; }
+
+.simbar__cap {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  white-space: nowrap;
+}
+
+.simbar__range {
+  -webkit-appearance: none; appearance: none;
+  flex: 1; min-width: 0;
+  height: 4px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.26);
+  cursor: pointer;
+}
+.simbar__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+}
+.simbar__range::-moz-range-thumb {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+}
 
 .agentbar__meta {
   display: flex;
@@ -602,6 +710,37 @@ body.nav-open .navsheet { opacity: 1; visibility: visible; transform: none; }
 .glass-foot .dot::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
 .glass-foot .dot.muted::before { background: rgba(20, 22, 26, 0.2); }
 .glass-foot .spacer { margin-left: auto; display: flex; gap: 10px; }
+
+/* --------------------------------------------------------------------------
+   8b. 3D modely domů
+   Poster (img) drží layout — dědí všechna stávající pravidla pro obrázky.
+   Canvas leží přes něj a po prvním vykreslení se prolne dovnitř.
+   -------------------------------------------------------------------------- */
+.house3d { position: relative; display: block; }
+
+.house3d__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+.house3d.is-live .house3d__canvas { opacity: 1; }
+
+.house3d__poster { transition: opacity 0.9s ease; }
+.house3d.is-live .house3d__poster { opacity: 0; }
+
+/* Slot v showcase banneru je absolutně poziciovaný — poster nesmí zmizet z toku */
+.showcase__house.house3d { display: block; }
+.showcase__house .house3d__poster { width: 100%; height: auto; }
+
+/* Vysoká bento karta — slot musí vyplnit zbytek karty */
+.bcard--tall .bcard__media .house3d { height: 100%; }
+
+/* Sloty v kartách nemovitostí kopírují výšku posteru */
+.propcard__media .house3d { line-height: 0; }
 
 /* --------------------------------------------------------------------------
    9. Trust strip

@@ -243,7 +243,115 @@
     update();
   }
 
-  /* ---------------------------------------------------------- 6. Formulář */
+  /* ------------------------------------------- 6. Simulace „před → po" ---
+     Hero animace řídí obě skleněné karty i posuvník. Čísla odpovídají
+     modelovému příkladu ze sekce „Nevěřte slibům" — nejde o příslib výsledku.
+  ------------------------------------------------------------------------ */
+  (function heroSim() {
+    var bar = doc.getElementById('simbar');
+    var range = doc.getElementById('simRange');
+    var playBtn = doc.getElementById('simPlay');
+    if (!bar || !range || !playBtn) return;
+
+    var czk = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 0 });
+    var V0 = 6500000, V1 = 9500000, INVEST = 1500000, FEE = 0.037;
+
+    var PHASES = [
+      [0.10, 'Původní stav', 'Dům tak, jak dnes stojí'],
+      [0.28, 'Vyklizení a demolice', 'Odstranění dosloužilých konstrukcí'],
+      [0.50, 'Hrubá stavba a obálka', 'Nosné prvky, střecha, okna'],
+      [0.70, 'Instalace a interiér', 'Rozvody, povrchy, kuchyň, koupelny'],
+      [0.88, 'Terén, terasa a bazén', 'Úpravy pozemku a exteriéru'],
+      [1.01, 'Připraveno k prodeji', 'Staging, fotografie, dokumentace'],
+    ];
+
+    var el = {
+      week: doc.getElementById('simWeek'),
+      ring: doc.getElementById('simRing'),
+      pct: doc.getElementById('simPct'),
+      phase: doc.getElementById('simPhase'),
+      note: doc.getElementById('simPhaseNote'),
+      value: doc.getElementById('simValue'),
+      delta: doc.getElementById('simDelta'),
+      invest: doc.getElementById('simInvest'),
+      created: doc.getElementById('simCreated'),
+      clip: doc.getElementById('simClip'),
+      line: doc.getElementById('simLine'),
+      dot: doc.getElementById('simDot'),
+    };
+
+    var RING = 169.6;
+    var lineLen = 0;
+    var dragging = false;
+
+    function money(n) { return czk.format(Math.round(n)) + ' Kč'; }
+
+    function paint(p) {
+      var value = V0 + p * (V1 - V0);
+      var invest = p * INVEST;
+      var created = Math.max(0, value - V0 - invest - value * FEE);
+
+      if (el.value) el.value.textContent = czk.format(Math.round(value));
+      if (el.delta) el.delta.textContent = '+' + money(p * (V1 - V0));
+      if (el.invest) el.invest.textContent = money(invest);
+      if (el.created) el.created.textContent = money(created);
+
+      if (el.pct) el.pct.textContent = Math.round(p * 100) + ' %';
+      if (el.ring) el.ring.setAttribute('stroke-dashoffset', String(RING * (1 - p)));
+      if (el.week) el.week.textContent = 'Týden ' + Math.round(p * 14) + ' / 14';
+
+      for (var i = 0; i < PHASES.length; i++) {
+        if (p < PHASES[i][0]) {
+          if (el.phase && el.phase.textContent !== PHASES[i][1]) {
+            el.phase.textContent = PHASES[i][1];
+            el.note.textContent = PHASES[i][2];
+          }
+          break;
+        }
+      }
+
+      if (el.clip) el.clip.setAttribute('width', String(220 * p));
+      if (el.line && el.dot) {
+        if (!lineLen) { try { lineLen = el.line.getTotalLength(); } catch (e) { lineLen = 0; } }
+        if (lineLen) {
+          var pt = el.line.getPointAtLength(lineLen * p);
+          el.dot.setAttribute('cx', String(pt.x));
+          el.dot.setAttribute('cy', String(pt.y));
+        }
+      }
+      if (!dragging) range.value = String(Math.round(p * 1000));
+    }
+
+    doc.addEventListener('house3d:progress', function (e) {
+      paint(e.detail.progress);
+      bar.classList.toggle('is-paused', !e.detail.playing);
+      playBtn.setAttribute('aria-pressed', e.detail.playing ? 'true' : 'false');
+      playBtn.setAttribute('aria-label', e.detail.playing ? 'Pozastavit simulaci' : 'Spustit simulaci');
+    });
+
+    var wired = false;
+    function wire(sim) {
+      if (wired || !sim) return;
+      wired = true;
+      bar.hidden = false;
+
+      range.addEventListener('pointerdown', function () { dragging = true; });
+      range.addEventListener('pointerup', function () { dragging = false; });
+      range.addEventListener('input', function () { sim.seek(+range.value / 1000); });
+      range.addEventListener('keydown', function () { dragging = false; });
+      playBtn.addEventListener('click', function () { sim.toggle(); });
+
+      paint(sim.progress);
+    }
+
+    // Modul se může nabootovat před i po tomto skriptu — pokrýváme obě pořadí.
+    doc.addEventListener('house3d:ready', function (e) { wire(e.detail); });
+    if (window.RekoSim) wire(window.RekoSim);
+
+    paint(0);
+  })();
+
+  /* ---------------------------------------------------------- 7. Formulář */
   doc.querySelectorAll("[data-demo-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();

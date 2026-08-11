@@ -11,7 +11,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.1/build/three.module.js"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -84,50 +91,75 @@
 
     <div class="hero__stage">
       <div class="hero__photo">
-        <img src="assets/img/hero-house.svg" alt="Rodinný dům po kompletní rekonstrukci připravený k prodeji" width="1600" height="760">
+        <div class="house3d" data-house="villa">
+          <canvas class="house3d__canvas"></canvas>
+          <img class="house3d__poster" src="assets/img/hero-house.svg" alt="Rodinný dům po kompletní rekonstrukci připravený k prodeji" width="1600" height="760">
+        </div>
 
-        <!-- Skleněná karta: investiční skóre -->
-        <div class="glasscard glasscard--donut">
-          <div class="glasscard__head"><span>Investiční skóre</span><span>—</span></div>
-          <div class="donut">
-            <div class="donut__chart">
-              <svg viewBox="0 0 100 100" aria-hidden="true">
-                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(20,22,26,.08)" stroke-width="13"/>
-                <circle cx="50" cy="50" r="42" fill="none" stroke="#2fa860" stroke-width="13" stroke-dasharray="65.9 197.9" stroke-dashoffset="0"/>
-                <circle cx="50" cy="50" r="42" fill="none" stroke="#ff6f9c" stroke-width="13" stroke-dasharray="52.7 211.1" stroke-dashoffset="-65.9"/>
-                <circle cx="50" cy="50" r="42" fill="none" stroke="#ffb443" stroke-width="13" stroke-dasharray="39.5 224.3" stroke-dashoffset="-118.6"/>
-                <circle cx="50" cy="50" r="42" fill="none" stroke="#2f5af3" stroke-width="13" stroke-dasharray="39.5 224.3" stroke-dashoffset="-158.1"/>
+        <!-- Skleněná karta: fáze projektu (řízená simulací) -->
+        <div class="glasscard glasscard--phase">
+          <div class="glasscard__head"><span>Fáze projektu</span><span id="simWeek">Týden 0 / 14</span></div>
+          <div class="phase">
+            <div class="phase__ring">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="27" fill="none" stroke="rgba(20,22,26,.12)" stroke-width="7"/>
+                <circle id="simRing" cx="32" cy="32" r="27" fill="none" stroke="#2f5af3" stroke-width="7"
+                        stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"
+                        transform="rotate(-90 32 32)"/>
               </svg>
-              <div class="donut__val"><b>74</b><i>ze 100</i></div>
+              <b id="simPct">0 %</b>
             </div>
-            <ul class="donut__legend">
-              <li><i style="background:#2fa860"></i><span>Rozdíl hodnoty</span><b>25</b></li>
-              <li><i style="background:#ff6f9c"></i><span>Likvidita</span><b>20</b></li>
-              <li><i style="background:#ffb443"></i><span>Právní stav</span><b>15</b></li>
-              <li><i style="background:#2f5af3"></i><span>Technika</span><b>15</b></li>
-            </ul>
+            <div class="phase__meta">
+              <strong id="simPhase">Původní stav</strong>
+              <span id="simPhaseNote">Dům před rekonstrukcí</span>
+            </div>
           </div>
         </div>
 
-        <!-- Skleněná karta: průběh rekonstrukce -->
-        <div class="glasscard glasscard--agent">
-          <div class="glasscard__head"><span>Průběh rekonstrukce</span><span>Týden 9 / 14</span></div>
-          <div class="agentbar__meta">
-            <span class="agentbar__avatar" aria-hidden="true"></span>
-            <span>Projekt Brno&#8209;venkov</span>
-            <span class="agentbar__sum">1 500 000 Kč</span>
+        <!-- Skleněná karta: růst hodnoty (řízená simulací) -->
+        <div class="glasscard glasscard--value">
+          <div class="glasscard__head">
+            <span>Odhad tržní hodnoty</span>
+            <span class="glasscard__tag">Modelový příklad</span>
           </div>
-          <div class="ticks" aria-hidden="true">
-            <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
-            <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
-            <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <p class="value__num"><span id="simValue">6 500 000</span> Kč</p>
+          <div class="value__delta">
+            <b id="simDelta">+0 Kč</b><span>oproti dnešnímu stavu</span>
           </div>
-          <div class="glass-foot">
-            <span class="dot">Čerpáno 68 %</span>
-            <span class="dot muted">Plán</span>
-            <span class="spacer"><span>3 profese</span><span>0 víceprací</span></span>
+
+          <svg class="value__chart" viewBox="0 0 220 62" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="vGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2f5af3" stop-opacity="0.34"/>
+                <stop offset="1" stop-color="#2f5af3" stop-opacity="0"/>
+              </linearGradient>
+              <clipPath id="vClip"><rect id="simClip" x="0" y="0" width="0" height="62"/></clipPath>
+            </defs>
+            <path d="M0 54 C 34 52 52 46 78 41 C 104 36 122 27 148 20 C 172 14 196 9 220 6 L220 62 L0 62 Z"
+                  fill="url(#vGrad)" clip-path="url(#vClip)"/>
+            <path id="simLine"
+                  d="M0 54 C 34 52 52 46 78 41 C 104 36 122 27 148 20 C 172 14 196 9 220 6"
+                  fill="none" stroke="#2f5af3" stroke-width="2.4" stroke-linecap="round"
+                  clip-path="url(#vClip)"/>
+            <circle id="simDot" cx="0" cy="54" r="3.6" fill="#2f5af3" stroke="#fff" stroke-width="2"/>
+          </svg>
+
+          <div class="value__legend">
+            <span>Investice <b id="simInvest">0 Kč</b></span>
+            <span>Vytvořená hodnota <b id="simCreated">0 Kč</b></span>
           </div>
+        </div>
+
+        <!-- Ovládání simulace -->
+        <div class="simbar" id="simbar" hidden>
+          <button class="simbar__btn" id="simPlay" type="button" aria-label="Pozastavit simulaci" aria-pressed="true">
+            <svg class="simbar__ico simbar__ico--pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="3" height="10" rx="1"/><rect x="9" y="3" width="3" height="10" rx="1"/></svg>
+            <svg class="simbar__ico simbar__ico--play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2 12.5 8 5 12.8z"/></svg>
+          </button>
+          <span class="simbar__cap">Před</span>
+          <input id="simRange" class="simbar__range" type="range" min="0" max="1000" value="0" step="1"
+                 aria-label="Fáze rekonstrukce">
+          <span class="simbar__cap">Po</span>
         </div>
       </div>
     </div>
@@ -236,7 +268,10 @@
           <article class="propcard">
             <div class="propcard__media">
               <span class="pill pill--white propcard__tag">Modelový scénář</span>
-              <img src="assets/img/prop-1.svg" alt="Rodinný dům se sedlovou střechou" width="800" height="520" loading="lazy">
+              <div class="house3d" data-house="gable">
+                <canvas class="house3d__canvas"></canvas>
+                <img class="house3d__poster" src="assets/img/prop-1.svg" alt="Rodinný dům se sedlovou střechou" width="800" height="520" loading="lazy">
+              </div>
             </div>
             <div class="propcard__body">
               <h3 class="propcard__title">Zděděný dům, Brno&#8209;venkov</h3>
@@ -251,7 +286,10 @@
           <article class="propcard">
             <div class="propcard__media">
               <span class="pill pill--peach propcard__tag">Vysoký potenciál</span>
-              <img src="assets/img/prop-2.svg" alt="Moderní vila s bazénem po rekonstrukci" width="800" height="520" loading="lazy">
+              <div class="house3d" data-house="poolvilla">
+                <canvas class="house3d__canvas"></canvas>
+                <img class="house3d__poster" src="assets/img/prop-2.svg" alt="Moderní vila s bazénem po rekonstrukci" width="800" height="520" loading="lazy">
+              </div>
             </div>
             <div class="propcard__body">
               <h3 class="propcard__title">Vila s bazénem, Praha&#8209;západ</h3>
@@ -266,7 +304,10 @@
           <article class="propcard">
             <div class="propcard__media">
               <span class="pill pill--mint propcard__tag">Rok v nabídce</span>
-              <img src="assets/img/prop-3.svg" alt="Bungalov se zahradou" width="800" height="520" loading="lazy">
+              <div class="house3d" data-house="bungalow">
+                <canvas class="house3d__canvas"></canvas>
+                <img class="house3d__poster" src="assets/img/prop-3.svg" alt="Bungalov se zahradou" width="800" height="520" loading="lazy">
+              </div>
             </div>
             <div class="propcard__body">
               <h3 class="propcard__title">Bungalov, Olomouc</h3>
@@ -281,7 +322,10 @@
           <article class="propcard">
             <div class="propcard__media">
               <span class="pill pill--pink propcard__tag">Před rekonstrukcí</span>
-              <img src="assets/img/prop-4.svg" alt="Městská vila po rekonstrukci" width="800" height="520" loading="lazy">
+              <div class="house3d" data-house="townvilla">
+                <canvas class="house3d__canvas"></canvas>
+                <img class="house3d__poster" src="assets/img/prop-4.svg" alt="Městská vila po rekonstrukci" width="800" height="520" loading="lazy">
+              </div>
             </div>
             <div class="propcard__body">
               <h3 class="propcard__title">Městská vila, Plzeň</h3>
@@ -317,7 +361,10 @@
           <span class="ital">hotový</span> domov
         </h2>
 
-        <img class="showcase__house" src="assets/img/dream-house.svg" alt="Dům připravený k prodeji" width="900" height="620" loading="lazy">
+        <div class="showcase__house house3d" data-house="cube">
+          <canvas class="house3d__canvas"></canvas>
+          <img class="house3d__poster" src="assets/img/dream-house.svg" alt="Dům připravený k prodeji" width="900" height="620" loading="lazy">
+        </div>
 
         <div class="showcase__cards">
           <article class="featcard">
@@ -420,7 +467,10 @@
         <h3 class="mt-s">Data z lokality.<br>Ne dojem z prohlídky.</h3>
         <p>Potenciál počítáme ze srovnatelných prodejů, počtu kupujících a dnů na trhu. Pokud lokalita nemá absorpci, projekt nezačneme.</p>
         <div class="bcard__media">
-          <img src="assets/img/aerial.svg" alt="Letecký pohled na rezidenční lokalitu" width="700" height="900" loading="lazy">
+          <div class="house3d" data-house="aerial">
+            <canvas class="house3d__canvas"></canvas>
+            <img class="house3d__poster" src="assets/img/aerial.svg" alt="Letecký pohled na rezidenční lokalitu" width="700" height="900" loading="lazy">
+          </div>
           <span class="pricepin pricepin--1">9 590 000 Kč</span>
           <span class="pricepin pricepin--2">8 320 000 Kč</span>
           <span class="pricepin pricepin--3">9 200 000 Kč</span>
@@ -728,6 +778,7 @@
 
 <a class="btn btn--ink sticky-cta" id="stickyCta" href="kalkulacka.html">Nezávazně posoudit dům</a>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=2"></script>
+<script type="module" src="assets/js/houses3d.js"></script>
 </body>
 </html>

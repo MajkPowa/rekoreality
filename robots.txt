@@ -1,0 +1,14 @@
+# REKOREALITY — koncepční prototyp, nemá se objevovat ve vyhledávačích.
+#
+# Procházení je záměrně povolené: deindexace je řízená meta tagem
+# <meta name="robots" content="noindex, nofollow"> na každé stránce.
+# Kdybychom crawlery zablokovali zde, meta tag by nikdy nepřečetly
+# a URL by se mohla do výsledků dostat i tak (bez obsahu, jen odkaz).
+#
+# Až bude web schválený ke spuštění: odstranit noindex meta tagy
+# ze všech .html a nahradit tento soubor běžným robots.txt se sitemap.
+
+User-agent: *
+Allow: /
+
+# Žádná sitemap se záměrně neuvádí.

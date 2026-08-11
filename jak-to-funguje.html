@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jak to funguje — proces, pravidla a vypořádání | REKOREALITY</title>
+<meta name="description" content="Celý proces od vstupního posouzení po výmaz zástavy: kdo co rozhoduje, jak vzniká rozpočet, jak se počítá vypořádání a jaká jsou vstupní kritéria.">
+<meta name="theme-color" content="#14161a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5af3'/%3E%3Cpath d='M9 15l7-6 7 6v8a1 1 0 0 1-1 1h-4v-5h-4v5h-4a1 1 0 0 1-1-1z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <nav class="nav__group">
+      <a class="nav__link" href="index.html">Domů</a><span class="nav__dot"></span>
+      <a class="nav__link is-active" href="jak-to-funguje.html">Jak to funguje</a><span class="nav__dot"></span>
+      <a class="nav__link" href="pro-majitele.html">Pro majitele</a>
+    </nav>
+    <a class="nav__mark" href="index.html" aria-label="REKOREALITY — domů">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.2 12 4.6l8 6.6V19a1.4 1.4 0 0 1-1.4 1.4h-4.1V14h-5v6.4H5.4A1.4 1.4 0 0 1 4 19z" fill="#fff"/></svg>
+    </a>
+    <nav class="nav__group">
+      <a class="nav__link" href="pro-maklere.html">Pro makléře</a><span class="nav__dot"></span>
+      <a class="nav__link" href="kalkulacka.html">Kalkulačka</a><span class="nav__dot"></span>
+      <a class="nav__link" href="faq.html">FAQ</a>
+    </nav>
+    <a class="btn btn--light nav__cta" href="kalkulacka.html">Posoudit dům</a>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="navsheet" id="navsheet">
+  <a href="index.html">Domů</a>
+  <a href="jak-to-funguje.html">Jak to funguje</a>
+  <a href="pro-majitele.html">Pro majitele</a>
+  <a href="pro-maklere.html">Pro makléře</a>
+  <a href="kalkulacka.html">Kalkulačka</a>
+  <a href="faq.html">FAQ</a>
+  <a class="btn btn--light" href="kalkulacka.html">Nezávazně posoudit dům</a>
+</div>
+
+<main class="page">
+
+  <!-- SUBHERO -->
+  <section class="subhero">
+    <div class="shell subhero__inner">
+      <div>
+        <div class="pill-row">
+          <span class="pill pill--mint">Proces</span>
+          <span class="pill pill--pink">Pravidla</span>
+        </div>
+        <h1 class="display display--l">Celý proces od prvního e-mailu po <span class="ital">výmaz zástavy</span></h1>
+        <div class="subhero__actions">
+          <a class="btn btn--ink" href="kalkulacka.html">Nezávazně posoudit dům
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#kriteria">Vstupní kritéria</a>
+        </div>
+      </div>
+      <div>
+        <p class="lead">REKOREALITY je společný projekt majitele a provozovatele služby. Majitel vloží nemovitost a součinnost. My vložíme kapitál, know-how, dodavatelský řetězec a projektové řízení. Předem schválená investice se vrátí z prodejní ceny a čistá vytvořená hodnota se rozdělí podle sjednaného poměru.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÁZE -->
+  <section class="section shell">
+    <div class="sechead reveal">
+      <div>
+        <h2 class="display display--m sechead__title">Deset fází, každá s vlastním <span class="ital">výstupem a bránou</span></h2>
+      </div>
+      <div class="sechead__aside"><p class="body">Žádná fáze nepokračuje, dokud není splněna její brána. Obchodník nemá pravomoc projekt sám schválit — to dělá investiční komise.</p></div>
+    </div>
+
+    <div class="tablecard reveal">
+      <div class="tablescroll">
+        <table class="data">
+          <thead><tr><th>Fáze</th><th>Výstup</th><th>Odpovědnost</th><th>Brána</th></tr></thead>
+          <tbody>
+            <tr><td>Lead</td><td>Kompletní intake a souhlasy</td><td>Inside sales</td><td>Data complete</td></tr>
+            <tr><td>Pre-screen</td><td>Trh, list vlastnictví, dluhy, hrubá ekonomika</td><td>Acquisition analyst</td><td>Bez stop faktoru</td></tr>
+            <tr><td>Due diligence</td><td>Audit, odhady, právní a daňový checklist</td><td>PM + advokát</td><td>Skóre ≥ 70</td></tr>
+            <tr><td>Schválení komisí</td><td>Downside / base / upside, limit, návratnost</td><td>Investiční komise</td><td>Písemné schválení</td></tr>
+            <tr><td>Smluvní nastavení</td><td>Smluvní balík, pojištění, vklad zástavy</td><td>Legal</td><td>Právní účinnost</td></tr>
+            <tr><td>Rekonstrukce</td><td>Milníky, QA, fotodokumentace, change log</td><td>Projektový manažer</td><td>Rozpočet a kvalita</td></tr>
+            <tr><td>Příprava prodeje</td><td>Staging, dokumentace, inzerce, report leadů</td><td>Makléř + marketing</td><td>Ready to sell</td></tr>
+            <tr><td>Prodej</td><td>Kupní smlouva, úschova, payoff statement</td><td>Makléř + legal</td><td>Prostředky v úschově</td></tr>
+            <tr><td>Vypořádání</td><td>Waterfall, faktury, referral, výplata</td><td>Finance</td><td>Odsouhlaseno</td></tr>
+            <tr><td>Uzavření</td><td>Výmaz zástavy, záruky, souhlas s case study</td><td>Legal + péče o klienta</td><td>Projekt uzavřen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROZHODOVACÍ MATICE -->
+  <section class="section section--flush-top shell">
+    <div class="grid-2">
+      <div class="reveal">
+        <div class="pill-row"><span class="pill pill--peach">Kdo rozhoduje</span></div>
+        <h2 class="display display--m mt-s">Rozhodovací pravomoci nejsou <span class="ital">věcí dohody na místě</span></h2>
+        <p class="body mt-s">Matice je součástí smluv. Určuje, co schvalujete vy, co rozhodujeme my a co vyžaduje písemný souhlas obou stran. Bez ní se každý spor řeší až ve chvíli, kdy je pozdě.</p>
+        <div class="callout mt-m" style="box-shadow:none;background:var(--surface-2)">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div>
+            <p class="callout__label">Change order</p>
+            <p class="callout__text">Vícepráce nad definovanou toleranci vyžadují písemný důvod, částku, dopad na termín, fotografie a schválení <em>před</em> provedením. Havárie mají zvláštní režim. Bez change orderu nesmí narůst zajištěná částka.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tablecard reveal" data-d="1">
+        <div class="tablescroll">
+          <table class="data">
+            <thead><tr><th>Rozhodnutí</th><th>Majitel</th><th>REKOREALITY</th></tr></thead>
+            <tbody>
+              <tr><td>Rozsah a maximální investice</td><td>Schvaluje</td><td>Schvaluje</td></tr>
+              <tr><td>Volba dodavatelů v rámci rozpočtu</td><td>Informace</td><td>Rozhoduje</td></tr>
+              <tr><td>Vícepráce nad toleranci</td><td>Písemně</td><td>Písemně</td></tr>
+              <tr><td>Technické řešení v rámci projektu</td><td>Informace</td><td>Rozhoduje</td></tr>
+              <tr><td>Nabídková strategie</td><td>Schvaluje</td><td>Schvaluje</td></tr>
+              <tr><td>Přijetí nabídky / kupní smlouva</td><td>Rozhoduje</td><td>Doporučuje</td></tr>
+              <tr><td>Vypořádání dle vzorce</td><td>Kontroluje</td><td>Dokládá</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VSTUPNÍ KRITÉRIA -->
+  <section class="section section--flush-top shell" id="kriteria">
+    <div class="sechead sechead--center reveal">
+      <div class="pill-row"><span class="pill pill--mint">Selektivní produkt</span></div>
+      <h2 class="display display--l">Nepřijímáme každý dům. <span class="ital">A je to dobře.</span></h2>
+      <p class="lead">Největší riziko není nedostatek poptávek. Je to přijetí nemovitosti s nízkým potenciálem, nejasným právním stavem nebo nelikvidním trhem. Pokud ekonomika nevychází, řekneme to hned.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="tablecard reveal">
+        <div class="tablecard__head"><h3>Minimální vstupní kritéria</h3><span class="pill">Pilot</span></div>
+        <div class="tablescroll">
+          <table class="data">
+            <thead><tr><th>Oblast</th><th>Doporučený limit</th></tr></thead>
+            <tbody>
+              <tr><td>Typ</td><td>Rodinný dům; byty až po ověření procesu</td></tr>
+              <tr><td>Lokalita</td><td>Likvidní mikroregion s ověřitelnými srovnatelnými prodeji</td></tr>
+              <tr><td>Právní stav</td><td>Jasné vlastnictví, souhlas všech vlastníků, řešitelné zástavy a břemena</td></tr>
+              <tr><td>Vlastní kapitál</td><td>Dostatečná rezerva mezi konzervativní hodnotou a existujícími dluhy</td></tr>
+              <tr><td>Rozsah</td><td>Předvídatelný rozpočet, dokončení ideálně do 16 týdnů</td></tr>
+              <tr><td>Ekonomika</td><td>Konzervativní čistá vytvořená hodnota alespoň 800 000 Kč</td></tr>
+              <tr><td>Doba projektu</td><td>Cíl do 9 měsíců od podpisu do vypořádání; stop-loss po 12 měsících</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="plaincard reveal" data-d="1">
+        <div class="pill-row"><span class="pill pill--peach">Automatické stop faktory</span></div>
+        <h3 class="mt-s" style="font-size:22px">Kdy říkáme ne — bez výjimky</h3>
+        <ul class="checklist checklist--x mt-s">
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Nevyřešené dědictví, sporné spoluvlastnictví, exekuce nebo insolvence bez potvrzeného řešení.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Stávající banka nepovolí další zástavu nebo pořadí zajištění znemožňuje bezpečný model.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Statické nebo ekologické riziko s obtížně limitovatelným rozpočtem.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Majitel potřebuje okamžitou hotovost a nemůže čekat na rekonstrukci a prodej.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Očekávání majitele výrazně převyšuje nezávislý tržní odhad.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Lokalita s nízkou absorpcí nebo málo srovnatelnými prodeji.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Projekt vytváří hodnotu hlavně spekulací na růst trhu, nikoli konkrétní rekonstrukcí.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tablecard mt-m reveal">
+      <div class="tablecard__head">
+        <h3>Investiční skóre — 100 bodů</h3>
+        <span class="pill pill--ink">Projekt pokračuje od 70 bodů</span>
+      </div>
+      <div class="tablescroll">
+        <table class="data">
+          <thead><tr><th>Kritérium</th><th>Váha</th><th>Co se ověřuje</th></tr></thead>
+          <tbody>
+            <tr><td>Rozdíl hodnoty před / po</td><td class="num">25</td><td>Konzervativní uplift po odečtení všech nákladů</td></tr>
+            <tr><td>Likvidita lokality</td><td class="num">20</td><td>Počet kupujících, srovnatelné prodeje, dny na trhu</td></tr>
+            <tr><td>Právní čistota</td><td class="num">15</td><td>Vlastnictví, zástavy, břemena, přístup, dokumentace</td></tr>
+            <tr><td>Technická předvídatelnost</td><td class="num">15</td><td>Statika, vlhkost, instalace, povolení, rozsah</td></tr>
+            <tr><td>Vlastní kapitál majitele</td><td class="num">10</td><td>Bezpečný prostor pro investici a existující dluhy</td></tr>
+            <tr><td>Doba realizace a prodeje</td><td class="num">10</td><td>Povolení, dodavatelé, sezónnost, absorpce</td></tr>
+            <tr><td>Kvalita dat a součinnost</td><td class="num">5</td><td>Doklady, přístup, rychlost rozhodování, realističnost</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVOZNÍ STANDARDY -->
+  <section class="section section--flush-top shell">
+    <div class="sechead reveal">
+      <div><h2 class="display display--m sechead__title">Provozní standardy, které <span class="ital">držíme</span></h2></div>
+      <div class="sechead__aside"><p class="body">Zákaznická zkušenost bude tak dobrá, jak dobrá je interní kontrola rozpočtu, změn, dokumentace a odpovědností.</p></div>
+    </div>
+
+    <div class="flow reveal">
+      <article class="flow__item"><span class="flow__num">01</span><h3>Rozpočet</h3><p>Položkový, verzovaný, s rezervou 10–15 % a jednoznačným limitem zajištění.</p></article>
+      <article class="flow__item"><span class="flow__num">02</span><h3>Platby dodavatelům</h3><p>Podle ověřených milníků, se zádržným na vady a doloženými fakturami.</p></article>
+      <article class="flow__item"><span class="flow__num">03</span><h3>Reporting</h3><p>Týdenní souhrn, fotografie, rozpočet plán/skutečnost, rizika a rozhodnutí.</p></article>
+      <article class="flow__item"><span class="flow__num">04</span><h3>Kontrola kvality</h3><p>Checklist po profesích, předávací protokol, revize a dokumentace skutečného provedení.</p></article>
+      <article class="flow__item"><span class="flow__num">05</span><h3>Pojištění</h3><p>Odpovědnost, stavebně-montážní rizika, majetek, pracovníci a škody třetím osobám.</p></article>
+      <article class="flow__item"><span class="flow__num">06</span><h3>Úschova</h3><p>Předem sjednaný waterfall a payoff statement podepsaný před uvolněním kupní ceny.</p></article>
+      <article class="flow__item"><span class="flow__num">07</span><h3>Dokumentace pro kupující</h3><p>Co bylo opraveno, kým, kdy a s jakou zárukou — jako součást nabídky.</p></article>
+      <article class="flow__item"><span class="flow__num">08</span><h3>Uzavření</h3><p>Výmaz zástavy, předání záruk a vyúčtování bez zbytečného odkladu.</p></article>
+    </div>
+  </section>
+
+  <!-- PRÁVNÍ RÁMEC -->
+  <section class="section section--flush-top shell" id="pravni">
+    <div class="callout callout--warn reveal">
+      <span class="callout__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 8.5v5m0 3.5h.01M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div>
+        <p class="callout__label">Regulatorní brána před spuštěním</p>
+        <p class="callout__text">Zákon č. 257/2016 Sb. definuje spotřebitelský úvěr mimo jiné jako odloženou platbu poskytovanou spotřebiteli. Je-li taková služba zajištěna nemovitostí, může jít o spotřebitelský úvěr na bydlení. Ostrý provoz proto smí začít až po písemném právním stanovisku — buď potvrzením, že struktura pod regulaci nespadá, nebo poskytováním financování přes licencovaného partnera. Branding ani přejmenování „úvěru“ na „investici“ právní kvalifikaci nezmění.</p>
+      </div>
+    </div>
+
+    <div class="grid-2 mt-m" id="dokumenty">
+      <div class="plaincard reveal">
+        <div class="pill-row"><span class="pill">Smluvní balík</span></div>
+        <h3 class="mt-s" style="font-size:22px">Co podepisujete</h3>
+        <ul class="checklist mt-s">
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Vstupní posouzení a souhlasy s daty</b> — jasně nezávazné.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Rámcová projektová smlouva</b> s cílem, pravomocemi, milníky, scénářem neprodeje a ukončením.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Smlouva o dílo</b> s cenou, změnami, vadami a zárukami.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Zástavní smlouva</b> s konkrétní pohledávkou, maximální výší jistiny, pořadím a podmínkami výmazu.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Vypořádací dohoda</b> s výchozí hodnotou, uznatelnými náklady a matematickým vzorcem.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Smlouva o realitním zprostředkování</b> nebo trojstranná dohoda s makléřem — vždy jako samostatná listina.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Instrukce pro úschovu</b> včetně waterfallu a výmazu zástavy.</span></li>
+        </ul>
+      </div>
+
+      <div class="plaincard reveal" data-d="1">
+        <div class="pill-row"><span class="pill pill--peach">Co netvrdíme</span></div>
+        <h3 class="mt-s" style="font-size:22px">Formulace, které na tomto webu nenajdete</h3>
+        <ul class="checklist checklist--x mt-s">
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>„Zdarma“ — náklady se vypořádávají z prodeje; správně je <b>bez platby předem</b>.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>„Bez rizika“ — existuje tržní, stavební, časové i právní riziko.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>„Garantujeme vyšší cenu“ — pokud nejde o skutečnou smluvní garanci s podmínkami.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>„Zástava je jen formalita“ — je to reálné věcné zajištění.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>„Schválíme každý dům“ — produkt je selektivní.</span></li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span>Konkrétní procento zhodnocení nebo délku prodeje <b>bez auditovaných případových studií</b>.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--flush-top shell">
+    <div class="ctablock reveal">
+      <h2 class="display display--l balance">Chcete vědět, jestli váš dům <span class="ital">projde branami</span>?</h2>
+      <p class="lead">Vyplňte krátké posouzení. Do 2 pracovních dnů pošleme předběžný výsledek: má potenciál / potřebujeme doplnit / pro náš model není vhodné.</p>
+      <a class="btn btn--ink" href="kalkulacka.html">Nezávazně posoudit dům
+        <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="ctablock__note">Vstupní posouzení není nabídka financování ani závazek uzavřít smlouvu.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <span class="footer__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4.6l8 6.6V19a1.4 1.4 0 0 1-1.4 1.4h-4.1V14h-5v6.4H5.4A1.4 1.4 0 0 1 4 19z" fill="#fff"/></svg></span>
+            <span class="footer__word">reko<em>reality</em></span>
+          </div>
+          <p class="footer__tag">Neprodávejte dům tak, jak je. Prodejte jeho skutečný potenciál.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.7 21H1.5l7.5-8.6L1.2 3h6.6l4.5 5.6zm-1.1 16h1.8L7.7 4.8H5.8z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.6V3.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V13h2.7v8z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col"><h4>Služba</h4><ul>
+          <li><a href="jak-to-funguje.html">Jak to funguje</a></li>
+          <li><a href="kalkulacka.html">Kalkulačka potenciálu</a></li>
+          <li><a href="index.html#vypocet">Modelový výpočet</a></li>
+          <li><a href="index.html#zastava">Co znamená zástava</a></li>
+          <li><a href="jak-to-funguje.html#kriteria">Vstupní kritéria</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Pro koho</h4><ul>
+          <li><a href="pro-majitele.html">Majitelé domů</a></li>
+          <li><a href="pro-majitele.html#dedictvi">Zděděné nemovitosti</a></li>
+          <li><a href="pro-maklere.html">Realitní makléři</a></li>
+          <li><a href="pro-maklere.html#odmena">Partnerská odměna</a></li>
+          <li><a href="faq.html">Časté otázky</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Firma</h4><ul>
+          <li><a href="jak-to-funguje.html#dokumenty">Smluvní dokumenty</a></li>
+          <li><a href="jak-to-funguje.html#pravni">Právní rámec</a></li>
+          <li><a href="faq.html#dane">Daňové dopady</a></li>
+          <li><a href="kalkulacka.html#formular">Kontakt</a></li>
+          <li><a href="faq.html">Reklamační proces</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bar">
+        <nav><a href="#">Podmínky užití</a><a href="#">Ochrana osobních údajů</a><a href="#">Cookies</a></nav>
+        <span>© 2026 REKOREALITY. Všechna práva vyhrazena.</span>
+      </div>
+      <p class="disclaimer">Tento web je koncepční prototyp. Obsahuje modelové výpočty, nikoli nabídku financování, závazek uzavřít smlouvu ani právní, daňové či investiční poradenství.</p>
+    </div>
+  </footer>
+</main>
+
+<a class="btn btn--ink sticky-cta" id="stickyCta" href="kalkulacka.html">Nezávazně posoudit dům</a>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

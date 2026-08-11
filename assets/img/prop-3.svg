@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img" aria-label="Bungalov se zahradou a živým plotem">
+  <defs>
+    <linearGradient id="p3sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcdcef"/><stop offset="1" stop-color="#eef5f7"/>
+    </linearGradient>
+    <linearGradient id="p3c" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f4ee"/><stop offset="1" stop-color="#dfd9cd"/>
+    </linearGradient>
+    <linearGradient id="p3gg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#61808e"/><stop offset="1" stop-color="#22313a"/>
+    </linearGradient>
+    <linearGradient id="p3hedge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#59814f"/><stop offset="1" stop-color="#33552f"/>
+    </linearGradient>
+    <radialGradient id="p3warm" cx="0.5" cy="0.6" r="0.6">
+      <stop offset="0" stop-color="#ffd79b" stop-opacity="0.8"/><stop offset="1" stop-color="#ffbe6d" stop-opacity="0.08"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="520" fill="url(#p3sky)"/>
+  <ellipse cx="560" cy="76" rx="170" ry="42" fill="#fff" opacity="0.55"/>
+
+  <!-- vzrostlé stromy -->
+  <g fill="#4f7657" opacity="0.9">
+    <ellipse cx="86" cy="222" rx="92" ry="104"/>
+    <ellipse cx="716" cy="206" rx="86" ry="98"/>
+    <ellipse cx="640" cy="248" rx="56" ry="62"/>
+  </g>
+
+  <!-- živý plot -->
+  <rect x="0" y="292" width="800" height="66" fill="url(#p3hedge)"/>
+  <g fill="#6b9459" opacity="0.5">
+    <ellipse cx="60" cy="296" rx="52" ry="18"/><ellipse cx="200" cy="292" rx="60" ry="20"/>
+    <ellipse cx="360" cy="298" rx="56" ry="18"/><ellipse cx="520" cy="292" rx="62" ry="20"/>
+    <ellipse cx="700" cy="298" rx="58" ry="18"/>
+  </g>
+
+  <!-- dům -->
+  <g>
+    <ellipse cx="400" cy="404" rx="270" ry="24" fill="#40522f" opacity="0.25"/>
+    <rect x="160" y="212" width="480" height="180" fill="url(#p3c)"/>
+    <rect x="146" y="200" width="508" height="16" fill="#3b3f46"/>
+    <!-- velké prosklení -->
+    <rect x="196" y="240" width="300" height="130" fill="url(#p3gg)"/>
+    <rect x="196" y="240" width="300" height="130" fill="url(#p3warm)" opacity="0.42"/>
+    <g fill="#eae6de" opacity="0.85">
+      <rect x="272" y="240" width="4" height="130"/><rect x="346" y="240" width="4" height="130"/>
+      <rect x="420" y="240" width="4" height="130"/>
+    </g>
+    <path d="M212 370 L292 240 L326 240 L246 370 Z" fill="#fff" opacity="0.16"/>
+    <!-- omítková část a dveře -->
+    <rect x="512" y="240" width="106" height="152" fill="#e7e1d5"/>
+    <rect x="530" y="268" width="70" height="124" fill="#2a3a43"/>
+    <rect x="530" y="268" width="70" height="124" fill="url(#p3warm)" opacity="0.2"/>
+    <rect x="590" y="322" width="4" height="20" rx="2" fill="#eae6de"/>
+    <!-- markýza -->
+    <path d="M160 212 L640 212 L676 236 L124 236 Z" fill="#cbc5b8"/>
+  </g>
+
+  <!-- trávník + cesta -->
+  <path d="M0 392 L800 392 L800 520 L0 520 Z" fill="#8db273"/>
+  <path d="M320 392 L500 392 L590 520 L230 520 Z" fill="#e2ded2"/>
+  <g stroke="#c8c2b4" stroke-width="3" opacity="0.7">
+    <line x1="308" y1="432" x2="524" y2="432"/>
+    <line x1="278" y1="476" x2="558" y2="476"/>
+  </g>
+  <g>
+    <ellipse cx="160" cy="424" rx="66" ry="26" fill="#79a061"/>
+    <ellipse cx="668" cy="428" rx="72" ry="28" fill="#79a061"/>
+    <ellipse cx="120" cy="470" rx="42" ry="18" fill="#6d955a"/>
+  </g>
+</svg>

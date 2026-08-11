@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" width="1600" height="760" role="img" aria-label="Moderní rodinný dům po rekonstrukci s bazénem">
+  <defs>
+    <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fc9ea" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#bfdff0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#dcecf3"/>
+    </linearGradient>
+    <linearGradient id="hHaze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="hConcrete" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6e2da"/>
+      <stop offset="0.5" stop-color="#d5d0c6"/>
+      <stop offset="1" stop-color="#c2bcb0"/>
+    </linearGradient>
+    <linearGradient id="hConcrete2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfcabf"/>
+      <stop offset="1" stop-color="#b9b3a6"/>
+    </linearGradient>
+    <linearGradient id="hGlass" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#4a6474"/>
+      <stop offset="0.45" stop-color="#2b3d48"/>
+      <stop offset="1" stop-color="#1c2a33"/>
+    </linearGradient>
+    <linearGradient id="hWood" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#c58f52"/>
+      <stop offset="0.5" stop-color="#a97137"/>
+      <stop offset="1" stop-color="#8d5c2c"/>
+    </linearGradient>
+    <linearGradient id="hLawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9c48c"/>
+      <stop offset="1" stop-color="#87a86d"/>
+    </linearGradient>
+    <linearGradient id="hPool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe4ef"/>
+      <stop offset="0.5" stop-color="#8fcfe4"/>
+      <stop offset="1" stop-color="#6dbcd8"/>
+    </linearGradient>
+    <linearGradient id="hDeck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9e5dc"/>
+      <stop offset="1" stop-color="#d3cec3"/>
+    </linearGradient>
+    <radialGradient id="hWarm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffbe6d" stop-opacity="0.15"/>
+    </radialGradient>
+    <linearGradient id="hTree" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f6146"/>
+      <stop offset="1" stop-color="#22392a"/>
+    </linearGradient>
+    <linearGradient id="hTreeFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fa189" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#54755f" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="hSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="hSoft2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <!-- obloha / atmosféra -->
+  <rect width="1600" height="760" fill="url(#hSky)"/>
+
+  <!-- vzdálený horizont -->
+  <path d="M0 452 C 190 424 330 442 470 436 C 640 428 760 448 900 440 C 1080 430 1260 448 1600 434 L1600 560 L0 560 Z" fill="#b9cfc4" opacity="0.5"/>
+  <path d="M0 470 C 220 452 380 470 560 462 C 760 452 940 472 1140 462 C 1320 454 1460 466 1600 458 L1600 600 L0 600 Z" fill="#9dbaa8" opacity="0.55"/>
+
+  <!-- vzdálené stromy -->
+  <g fill="url(#hTreeFar)">
+    <ellipse cx="180" cy="430" rx="70" ry="52"/>
+    <ellipse cx="262" cy="444" rx="52" ry="38"/>
+    <ellipse cx="1392" cy="424" rx="76" ry="56"/>
+    <ellipse cx="1300" cy="446" rx="54" ry="38"/>
+    <ellipse cx="820" cy="436" rx="60" ry="40"/>
+    <ellipse cx="900" cy="446" rx="44" ry="30"/>
+  </g>
+
+  <!-- terén / trávník -->
+  <path d="M0 560 C 260 540 520 552 800 548 C 1090 544 1340 556 1600 546 L1600 760 L0 760 Z" fill="url(#hLawn)"/>
+
+  <!-- ====== DŮM ====== -->
+  <g>
+    <!-- stín pod domem -->
+    <ellipse cx="800" cy="612" rx="520" ry="46" fill="#3d4a3a" opacity="0.22" filter="url(#hSoft2)"/>
+
+    <!-- přízemí: hmota -->
+    <rect x="330" y="392" width="960" height="212" fill="url(#hConcrete)"/>
+    <!-- boční ustoupená stěna -->
+    <path d="M1290 392 L1372 414 L1372 604 L1290 604 Z" fill="url(#hConcrete2)"/>
+
+    <!-- prosklená část přízemí -->
+    <rect x="372" y="418" width="640" height="168" fill="url(#hGlass)"/>
+    <rect x="372" y="418" width="640" height="168" fill="url(#hWarm)" opacity="0.35"/>
+    <!-- rámy oken -->
+    <g fill="#e8e4dc" opacity="0.85">
+      <rect x="470" y="418" width="6" height="168"/>
+      <rect x="568" y="418" width="6" height="168"/>
+      <rect x="666" y="418" width="6" height="168"/>
+      <rect x="764" y="418" width="6" height="168"/>
+      <rect x="862" y="418" width="6" height="168"/>
+      <rect x="960" y="418" width="6" height="168"/>
+    </g>
+    <!-- odlesk ve skle -->
+    <path d="M400 586 L520 418 L604 418 L462 586 Z" fill="#ffffff" opacity="0.14"/>
+    <path d="M660 586 L790 418 L830 418 L700 586 Z" fill="#ffffff" opacity="0.09"/>
+
+    <!-- dřevěný obklad vpravo -->
+    <rect x="1030" y="392" width="252" height="212" fill="url(#hWood)"/>
+    <g fill="#6f4620" opacity="0.32">
+      <rect x="1048" y="392" width="3" height="212"/><rect x="1076" y="392" width="3" height="212"/>
+      <rect x="1104" y="392" width="3" height="212"/><rect x="1132" y="392" width="3" height="212"/>
+      <rect x="1160" y="392" width="3" height="212"/><rect x="1188" y="392" width="3" height="212"/>
+      <rect x="1216" y="392" width="3" height="212"/><rect x="1244" y="392" width="3" height="212"/>
+      <rect x="1272" y="392" width="3" height="212"/>
+    </g>
+    <!-- vstupní dveře -->
+    <rect x="1104" y="452" width="82" height="152" fill="#2b3d48"/>
+    <rect x="1104" y="452" width="82" height="152" fill="url(#hWarm)" opacity="0.28"/>
+    <rect x="1176" y="516" width="4" height="22" rx="2" fill="#e8e4dc"/>
+
+    <!-- patro: převislá hmota -->
+    <rect x="286" y="212" width="1010" height="186" fill="url(#hConcrete)"/>
+    <rect x="286" y="212" width="1010" height="16" fill="#f0ece4" opacity="0.7"/>
+    <!-- stín pod převisem -->
+    <rect x="330" y="392" width="960" height="14" fill="#7d786d" opacity="0.35"/>
+
+    <!-- lamely / stínicí clona na patře -->
+    <rect x="620" y="238" width="470" height="140" fill="#33424c"/>
+    <g fill="#0f1a20" opacity="0.55">
+      <rect x="620" y="238" width="470" height="7"/>
+      <rect x="620" y="262" width="470" height="7"/>
+      <rect x="620" y="286" width="470" height="7"/>
+      <rect x="620" y="310" width="470" height="7"/>
+      <rect x="620" y="334" width="470" height="7"/>
+      <rect x="620" y="358" width="470" height="7"/>
+    </g>
+    <!-- okna patra vlevo -->
+    <rect x="330" y="248" width="256" height="126" fill="url(#hGlass)"/>
+    <rect x="330" y="248" width="256" height="126" fill="url(#hWarm)" opacity="0.25"/>
+    <rect x="452" y="248" width="5" height="126" fill="#e8e4dc" opacity="0.85"/>
+    <path d="M348 374 L440 248 L484 248 L392 374 Z" fill="#ffffff" opacity="0.13"/>
+    <!-- okno patra vpravo -->
+    <rect x="1122" y="248" width="150" height="126" fill="url(#hGlass)"/>
+    <rect x="1122" y="248" width="150" height="126" fill="url(#hWarm)" opacity="0.2"/>
+
+    <!-- zábradlí terasy -->
+    <g stroke="#eceadf" stroke-width="3" opacity="0.7">
+      <line x1="286" y1="398" x2="286" y2="212"/>
+    </g>
+  </g>
+
+  <!-- terasa / dlažba -->
+  <path d="M300 604 L1372 604 L1470 700 L206 700 Z" fill="url(#hDeck)"/>
+  <g stroke="#bdb7ab" stroke-width="2" opacity="0.6">
+    <line x1="486" y1="604" x2="452" y2="700"/>
+    <line x1="672" y1="604" x2="662" y2="700"/>
+    <line x1="858" y1="604" x2="872" y2="700"/>
+    <line x1="1044" y1="604" x2="1082" y2="700"/>
+    <line x1="1230" y1="604" x2="1292" y2="700"/>
+  </g>
+
+  <!-- bazén -->
+  <path d="M300 706 L1380 706 L1444 760 L236 760 Z" fill="url(#hPool)"/>
+  <g stroke="#ffffff" opacity="0.5" stroke-linecap="round">
+    <line x1="380" y1="726" x2="640" y2="726" stroke-width="4"/>
+    <line x1="700" y1="742" x2="1080" y2="742" stroke-width="5"/>
+    <line x1="1140" y1="722" x2="1300" y2="722" stroke-width="3"/>
+    <line x1="420" y1="750" x2="600" y2="750" stroke-width="3"/>
+  </g>
+  <!-- odraz domu v bazénu -->
+  <g opacity="0.22" filter="url(#hSoft)">
+    <rect x="372" y="708" width="640" height="40" fill="#2b3d48"/>
+    <rect x="1030" y="708" width="252" height="40" fill="#a97137"/>
+  </g>
+
+  <!-- popředí: stromy vlevo a vpravo -->
+  <g fill="url(#hTree)">
+    <path d="M0 760 L0 118 C 46 128 84 176 96 236 C 132 210 176 226 196 268 C 226 244 268 262 276 306 C 300 300 322 320 320 348 L318 760 Z" opacity="0.95"/>
+    <path d="M1600 760 L1600 96 C 1546 108 1502 158 1490 222 C 1452 194 1404 212 1382 258 C 1348 232 1306 254 1298 300 C 1272 292 1250 314 1252 344 L1256 760 Z" opacity="0.95"/>
+  </g>
+  <g fill="#152219" opacity="0.35">
+    <ellipse cx="120" cy="300" rx="88" ry="120"/>
+    <ellipse cx="1486" cy="286" rx="94" ry="128"/>
+  </g>
+
+  <!-- světelná atmosféra -->
+  <rect y="0" width="1600" height="220" fill="url(#hHaze)" opacity="0.5"/>
+  <ellipse cx="820" cy="330" rx="620" ry="240" fill="#ffffff" opacity="0.1" filter="url(#hSoft2)"/>
+</svg>

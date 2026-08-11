@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-label="Letecký pohled na rezidenční lokalitu">
+  <defs>
+    <linearGradient id="aBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#cfe3d0"/><stop offset="0.45" stop-color="#9fbf9c"/><stop offset="1" stop-color="#6f9270"/>
+    </linearGradient>
+    <linearGradient id="aRoof" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2eee6"/><stop offset="1" stop-color="#cdc7b9"/>
+    </linearGradient>
+    <linearGradient id="aPv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3d5a86"/><stop offset="1" stop-color="#1d2f4a"/>
+    </linearGradient>
+    <linearGradient id="aRoad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9d4c8"/><stop offset="1" stop-color="#bdb7aa"/>
+    </linearGradient>
+    <filter id="aMist" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="900" fill="url(#aBg)"/>
+
+  <!-- mlha v pozadí -->
+  <ellipse cx="350" cy="120" rx="480" ry="150" fill="#eaf2ea" opacity="0.85" filter="url(#aMist)"/>
+  <ellipse cx="120" cy="300" rx="240" ry="110" fill="#dfeadd" opacity="0.5" filter="url(#aMist)"/>
+
+  <!-- silnice -->
+  <path d="M-40 470 C 160 430 260 500 420 480 C 540 464 620 500 740 470 L740 508 C 620 538 540 502 420 518 C 260 538 160 468 -40 508 Z" fill="url(#aRoad)"/>
+  <path d="M-40 700 C 140 664 300 726 460 706 C 580 690 660 720 740 700 L740 734 C 660 754 580 724 460 740 C 300 760 140 698 -40 734 Z" fill="url(#aRoad)" opacity="0.9"/>
+
+  <!-- lesní plochy -->
+  <g fill="#4d7355" opacity="0.85">
+    <ellipse cx="60" cy="196" rx="72" ry="46"/>
+    <ellipse cx="150" cy="230" rx="54" ry="36"/>
+    <ellipse cx="640" cy="238" rx="76" ry="50"/>
+    <ellipse cx="556" cy="268" rx="48" ry="32"/>
+    <ellipse cx="40" cy="620" rx="70" ry="46"/>
+    <ellipse cx="660" cy="614" rx="66" ry="44"/>
+    <ellipse cx="330" cy="852" rx="120" ry="56"/>
+    <ellipse cx="120" cy="836" rx="80" ry="44"/>
+    <ellipse cx="600" cy="846" rx="90" ry="48"/>
+  </g>
+
+  <!-- domky -->
+  <g>
+    <!-- dům 1 -->
+    <g transform="translate(120 320)">
+      <path d="M0 0 L96 -26 L152 6 L56 34 Z" fill="url(#aRoof)"/>
+      <path d="M18 6 L86 -12 L112 4 L44 22 Z" fill="url(#aPv)"/>
+      <path d="M0 0 L56 34 L56 62 L0 30 Z" fill="#ded8cb"/>
+      <path d="M56 34 L152 6 L152 32 L56 62 Z" fill="#b9b3a5"/>
+      <ellipse cx="76" cy="76" rx="70" ry="14" fill="#41603f" opacity="0.3"/>
+    </g>
+    <!-- dům 2 -->
+    <g transform="translate(370 250)">
+      <path d="M0 0 L84 -22 L134 6 L50 30 Z" fill="url(#aRoof)"/>
+      <path d="M16 6 L76 -10 L100 4 L40 20 Z" fill="url(#aPv)"/>
+      <path d="M0 0 L50 30 L50 54 L0 26 Z" fill="#ded8cb"/>
+      <path d="M50 30 L134 6 L134 30 L50 54 Z" fill="#b9b3a5"/>
+      <ellipse cx="66" cy="66" rx="62" ry="12" fill="#41603f" opacity="0.3"/>
+    </g>
+    <!-- dům 3 -->
+    <g transform="translate(432 552)">
+      <path d="M0 0 L92 -24 L146 6 L54 32 Z" fill="url(#aRoof)"/>
+      <path d="M18 6 L82 -12 L108 4 L44 22 Z" fill="url(#aPv)"/>
+      <path d="M0 0 L54 32 L54 60 L0 28 Z" fill="#ded8cb"/>
+      <path d="M54 32 L146 6 L146 32 L54 60 Z" fill="#b9b3a5"/>
+      <ellipse cx="72" cy="74" rx="68" ry="14" fill="#41603f" opacity="0.3"/>
+    </g>
+    <!-- dům 4 -->
+    <g transform="translate(96 610)">
+      <path d="M0 0 L80 -20 L128 6 L48 28 Z" fill="url(#aRoof)"/>
+      <path d="M14 6 L72 -10 L96 4 L38 20 Z" fill="url(#aPv)"/>
+      <path d="M0 0 L48 28 L48 52 L0 24 Z" fill="#ded8cb"/>
+      <path d="M48 28 L128 6 L128 28 L48 52 Z" fill="#b9b3a5"/>
+      <ellipse cx="62" cy="62" rx="58" ry="12" fill="#41603f" opacity="0.3"/>
+    </g>
+    <!-- dům 5 -->
+    <g transform="translate(268 728)">
+      <path d="M0 0 L88 -22 L140 6 L52 30 Z" fill="url(#aRoof)"/>
+      <path d="M16 6 L80 -10 L104 4 L42 20 Z" fill="url(#aPv)"/>
+      <path d="M0 0 L52 30 L52 58 L0 28 Z" fill="#ded8cb"/>
+      <path d="M52 30 L140 6 L140 30 L52 58 Z" fill="#b9b3a5"/>
+      <ellipse cx="70" cy="70" rx="66" ry="14" fill="#41603f" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- bazény a zahrady -->
+  <g>
+    <rect x="252" y="368" width="54" height="24" rx="8" fill="#7cc4dd" opacity="0.9" transform="rotate(-14 279 380)"/>
+    <rect x="560" y="632" width="52" height="22" rx="8" fill="#7cc4dd" opacity="0.9" transform="rotate(-14 586 643)"/>
+  </g>
+
+  <!-- keře -->
+  <g fill="#5c8258" opacity="0.9">
+    <circle cx="240" cy="452" r="14"/><circle cx="266" cy="466" r="10"/>
+    <circle cx="512" cy="500" r="15"/><circle cx="538" cy="512" r="10"/>
+    <circle cx="196" cy="700" r="13"/><circle cx="220" cy="712" r="9"/>
+    <circle cx="404" cy="812" r="14"/><circle cx="430" cy="822" r="10"/>
+  </g>
+</svg>

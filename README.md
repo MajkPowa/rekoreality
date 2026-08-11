@@ -72,6 +72,26 @@ Model se vykreslí až po prvním úspěšném snímku (`.is-live`).
 
 **Cena:** three.js z CDN ≈ 257 kB (gzip). Verze je připnutá v importmapě v `index.html`.
 
+### Modely
+
+| Klíč | Slot | Meshů | Obsah |
+|---|---|---|---|
+| `villa` | hero | 151 | simulace před → po (viz níže) |
+| `gable` | karta 1 | 113 | zděděný dům se sedlovou střechou, garáž, komín, anténa |
+| `poolvilla` | karta 2 | 103 | moderní vila s bazénem, dřevo + beton |
+| `bungalow` | karta 3 | 75 | přízemní bungalov s markýzou a živým plotem |
+| `townvilla` | karta 4 | 114 | městská vila, cihlový sokl, kus ulice se stromořadím |
+| `cube` | showcase | 86 | kubická vila s vodním prvkem |
+| `aerial` | bento | 105 | ptačí pohled na pět domů, cesty, bazény, solární panely |
+
+Nový model = přidat `build…(THREE, M, U)` do `houses3d.models.js` a zaregistrovat
+ho v `MODELS` s `view` a `radius`. Kompozici lze ladit bez screenshotů:
+
+```js
+const p = await import('/dev/preview.mjs');
+await p.preview('cube', { aspect: 900/620, cols: 60, rows: 16 });
+```
+
 ### Simulace „před → po" v hero
 
 Hero model má dvě fáze označené `userData.phase = 'old' | 'new'`. Engine je prolíná

@@ -2,6 +2,25 @@
 
 Statický web bez build kroku. Otevřete `index.html` v prohlížeči.
 
+**Živá verze:** <https://majkpowa.github.io/rekoreality/>
+
+## Nasazení
+
+Hostováno na GitHub Pages z větve `main`, složka `/` (kořen). Publikace = `git push` na `main`;
+build se spustí sám a trvá zpravidla do minuty.
+
+```bash
+git add -A && git commit -m "popis změny" && git push
+```
+
+Web je **záměrně mimo vyhledávače**: každá stránka nese `<meta name="robots" content="noindex, nofollow">`.
+Procházení v `robots.txt` je povolené schválně — kdyby bylo zakázané, crawler by meta tag nikdy nepřečetl
+a URL by se do výsledků mohla dostat i tak. Odkaz tedy funguje komukoli, kdo ho dostane, ale web
+nikdo nenajde přes Google. Před ostrým spuštěním je potřeba `noindex` ze všech `.html` odstranit.
+
+Repozitář je veřejný, protože GitHub Pages na bezplatném účtu ze soukromého repozitáře nefungují.
+Obsah včetně obchodního modelu je tedy technicky veřejně čitelný.
+
 ## Struktura
 
 ```

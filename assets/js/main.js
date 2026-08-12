@@ -224,15 +224,15 @@
       if (out.verdict) {
         var v, note;
         if (price <= 0 || base <= 0) {
-          v = "Doplňte údaje"; note = "Zadejte alespoň odhad dnešní hodnoty a očekávanou cenu po rekonstrukci.";
+          v = "Doplňte čísla"; note = "Nastavte aspoň dnešní cenu domu a cenu po opravě.";
         } else if (b.net <= 0) {
-          v = "Model nevychází"; note = "Při zadaných číslech nevzniká čistá vytvořená hodnota. REKOREALITY pak nemá nárok na podíl ze zisku, ale schválená investice se z kupní ceny vypořádává tak jako tak — majiteli by proto zbylo méně než dnešní hodnota domu. Takový projekt by nezačal.";
+          v = "Takhle to nevyjde"; note = "S těmito čísly rekonstrukce žádnou hodnotu navíc nevytvoří. My pak nemáme nárok na podíl — ale to, co jsme prostavěli, se z prodeje stejně vrací. Vám by proto zbylo míň, než má dům dnes. Takový projekt bychom nezačali.";
         } else if (b.net < 800000) {
-          v = "Hraniční"; note = "Konzervativní čistá vytvořená hodnota je pod pilotní hranicí 800 000 Kč. Projekt by šel do individuálního posouzení.";
+          v = "Hraniční"; note = "Hodnota navíc je pod 800 000 Kč. To je hranice, od které se nám to vyplatí — museli bychom se na dům podívat individuálně.";
         } else if (d.net <= 0) {
-          v = "Citlivé na trh"; note = "Base scénář vychází, ale downside (−7 %) už ne. Vyžadovalo by to nižší investici nebo opatrnější cenový plán.";
+          v = "Záleží na trhu"; note = "Při očekávané ceně to vychází, při opatrném odhadu (o 7 % níž) už ne. Chtělo by to levnější rekonstrukci nebo střízlivější cenu.";
         } else {
-          v = "Vypadá průchodně"; note = "Base i downside scénář vytvářejí hodnotu. Další krok je technický audit a nezávislé ocenění.";
+          v = "Vypadá to dobře"; note = "Vychází to i při opatrném odhadu. Další krok je prohlídka a nezávislý odhad ceny.";
         }
         out.verdict.textContent = v;
         if (out.verdictNote) out.verdictNote.textContent = note;
@@ -262,7 +262,7 @@
       [0.50, 'Hrubá stavba a obálka', 'Nosné prvky, střecha, okna'],
       [0.70, 'Instalace a interiér', 'Rozvody, povrchy, kuchyň, koupelny'],
       [0.88, 'Terén, terasa a bazén', 'Úpravy pozemku a exteriéru'],
-      [1.01, 'Připraveno k prodeji', 'Staging, fotografie, dokumentace'],
+      [1.01, 'Připraveno k prodeji', 'Příprava na prohlídky, fotografie, dokumentace'],
     ];
 
     var el = {

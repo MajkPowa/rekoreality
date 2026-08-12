@@ -742,6 +742,15 @@ body.nav-open .navsheet { opacity: 1; visibility: visible; transform: none; }
 /* Sloty v kartách nemovitostí kopírují výšku posteru */
 .propcard__media .house3d { line-height: 0; }
 
+/* 3D dům jako ilustrace uvnitř pastelového panelu */
+.gradpanel__house { position: relative; width: 100%; max-width: 460px; }
+.gradpanel__house .house3d__poster { width: 100%; height: auto; }
+
+/* 3D dům v hlavičce podstránky (na výšku) */
+.subhero__house { width: min(100%, 300px); margin-left: auto; }
+.subhero__house .house3d__poster { width: 100%; height: auto; }
+@media (max-width: 980px) { .subhero__house { margin-inline: 0; } }
+
 /* --------------------------------------------------------------------------
    9. Trust strip
    -------------------------------------------------------------------------- */
@@ -1456,6 +1465,7 @@ table.data .num { font-family: var(--font-display); font-weight: 500; letter-spa
    -------------------------------------------------------------------------- */
 .footer { padding: clamp(56px, 7vw, 92px) 0 34px; background: var(--bg); }
 .footer__grid { display: grid; grid-template-columns: 1.35fr repeat(3, 1fr); gap: 40px; }
+.footer__grid--slim { grid-template-columns: 1.5fr 1fr 1fr; }
 .footer__brand { display: flex; align-items: center; gap: 11px; }
 .footer__mark {
   display: grid;

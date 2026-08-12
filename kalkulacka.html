@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kalkulačka potenciálu — orientační scénář | REKOREALITY</title>
-<meta name="description" content="Spočítejte si orientační vypořádání: čistá vytvořená hodnota, podíl majitele 60 %, odměna REKOREALITY 40 % a prodejní minimum. Pak pošlete dům k nezávaznému posouzení.">
+<title>Spočítat, kolik z prodeje dostanete | REKOREALITY</title>
+<meta name="description" content="Posuňte posuvníky a uvidíte, kolik z prodeje domu dostanete vy a kolik my. Pak nám dům pošlete k posouzení zdarma.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14161a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5af3'/%3E%3Cpath d='M9 15l7-6 7 6v8a1 1 0 0 1-1 1h-4v-5h-4v5h-4a1 1 0 0 1-1-1z' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=2">
+<link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
 
@@ -19,7 +19,6 @@
   <div class="nav__inner">
     <nav class="nav__group">
       <a class="nav__link" href="index.html">Domů</a><span class="nav__dot"></span>
-      <a class="nav__link" href="jak-to-funguje.html">Jak to funguje</a><span class="nav__dot"></span>
       <a class="nav__link" href="pro-majitele.html">Pro majitele</a>
     </nav>
     <a class="nav__mark" href="index.html" aria-label="REKOREALITY — domů">
@@ -27,8 +26,7 @@
     </a>
     <nav class="nav__group">
       <a class="nav__link" href="pro-maklere.html">Pro makléře</a><span class="nav__dot"></span>
-      <a class="nav__link is-active" href="kalkulacka.html">Kalkulačka</a><span class="nav__dot"></span>
-      <a class="nav__link" href="faq.html">FAQ</a>
+      <a class="nav__link is-active" href="kalkulacka.html">Spočítat</a>
     </nav>
     <a class="btn btn--light nav__cta" href="#formular">Posoudit dům</a>
     <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -37,12 +35,11 @@
 
 <div class="navsheet" id="navsheet">
   <a href="index.html">Domů</a>
-  <a href="jak-to-funguje.html">Jak to funguje</a>
   <a href="pro-majitele.html">Pro majitele</a>
   <a href="pro-maklere.html">Pro makléře</a>
-  <a href="kalkulacka.html">Kalkulačka</a>
-  <a href="faq.html">FAQ</a>
-  <a class="btn btn--light" href="#formular">Nezávazně posoudit dům</a>
+  <a href="kalkulacka.html">Spočítat</a>
+  <a href="faq.html">Otázky</a>
+  <a class="btn btn--light" href="#formular">Posoudit dům zdarma</a>
 </div>
 
 <main class="page">
@@ -50,20 +47,14 @@
   <section class="subhero">
     <div class="shell subhero__inner">
       <div>
-        <div class="pill-row">
-          <span class="pill pill--mint">Kalkulačka</span>
-          <span class="pill pill--pink">Orientační</span>
-        </div>
-        <h1 class="display display--l">Podívejte se na <span class="ital">matematiku</span> dřív než na sliby</h1>
+        <div class="pill-row"><span class="pill pill--mint">Orientační propočet</span></div>
+        <h1 class="display display--l">Kolik z prodeje <span class="ital">dostanete</span></h1>
+        <p class="lead mt-s">Posuňte posuvníky podle svého domu. Uvidíte, kolik zbude vám a kolik nám — a taky pod jakou cenu se prodávat nevyplatí.</p>
         <div class="subhero__actions">
           <a class="btn btn--ink" href="#formular">Poslat dům k posouzení
             <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn--ghost" href="index.html#vypocet">Modelový příklad</a>
         </div>
-      </div>
-      <div>
-        <p class="lead">Nastavte čtyři vstupy a uvidíte, jak vychází vypořádací vzorec — včetně downside scénáře a ceny, pod kterou se nemovitost nemá prodávat. Výsledek je orientační: skutečný projekt vychází z nezávislého ocenění, technického auditu a schváleného rozpočtu.</p>
       </div>
     </div>
   </section>
@@ -72,76 +63,60 @@
   <section class="section shell">
     <div class="grid-2" id="calc">
       <div class="formcard reveal">
-        <h2 class="display display--s">Vstupy</h2>
-        <p class="body--tight" style="margin-top:8px">Odhady stačí. Kalkulačka slouží k rychlému ověření, zda má smysl pokračovat.</p>
+        <h2 class="display display--s">Vaše čísla</h2>
+        <p class="body--tight" style="margin-top:8px">Odhady stačí. Přesně to spočítáme až na místě.</p>
 
         <div class="field mt-m">
-          <div class="range-head"><label for="in-base">Dnešní hodnota domu „jak stojí a leží“</label><b id="lbl-base">6 500 000 Kč</b></div>
+          <div class="range-head"><label for="in-base">Co dům stojí dnes</label><b id="lbl-base">6 500 000 Kč</b></div>
           <input class="range" id="in-base" type="range" min="1500" max="25000" step="50" value="6500">
-          <span class="hint">Ve skutečném projektu určuje nezávislý odhad doplněný srovnatelnými prodeji.</span>
+          <span class="hint">Tak, jak stojí a leží — bez oprav.</span>
         </div>
 
         <div class="field">
-          <div class="range-head"><label for="in-invest">Předpokládaná investice do rekonstrukce</label><b id="lbl-invest">1 500 000 Kč</b></div>
+          <div class="range-head"><label for="in-invest">Kolik se prostaví</label><b id="lbl-invest">1 500 000 Kč</b></div>
           <input class="range" id="in-invest" type="range" min="200" max="6000" step="50" value="1500">
-          <span class="hint">Včetně rezervy 10–15 % a projektového řízení. Ve smlouvě má strop.</span>
+          <span class="hint">Platíme my. Ve smlouvě má tahle částka strop.</span>
         </div>
 
         <div class="field">
-          <div class="range-head"><label for="in-price">Očekávaná cena po rekonstrukci</label><b id="lbl-price">9 500 000 Kč</b></div>
+          <div class="range-head"><label for="in-price">Za kolik se prodá po opravě</label><b id="lbl-price">9 500 000 Kč</b></div>
           <input class="range" id="in-price" type="range" min="1500" max="35000" step="50" value="9500">
-          <span class="hint">Buďte konzervativní. Downside scénář počítáme jako −7 % z této částky.</span>
+          <span class="hint">Raději střízlivě. Opatrný odhad počítáme o 7 % níž.</span>
         </div>
 
         <div class="field">
-          <div class="range-head"><label for="in-fee">Externí náklady prodeje</label><b id="lbl-fee">3,7 %</b></div>
+          <div class="range-head"><label for="in-fee">Náklady na prodej</label><b id="lbl-fee">3,7 %</b></div>
           <input class="range" id="in-fee" type="range" min="1" max="7" step="0.1" value="3.7">
-          <span class="hint">Provize makléře, právní úschova a marketing — dle skutečnosti.</span>
-        </div>
-
-        <div class="callout callout--dark mt-s">
-          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-          <div>
-            <p class="callout__label">Vzorec</p>
-            <p class="callout__text">Čistá vytvořená hodnota = kupní cena − výchozí hodnota − investice − externí náklady prodeje. Majitel: výchozí hodnota + 60 %. REKOREALITY: návrat investice + 40 %.</p>
-          </div>
+          <span class="hint">Makléř, právník, inzerce.</span>
         </div>
       </div>
 
       <div class="reveal" data-d="1">
         <div class="result-panel">
-          <div class="pill-row"><span class="pill pill--white" id="out-verdict">Vypadá průchodně</span></div>
+          <div class="pill-row"><span class="pill pill--white" id="out-verdict">Vypadá to dobře</span></div>
 
           <div class="result-hero mt-s">
-            <small>Majiteli celkem (base scénář)</small>
+            <small>Dostanete celkem</small>
             <strong id="out-ownerTotal">7 190 000 Kč</strong>
-            <p class="small" id="out-verdictNote" style="margin-top:8px">Base i downside scénář vytvářejí hodnotu. Další krok je technický audit a nezávislé ocenění.</p>
+            <p class="small" id="out-verdictNote" style="margin-top:8px">Vychází to i při opatrném odhadu. Další krok je prohlídka a nezávislý odhad ceny.</p>
           </div>
 
           <div class="mt-s">
-            <div class="result-row"><span>Externí náklady prodeje</span><b id="out-fees">351 500 Kč</b></div>
-            <div class="result-row"><span>Čistá vytvořená hodnota</span><b id="out-netto">1 148 500 Kč</b></div>
-            <div class="result-row"><span>Podíl majitele 60 %</span><b id="out-ownerShare">689 100 Kč</b></div>
-            <div class="result-row"><span>Podíl REKOREALITY 40 %</span><b id="out-rekoShare">459 400 Kč</b></div>
-            <div class="result-row"><span>Prodejní minimum (nulová hodnota)</span><b id="out-breakeven">8 307 373 Kč</b></div>
+            <div class="result-row"><span>Náklady na prodej</span><b id="out-fees">351 500 Kč</b></div>
+            <div class="result-row"><span>Hodnota navíc</span><b id="out-netto">1 148 500 Kč</b></div>
+            <div class="result-row"><span>Z toho vám (60 %)</span><b id="out-ownerShare">689 100 Kč</b></div>
+            <div class="result-row"><span>Z toho nám (40 %)</span><b id="out-rekoShare">459 400 Kč</b></div>
+            <div class="result-row"><span>Pod tuhle cenu neprodávat</span><b id="out-breakeven">8 307 373 Kč</b></div>
           </div>
 
           <div class="scenarios">
-            <div class="scenario"><small>Downside −7 %</small><b id="out-scDown">—</b><span>majiteli celkem</span></div>
-            <div class="scenario"><small>Base</small><b id="out-scBase">—</b><span>majiteli celkem</span></div>
-            <div class="scenario"><small>Upside +5 %</small><b id="out-scUp">—</b><span>majiteli celkem</span></div>
+            <div class="scenario"><small>Opatrný odhad</small><b id="out-scDown">—</b><span>dostanete</span></div>
+            <div class="scenario"><small>Očekávaný</small><b id="out-scBase">—</b><span>dostanete</span></div>
+            <div class="scenario"><small>Optimistický</small><b id="out-scUp">—</b><span>dostanete</span></div>
           </div>
         </div>
 
-        <div class="plaincard mt-s">
-          <h3>Jak číst výsledek</h3>
-          <ul class="checklist mt-s">
-            <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Pokud <b>čistá vytvořená hodnota vyjde nulová nebo záporná</b>, REKOREALITY nemá nárok na podíl ze zisku a projekt by nezačal.</span></li>
-            <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Pilotní hranice je <b>800 000 Kč konzervativní čisté hodnoty</b>. Pod ní jde projekt do individuálního posouzení.</span></li>
-            <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.4 4.8 8.7 9.5 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Prodejní minimum</b> je cena, pod kterou se nemovitost bez nového písemného souhlasu obou stran neprodává.</span></li>
-          </ul>
-          <p class="small mt-s">Kalkulačka nezohledňuje daně, existující dluhy, poplatky katastru ani individuální náklady. Nejde o nabídku financování ani daňové poradenství.</p>
-        </div>
+        <p class="small mt-s">Orientační výpočet. Nepočítá s daněmi, hypotékou ani poplatky katastru. Když rekonstrukce žádnou hodnotu navíc nevytvoří, nemáme nárok na podíl.</p>
       </div>
     </div>
   </section>
@@ -149,145 +124,114 @@
   <!-- FORMULÁŘ -->
   <section class="section section--flush-top shell shell--tight" id="formular">
     <div class="sechead sechead--center reveal">
-      <div class="pill-row"><span class="pill pill--peach">Vstupní posouzení</span></div>
-      <h2 class="display display--l">Pošlete dům <span class="ital">k posouzení</span></h2>
-      <p class="lead">Adresu používáme jen k posouzení lokality. Údaje o vlastnictví potřebujeme pro předběžnou průchodnost, nikoli pro veřejné hodnocení.</p>
+      <h2 class="display display--l">Pošlete nám <span class="ital">svůj dům</span></h2>
+      <p class="lead">Sedm políček. Do dvou pracovních dnů vám napíšeme, jestli to má smysl.</p>
     </div>
 
     <form class="formcard reveal" data-demo-form="ownerDone" novalidate>
-      <h3 class="display display--s">1 — Nemovitost</h3>
-      <div class="field-row mt-s">
-        <div class="field"><label for="f-city">Obec</label><input id="f-city" type="text" placeholder="Brno-venkov" required></div>
-        <div class="field"><label for="f-street">Ulice a č. p.</label><input id="f-street" type="text" placeholder="Nezadávejte, pokud nechcete"></div>
-      </div>
       <div class="field-row">
         <div class="field">
-          <label for="f-type">Typ domu</label>
-          <select id="f-type"><option>Rodinný dům samostatný</option><option>Řadový dům</option><option>Dvojdomek</option><option>Bungalov</option><option>Jiné</option></select>
+          <label for="f-city">Kde dům je</label>
+          <input id="f-city" type="text" placeholder="Obec nebo město" required>
+          <span class="hint">Přesnou adresu zatím nepotřebujeme.</span>
         </div>
-        <div class="field"><label for="f-area">Užitná plocha / pozemek (m²)</label><input id="f-area" type="text" placeholder="180 / 800"></div>
+        <div class="field">
+          <label for="f-state">V jakém je stavu</label>
+          <select id="f-state">
+            <option>Původní, nic se nedělalo</option>
+            <option>Něco se opravilo, jádro je původní</option>
+            <option>Průběžně udržovaný</option>
+            <option>Nevím přesně</option>
+          </select>
+        </div>
       </div>
 
-      <h3 class="display display--s mt-m">2 — Stav</h3>
-      <div class="field-row mt-s">
-        <div class="field"><label for="f-year">Rok výstavby</label><input id="f-year" type="text" inputmode="numeric" placeholder="1978"></div>
-        <div class="field"><label for="f-last">Poslední rekonstrukce</label><input id="f-last" type="text" placeholder="Střecha 2011, jinak původní"></div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-owners">Komu dům patří</label>
+          <select id="f-owners">
+            <option>Jenom mně</option>
+            <option>Mně a partnerovi</option>
+            <option>Více lidem, shodneme se</option>
+            <option>Dědictví ještě není dořešené</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-debt">Je na domě hypotéka?</label>
+          <select id="f-debt">
+            <option>Ne</option>
+            <option>Ano, menší část hodnoty</option>
+            <option>Ano, velká část hodnoty</option>
+            <option>Je na něm exekuce</option>
+            <option>Nevím</option>
+          </select>
+        </div>
       </div>
+
       <div class="field">
-        <label for="f-issues">Známé technické problémy</label>
-        <textarea id="f-issues" placeholder="Vlhkost v suterénu, původní rozvody, okna…"></textarea>
-        <span class="hint">Nevadí, pokud přesné údaje neznáte.</span>
+        <label for="f-photos">Fotky domu</label>
+        <input id="f-photos" type="text" placeholder="Odkaz na fotky, nebo nechte prázdné">
+        <span class="hint">Stačí pár fotek z mobilu — zvenku, kuchyň, koupelna. Můžete je poslat i později.</span>
       </div>
 
-      <h3 class="display display--s mt-m">3 — Fotografie</h3>
-      <div class="field mt-s">
-        <label for="f-photos">Exteriér, kuchyň, koupelna, technické části</label>
-        <input id="f-photos" type="text" placeholder="Odkaz na sdílenou složku nebo galerii">
-        <span class="hint">Stačí fotografie z telefonu. V ostré verzi zde bude nahrávání souborů (max. 20 položek).</span>
-      </div>
-
-      <h3 class="display display--s mt-m">4 — Vlastnictví</h3>
-      <div class="field-row mt-s">
-        <div class="field">
-          <label for="f-owners">Počet vlastníků</label>
-          <select id="f-owners"><option>1</option><option>2</option><option>3 a více</option><option>Nevyřešené dědictví</option></select>
-        </div>
-        <div class="field">
-          <label for="f-debt">Hypotéka nebo zástavy</label>
-          <select id="f-debt"><option>Žádné</option><option>Hypotéka do 30 % hodnoty</option><option>Hypotéka nad 30 % hodnoty</option><option>Exekuce / insolvence</option><option>Nevím</option></select>
-        </div>
-      </div>
-
-      <h3 class="display display--s mt-m">5 — Cíl</h3>
-      <div class="field-row mt-s">
-        <div class="field">
-          <label for="f-when">Kdy chcete prodat</label>
-          <select id="f-when"><option>Do 6 měsíců</option><option>Do 12 měsíců</option><option>Do 2 let</option><option>Zatím jen zjišťuji</option></select>
-        </div>
-        <div class="field"><label for="f-expect">Očekávaná cena (Kč)</label><input id="f-expect" type="text" inputmode="numeric" placeholder="9 000 000"></div>
-      </div>
-      <div class="field">
-        <label for="f-broker">Máte makléře?</label>
-        <input id="f-broker" type="text" placeholder="Jméno a kancelář — můžeme spolupracovat s ním">
-      </div>
-
-      <h3 class="display display--s mt-m">6 — Kontakt</h3>
-      <div class="field-row mt-s">
+      <div class="field-row">
         <div class="field"><label for="f-name">Jméno</label><input id="f-name" type="text" placeholder="Jana Nováková" required></div>
-        <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" type="tel" placeholder="+420 …"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="f-email">E-mail</label><input id="f-email" type="email" placeholder="jana@email.cz" required></div>
-        <div class="field">
-          <label for="f-time">Preferovaný čas kontaktu</label>
-          <select id="f-time"><option>Kdykoli</option><option>Dopoledne</option><option>Odpoledne</option><option>Po 18:00</option></select>
-        </div>
+        <div class="field"><label for="f-contact">E-mail nebo telefon</label><input id="f-contact" type="text" placeholder="jana@email.cz" required></div>
       </div>
 
-      <label class="consent mt-s"><input type="checkbox" required><span>Souhlasím se zpracováním údajů pro vyřízení této poptávky.</span></label>
-      <label class="consent"><input type="checkbox"><span>Souhlasím s předáním údajů partnerskému makléři v mé lokalitě.</span></label>
-      <label class="consent"><input type="checkbox"><span>Chci dostávat novinky a průvodce prodejem. (Volitelné, lze kdykoli odvolat.)</span></label>
+      <label class="consent mt-s"><input type="checkbox" required><span>Souhlasím, abyste moje údaje použili k vyřízení téhle poptávky.</span></label>
+      <label class="consent"><input type="checkbox"><span>Můžete mi posílat novinky. (Nepovinné, kdykoli se dá odhlásit.)</span></label>
 
-      <button class="btn btn--ink btn--wide mt-s" type="submit">Odeslat k nezávaznému posouzení
+      <button class="btn btn--ink btn--wide mt-s" type="submit">Odeslat
         <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="small mt-s">Prototyp: formulář se neodesílá na server a žádná data se neukládají.</p>
+      <p class="small mt-s">Zkušební verze — formulář se nikam neodesílá a nic se neukládá.</p>
     </form>
 
     <div class="ctablock hide" id="ownerDone">
       <span class="pill pill--mint">Přijato</span>
-      <h2 class="display display--m mt-s balance">Děkujeme. Teď prověříme, zda čísla <span class="ital">dávají smysl.</span></h2>
-      <p class="lead">Do 2 pracovních dnů vám pošleme předběžný výsledek: „má potenciál“, „potřebujeme doplnit“ nebo „pro náš model není vhodné“. Ozve se konkrétní specialista, ne call centrum.</p>
-      <p class="ctablock__note">Vstupní posouzení není nabídka financování ani závazek uzavřít smlouvu.</p>
+      <h2 class="display display--m mt-s balance">Díky. Teď se na to <span class="ital">podíváme.</span></h2>
+      <p class="lead">Do dvou pracovních dnů vám napíšeme jednu ze tří věcí: má to smysl, potřebujeme doplnit, nebo pro nás dům není vhodný. Ozve se konkrétní člověk, ne call centrum.</p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="shell">
-      <div class="footer__grid">
+      <div class="footer__grid footer__grid--slim">
         <div>
           <div class="footer__brand">
             <span class="footer__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.2 12 4.6l8 6.6V19a1.4 1.4 0 0 1-1.4 1.4h-4.1V14h-5v6.4H5.4A1.4 1.4 0 0 1 4 19z" fill="#fff"/></svg></span>
             <span class="footer__word">reko<em>reality</em></span>
           </div>
-          <p class="footer__tag">Neprodávejte dům tak, jak je. Prodejte jeho skutečný potenciál.</p>
+          <p class="footer__tag">Rekonstrukci zaplatíme my. Dům zůstává váš.</p>
           <div class="footer__social">
             <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.7 21H1.5l7.5-8.6L1.2 3h6.6l4.5 5.6zm-1.1 16h1.8L7.7 4.8H5.8z"/></svg></a>
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.6V3.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V13h2.7v8z"/></svg></a>
           </div>
         </div>
-        <div class="footer__col"><h4>Služba</h4><ul>
-          <li><a href="jak-to-funguje.html">Jak to funguje</a></li>
-          <li><a href="kalkulacka.html">Kalkulačka potenciálu</a></li>
-          <li><a href="index.html#vypocet">Modelový výpočet</a></li>
-          <li><a href="index.html#zastava">Co znamená zástava</a></li>
-          <li><a href="jak-to-funguje.html#kriteria">Vstupní kritéria</a></li>
+        <div class="footer__col"><h4>Pro vás</h4><ul>
+          <li><a href="pro-majitele.html">Pro majitele domu</a></li>
+          <li><a href="pro-maklere.html">Pro makléře</a></li>
+          <li><a href="kalkulacka.html">Spočítat a poslat dům</a></li>
+          <li><a href="faq.html">Otázky a odpovědi</a></li>
         </ul></div>
-        <div class="footer__col"><h4>Pro koho</h4><ul>
-          <li><a href="pro-majitele.html">Majitelé domů</a></li>
-          <li><a href="pro-majitele.html#dedictvi">Zděděné nemovitosti</a></li>
-          <li><a href="pro-maklere.html">Realitní makléři</a></li>
-          <li><a href="pro-maklere.html#odmena">Partnerská odměna</a></li>
-          <li><a href="faq.html">Časté otázky</a></li>
-        </ul></div>
-        <div class="footer__col"><h4>Firma</h4><ul>
-          <li><a href="jak-to-funguje.html#dokumenty">Smluvní dokumenty</a></li>
-          <li><a href="jak-to-funguje.html#pravni">Právní rámec</a></li>
-          <li><a href="faq.html#dane">Daňové dopady</a></li>
-          <li><a href="kalkulacka.html#formular">Kontakt</a></li>
-          <li><a href="faq.html">Reklamační proces</a></li>
+        <div class="footer__col"><h4>Podrobnosti</h4><ul>
+          <li><a href="pro-majitele.html#krok-za-krokem">Krok za krokem</a></li>
+          <li><a href="pro-majitele.html#zastava">Co je zástava</a></li>
+          <li><a href="pro-majitele.html#kdy-ne">Kdy dům nebereme</a></li>
+          <li><a href="jak-to-funguje.html">Celý proces a právní rámec</a></li>
         </ul></div>
       </div>
       <div class="footer__bar">
-        <nav><a href="#">Podmínky užití</a><a href="#">Ochrana osobních údajů</a><a href="#">Cookies</a></nav>
-        <span>© 2026 REKOREALITY. Všechna práva vyhrazena.</span>
+        <nav><a href="#">Podmínky</a><a href="#">Osobní údaje</a><a href="#">Cookies</a></nav>
+        <span>© 2026 REKOREALITY</span>
       </div>
-      <p class="disclaimer">Tento web je koncepční prototyp. Obsahuje modelové výpočty, nikoli nabídku financování, závazek uzavřít smlouvu ani právní, daňové či investiční poradenství.</p>
+      <p class="disclaimer">Tento web je zkušební verze. Čísla na něm jsou modelová, nejde o nabídku financování ani o právní či daňové poradenství. Skutečné podmínky vždy určuje podepsaná smlouva.</p>
     </div>
   </footer>
 </main>
 
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=3"></script>
 </body>
 </html>

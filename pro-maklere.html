@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pro makléře — partnerství místo další slevy | REKOREALITY</title>
-<meta name="description" content="Klient i prodej zůstávají vám. REKOREALITY dodá kapitál, technické posouzení a kompletní realizaci rekonstrukce. Odměna za doporučení odměna splatná po vyrovnání.">
+<meta name="description" content="Klient i prodej zůstávají vám. REKOREALITY dodá kapitál, technické posouzení a kompletní realizaci rekonstrukce. Odměnu za doporučení vyplácíme až po prodeji.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14161a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5af3'/%3E%3Cpath d='M9 15l7-6 7 6v8a1 1 0 0 1-1 1h-4v-5h-4v5h-4a1 1 0 0 1-1-1z' fill='white'/%3E%3C/svg%3E">
@@ -12,6 +12,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css?v=3">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.1/build/three.module.js"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -60,7 +67,10 @@
         </div>
       </div>
       <div>
-        <p class="lead">Máte kvalitní zakázku, kterou brzdí stav domu? Vy si ponecháte klienta, exkluzivní prodej i svou provizi. REKOREALITY dodá kapitál, technické posouzení a kompletní realizaci rekonstrukce. Společně připravíme dům pro širší okruh kupujících.</p>
+        <div class="house3d subhero__house" data-house="cube">
+          <canvas class="house3d__canvas"></canvas>
+          <img class="house3d__poster" src="assets/img/dream-house.svg" alt="Dům připravený k prodeji" width="900" height="620" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
@@ -75,27 +85,27 @@
     <div class="grid-2">
       <article class="plaincard reveal">
         <h3>Klienta vám nebereme</h3>
-        <p class="body">Bez vašeho vědomí s majitelem neuzavíráme zprostředkování prodeje ani nepřebíráme prodej. Vztah se nastavuje trojstranně.</p>
+        <p class="body">Bez vašeho vědomí s majitelem nic nepodepisujeme a prodej nepřebíráme. Smlouva se uzavírá trojstranně.</p>
       </article>
       <article class="plaincard reveal" data-d="1">
         <h3>Provizi si chráníte</h3>
-        <p class="body">Stávající zprostředkovatelská smlouva a její zákonné limity se respektují. Model spolupráce k ní přistupuje, nenahrazuje ji.</p>
+        <p class="body">Vaše smlouva s klientem platí dál. Naše spolupráce se k ní přidává, nenahrazuje ji.</p>
       </article>
       <article class="plaincard reveal" data-d="2">
         <h3>Technickou část přebíráme</h3>
-        <p class="body">Audit, rozpočet, dodavatelé, kontrola kvality i týdenní report jsou na našem týmu. Nepřidáváme vám projektové řízení.</p>
+        <p class="body">Prohlídka, rozpočet, řemeslníci, kontrola i týdenní hlášení jsou na nás. Žádnou stavbu řídit nebudete.</p>
       </article>
       <article class="plaincard reveal" data-d="3">
         <h3>Odměna je transparentní</h3>
-        <p class="body">Odměna za doporučení je předem sjednaný, zveřejněný klientovi tam, kde to vyžaduje zákon nebo důvěra, a splatný až po úspěšném vyrovnání.</p>
+        <p class="body">Odměnu za doporučení sjednáme předem. Klientovi ji řekneme tam, kde to vyžaduje zákon nebo obyčejná slušnost, a vyplácíme ji až po prodeji.</p>
       </article>
     </div>
   </section>
 
-  <!-- PROCES SE Do kdy -->
+  <!-- PROCES A TERMÍNY -->
   <section class="section section--flush-top shell">
     <div class="sechead reveal">
-      <div><h2 class="display display--m sechead__title">Šest kroků a jasné <span class="ital">Do kdy</span></h2></div>
+      <div><h2 class="display display--m sechead__title">Šest kroků a jasné <span class="ital">termíny</span></h2></div>
       <div class="sechead__aside"><p class="body">Vy zůstáváte tváří obchodu. My držíme termíny, čísla a stavbu.</p></div>
     </div>
 
@@ -104,11 +114,11 @@
         <table class="data">
           <thead><tr><th>Krok</th><th>Co udělá makléř</th><th>Co udělá REKOREALITY</th><th>Do kdy</th></tr></thead>
           <tbody>
-            <tr><td>1. Lead</td><td>Odkaz, list vlastnictví, fotografie, očekávání</td><td>Potvrdí přijetí a úplnost dat</td><td>1 pracovní den</td></tr>
-            <tr><td>2. První posouzení</td><td>Doplní kontext a klienta</td><td>Trh, vlastnictví, ekonomika, stop faktory</td><td>Do 48 hodin</td></tr>
+            <tr><td>1. Poptávka</td><td>Odkaz, list vlastnictví, fotografie, očekávání</td><td>Potvrdí přijetí a úplnost dat</td><td>1 pracovní den</td></tr>
+            <tr><td>2. První posouzení</td><td>Doplní kontext a klienta</td><td>Trh, vlastnictví, ekonomika, co by projekt zastavilo</td><td>Do 48 hodin</td></tr>
             <tr><td>3. Návrh</td><td>Společná schůzka s klientem</td><td>Audit, odhady, rozpočet, scénáře</td><td>7–10 dnů</td></tr>
             <tr><td>4. Realizace</td><td>Průběžně zná stav</td><td>Kompletní řízení a report</td><td>Dle harmonogramu</td></tr>
-            <tr><td>5. Prodej</td><td>Řídí inzerci a kupující</td><td>Dodá dokumentaci, příprava na prohlídky a součinnost</td><td>Společný plán</td></tr>
+            <tr><td>5. Prodej</td><td>Řídí inzerci a kupující</td><td>Dodá dokumentaci a připraví dům na prohlídky</td><td>Společný plán</td></tr>
             <tr><td>6. Vyrovnání</td><td>Uzavře transakci</td><td>Vyúčtování, odměna za doporučení, výmaz zástavy</td><td>Z úschovy</td></tr>
           </tbody>
         </table>
@@ -124,9 +134,9 @@
     </div>
 
     <div class="grid-3">
-      <article class="plaincard reveal"><h3>Kalkulačka projektu</h3><p class="body--tight">Jednotný vzorec, opatrný odhad a export jednostránkového PDF pro klienta.</p></article>
+      <article class="plaincard reveal"><h3>Kalkulačka projektu</h3><p class="body--tight">Jeden výpočet, opatrná varianta a jednostránkové PDF pro klienta.</p></article>
       <article class="plaincard reveal" data-d="1"><h3>Prezentace s vaším logem</h3><p class="body--tight">Podklad pro schůzku s majitelem s vaším logem i naším procesem.</p></article>
-      <article class="plaincard reveal" data-d="2"><h3>Stav leadu online</h3><p class="body--tight">Checklist chybějících dokumentů, termíny a odpovědné osoby.</p></article>
+      <article class="plaincard reveal" data-d="2"><h3>Stav poptávky online</h3><p class="body--tight">Checklist chybějících dokumentů, termíny a odpovědné osoby.</p></article>
       <article class="plaincard reveal"><h3>Týdenní report</h3><p class="body--tight">Rozpočet plán/skutečnost, fotografie z kontrolních dnů a rizika.</p></article>
       <article class="plaincard reveal" data-d="1"><h3>Balíček pro kupující</h3><p class="body--tight">Co bylo opraveno, kým, kdy a s jakou zárukou — argument do prohlídky.</p></article>
       <article class="plaincard reveal" data-d="2"><h3>Školení</h3><p class="body--tight">„Jak poznat vhodnou dům do 15 minut“ — první posouzeníing v praxi.</p></article>
@@ -278,5 +288,6 @@
 
 <a class="btn btn--ink sticky-cta" id="stickyCta" href="#intake">Předat dům</a>
 <script src="assets/js/main.js?v=3"></script>
+<script type="module" src="assets/js/houses3d.js"></script>
 </body>
 </html>

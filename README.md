@@ -76,13 +76,14 @@ Model se vykreslí až po prvním úspěšném snímku (`.is-live`).
 
 | Klíč | Slot | Meshů | Obsah |
 |---|---|---|---|
-| `villa` | hero | 151 | simulace před → po (viz níže) |
+| `villa` | hero | 151 | simulace před → po (běží ve smyčce) |
+| `novak` | příběh | 125 | zděděný dům pana Nováka, před → po, přehrává se na tlačítko |
 | `gable` | karta 1 | 113 | zděděný dům se sedlovou střechou, garáž, komín, anténa |
 | `poolvilla` | karta 2 | 103 | moderní vila s bazénem, dřevo + beton |
 | `bungalow` | karta 3 | 75 | přízemní bungalov s markýzou a živým plotem |
 | `townvilla` | karta 4 | 114 | městská vila, cihlový sokl, kus ulice se stromořadím |
-| `cube` | showcase | 86 | kubická vila s vodním prvkem |
-| `aerial` | bento | 105 | ptačí pohled na pět domů, cesty, bazény, solární panely |
+| `cube` | pro makléře | 86 | kubická vila s vodním prvkem |
+| `aerial` | pro majitele | 105 | ptačí pohled na pět domů, cesty, bazény, solární panely |
 
 Nový model = přidat `build…(THREE, M, U)` do `houses3d.models.js` a zaregistrovat
 ho v `MODELS` s `view` a `radius`. Kompozici lze ladit bez screenshotů:
@@ -91,6 +92,21 @@ ho v `MODELS` s `view` a `radius`. Kompozici lze ladit bez screenshotů:
 const p = await import('/dev/preview.mjs');
 await p.preview('cube', { aspect: 900/620, cols: 60, rows: 16 });
 ```
+
+### Jedna sada čísel pro celý web
+
+Hero, příběh pana Nováka i výchozí nastavení kalkulačky pracují se **stejným
+příkladem**: dům za 3 800 000 Kč, rekonstrukce za 900 000 Kč, prodej za 6 000 000 Kč,
+hodnota navíc 1 078 000 Kč, majiteli zůstane 4 446 800 Kč. Kdyby se čísla měnila,
+mění se na třech místech: `main.js` (konstanty `V0/V1/INVEST` a sekce příběhu),
+`kalkulacka.html` (výchozí hodnoty posuvníků) a `index.html` (dlaždice příběhu).
+
+### Příběh pana Nováka
+
+Modelová ukázka v sekci `#pribeh` je 3D scéna ovládaná jako video: tlačítko přehrát,
+posuvník, titulky v šesti kapitolách a čtyři čísla, která se rozsvěcují podle toho,
+kam příběh došel. Na rozdíl od hera se přehraje jednou a zůstane stát na konci
+(`loop: false`, `autoplay: false`, `duration: 13`).
 
 ### Simulace „před → po" v hero
 
@@ -105,11 +121,11 @@ Při `prefers-reduced-motion` se rovnou zobrazí hotový stav a nic se nehýbe.
 
 Obě skleněné karty jsou na simulaci navázané (`house3d:progress`):
 
-| Postup | Hodnota | Investice | Vytvořená hodnota |
+| Postup | Hodnota | Investice | Hodnota navíc |
 |---|---|---|---|
-| 0 % | 6 500 000 Kč | 0 Kč | 0 Kč |
-| 50 % | 8 000 000 Kč | 750 000 Kč | 458 500 Kč |
-| 100 % | 9 500 000 Kč | 1 500 000 Kč | 1 148 500 Kč |
+| 0 % | 3 800 000 Kč | 0 Kč | 0 Kč |
+| 50 % | 4 900 000 Kč | 450 000 Kč | 468 700 Kč |
+| 100 % | 6 000 000 Kč | 900 000 Kč | 1 078 000 Kč |
 
 Čísla používají stejný vzorec jako kalkulačka (externí náklady 3,7 % z ceny), takže
 hero a `kalkulacka.html` nemohou ukázat rozdílný výsledek. Karta je označená

@@ -117,7 +117,7 @@
             <span>Cena domu</span>
             <span class="glasscard__tag">Příklad</span>
           </div>
-          <p class="value__num"><span id="simValue">6 500 000</span> Kč</p>
+          <p class="value__num"><span id="simValue">3 800 000</span> Kč</p>
           <div class="value__delta">
             <b id="simDelta">+0 Kč</b><span>oproti dnešku</span>
           </div>
@@ -169,87 +169,97 @@
     </div>
   </div>
 
-  <!-- ==================== 2. JAK TO FUNGUJE ==================== -->
-  <section class="section shell" id="jak">
+  <!-- ==================== 2. POSTUP ==================== -->
+  <section class="section shell" id="postup">
     <div class="sechead sechead--center reveal">
-      <h2 class="display display--l">Tři kroky, <span class="ital">nic víc</span></h2>
+      <h2 class="display display--l">Jak to <span class="ital">probíhá</span></h2>
+      <p class="lead">Pět kroků. První čtyři jsou zdarma a k ničemu vás nezavazují — rozhodujete se až nad hotovými čísly.</p>
     </div>
 
-    <div class="splitcard reveal">
-      <div class="steplist">
-        <article class="step">
-          <div class="step__top"><span class="step__num">01</span><h3 class="step__title">Spočítáme to</h3></div>
-          <p class="step__body">Přijedeme se na dům podívat. Řekneme vám, co má cenu opravit, kolik to bude stát a za kolik se dům dá prodat. Zdarma.</p>
-        </article>
-
-        <article class="step step--dark">
-          <div class="step__top">
-            <span class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V8l7-5 7 5v13M10 21v-6h4v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 class="step__title">Zaplatíme a opravíme</h3>
-          </div>
-          <p class="step__body">Rekonstrukci platíme my. Sháníme řemeslníky, hlídáme rozpočet i termíny a jednou týdně vám pošleme, jak to jde. Vy jste pořád vlastník.</p>
-        </article>
-
-        <article class="step">
-          <div class="step__top"><span class="step__num">03</span><h3 class="step__title">Prodáte a rozdělíme se</h3></div>
-          <p class="step__body">Z prodejní ceny se nám vrátí, co jsme zaplatili. Zbytek, který rekonstrukce navíc vytvořila, si dělíme — 60 % vám, 40 % nám.</p>
-        </article>
-      </div>
-
-      <div class="gradpanel">
-        <div class="house3d gradpanel__house" data-house="cube">
-          <canvas class="house3d__canvas"></canvas>
-          <img class="house3d__poster" src="assets/img/dream-house.svg" alt="Dům připravený k prodeji" width="900" height="620" loading="lazy">
-        </div>
-      </div>
+    <div class="flow flow--5 reveal">
+      <article class="flow__item">
+        <span class="flow__num">1</span>
+        <h3>Přijede poradce</h3>
+        <p>Domluvíme termín a projdeme dům spolu s vámi. Nic si předem nepřipravujte.</p>
+      </article>
+      <article class="flow__item">
+        <span class="flow__num">2</span>
+        <h3>Oceníme stav a cenu</h3>
+        <p>Zjistíme, v jakém dům je a co má cenu dnes — tak, jak stojí a leží.</p>
+      </article>
+      <article class="flow__item">
+        <span class="flow__num">3</span>
+        <h3>Rozpočet a vizualizace</h3>
+        <p>Spočítáme, co se opraví a za kolik. A ukážeme vám, jak bude dům po rekonstrukci vypadat.</p>
+      </article>
+      <article class="flow__item">
+        <span class="flow__num">4</span>
+        <h3>Oceníme budoucí stav</h3>
+        <p>Kolik bude dům stát po opravě. Teprve nad těmito čísly se rozhodujete, jestli do toho jdete.</p>
+      </article>
+      <article class="flow__item">
+        <span class="flow__num">5</span>
+        <h3>Opravíme a prodáme</h3>
+        <p>Vyklidíme, zrekonstruujeme a prodáme za nejvyšší možnou cenu. Placeno až z prodeje.</p>
+      </article>
     </div>
   </section>
 
-  <!-- ==================== 3. KOLIK Z TOHO MÁTE ==================== -->
-  <section class="section section--flush-top shell" id="penize">
+  <!-- ==================== 3. PŘÍBĚH PANA NOVÁKA ==================== -->
+  <section class="section section--flush-top shell" id="pribeh">
     <div class="sechead sechead--center reveal">
-      <h2 class="display display--l">Kolik z toho <span class="ital">máte vy</span></h2>
-      <p class="lead">Příklad domu za šest a půl milionu. Vaše čísla budou jiná — spočítáme je při první schůzce.</p>
+      <div class="pill-row"><span class="pill pill--peach">Modelová ukázka</span></div>
+      <h2 class="display display--l">Příběh pana <span class="ital">Nováka</span></h2>
     </div>
 
-    <div class="kpis reveal">
-      <div class="kpi">
-        <p class="kpi__label">Dům má dnes cenu</p>
-        <p class="kpi__value">6 500 000</p>
-        <p class="kpi__note">Odhad od nezávislého odhadce</p>
+    <div class="story reveal">
+      <div class="story__stage" id="storyStage">
+        <div class="house3d story__house" data-house="novak">
+          <canvas class="house3d__canvas"></canvas>
+          <img class="house3d__poster" src="assets/img/prop-1.svg" alt="Dům pana Nováka" width="800" height="520" loading="lazy">
+        </div>
+
+        <button class="story__big" id="storyBig" type="button" aria-label="Přehrát ukázku">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2 18.5 12 8 18.8z" fill="currentColor"/></svg>
+        </button>
+
+        <div class="story__cap">
+          <span class="story__step" id="storyStep">1 / 6</span>
+          <p id="storyText">Pan Novák zdědil dům po rodičích. Roky v něm nikdo nebydlel.</p>
+        </div>
+
+        <div class="story__ctrl">
+          <button class="simbar__btn" id="storyPlay" type="button" aria-label="Přehrát">
+            <svg class="simbar__ico simbar__ico--pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="3" height="10" rx="1"/><rect x="9" y="3" width="3" height="10" rx="1"/></svg>
+            <svg class="simbar__ico simbar__ico--play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2 12.5 8 5 12.8z"/></svg>
+          </button>
+          <input id="storyRange" class="simbar__range" type="range" min="0" max="1000" value="0" step="1" aria-label="Průběh ukázky">
+        </div>
       </div>
-      <div class="kpi">
-        <p class="kpi__label">Rekonstrukci platíme my</p>
-        <p class="kpi__value">1 500 000</p>
-        <p class="kpi__note">Vy nedáváte nic</p>
-      </div>
-      <div class="kpi">
-        <p class="kpi__label">Dům se prodá za</p>
-        <p class="kpi__value">9 500 000</p>
-        <p class="kpi__note">Cena po rekonstrukci</p>
-      </div>
-      <div class="kpi kpi--accent">
-        <p class="kpi__label">Dostanete</p>
-        <p class="kpi__value">7 190 000</p>
-        <p class="kpi__note">O 690 000 Kč víc než dnes</p>
+
+      <div class="story__nums" id="storyNums">
+        <div class="story__num is-on" data-at="0">
+          <small>Dům měl cenu</small><b>3 800 000 Kč</b><span>Tak, jak stál a ležel</span>
+        </div>
+        <div class="story__num" data-at="0.5">
+          <small>Vyklizení a rekonstrukce</small><b>900 000 Kč</b><span>Zaplatili jsme my</span>
+        </div>
+        <div class="story__num" data-at="0.88">
+          <small>Prodej</small><b>6 000 000 Kč</b><span>Nejvyšší dosažená cena</span>
+        </div>
+        <div class="story__num story__num--win" data-at="0.95">
+          <small>Panu Novákovi zůstalo</small><b>4 446 800 Kč</b><span>O 646 800 Kč víc než dnes</span>
+        </div>
       </div>
     </div>
 
-    <p class="body mt-m center balance" style="max-width:62ch;margin-inline:auto">
-      Rekonstrukce v tomto příkladu vytvořila navíc <b class="ink">1 150 000 Kč</b> — po odečtení toho,
-      co jsme zaplatili, a nákladů na prodej. Z toho jde 60 % vám a 40 % nám.
-      Když se hodnota nevytvoří, nemáme nárok na nic.
-    </p>
+    <p class="small center mt-s">Modelová ukázka, ne skutečný klient. Ukazuje, jak se počítá vyrovnání — vaše čísla budou jiná.</p>
 
     <div class="center mt-m">
       <a class="btn btn--ghost" href="kalkulacka.html">Spočítat pro můj dům
         <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
-
-    <p class="small center mt-s">Modelový příklad, ne slib. Skutečná čísla závisí na domu, jeho stavu a trhu.</p>
   </section>
 
   <!-- ==================== 4. PRO KOHO TO JE ==================== -->

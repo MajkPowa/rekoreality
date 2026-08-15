@@ -151,6 +151,8 @@ class Slot {
       // Bez animací ukážeme rovnou hotový stav — simulace není nositelem informace,
       // kterou by uživatel jinak nedostal (čísla jsou i v textu stránky).
       if (reduceMotion) { this.playing = false; this.progress = 1; }
+      // Vyprávěný příběh nezačíná sám — čeká na tlačítko přehrát.
+      else if (def.autoplay === false) { this.playing = false; this.progress = 0; }
       applyTimeline(this.items, this.progress);
     }
 
@@ -192,9 +194,16 @@ class Slot {
   advanceSim(dt) {
     if (!this.items || !this.playing) return;
     this.simT += dt;
+    const runTime = this.def.duration || RUN_S;
     if (this.simState === 'run') {
-      this.progress = clamp01(this.simT / RUN_S);
-      if (this.progress >= 1) { this.simState = 'hold'; this.simT = 0; }
+      this.progress = clamp01(this.simT / runTime);
+      if (this.progress >= 1) {
+        // Příběh se přehraje jednou a zůstane stát na konci; hero se točí dokola.
+        if (this.def.loop === false) { this.playing = false; this.simState = 'done'; }
+        else { this.simState = 'hold'; this.simT = 0; }
+      }
+    } else if (this.simState === 'done') {
+      this.progress = 1;
     } else if (this.simState === 'hold') {
       this.progress = 1;
       if (this.simT >= HOLD_S) { this.simState = 'rewind'; this.simT = 0; }
@@ -286,20 +295,39 @@ function boot() {
   });
   if (!slots.length) return;
 
-  /* Ovládání simulace pro UI (posuvník, tlačítko přehrávání). */
-  const sim = slots.find((s) => s.items);
-  if (sim) {
-    window.RekoSim = {
-      el: sim.el,
-      seek: (p) => sim.seek(p, true),
-      play: () => { sim.playing = true; sim.simState = 'run'; sim.simT = sim.progress * RUN_S; sim.emit(); },
-      pause: () => { sim.playing = false; sim.emit(); },
-      toggle: () => (sim.playing ? window.RekoSim.pause() : window.RekoSim.play()),
-      get progress() { return sim.progress; },
-      get playing() { return sim.playing; },
-      _slot: sim,     // ladicí přístup (stav simulace, ruční krokování)
+  /* Ovládání pro UI — jeden ovladač na každou časovou osu, klíčem je data-house. */
+  const sims = {};
+  slots.filter((s) => s.items).forEach((s) => {
+    const key = s.el.dataset.house;
+    const runTime = s.def.duration || RUN_S;
+    const api = {
+      key: key,
+      el: s.el,
+      seek: (p) => s.seek(p, true),
+      play: () => {
+        // Doběhlý příběh se spustí znovu od začátku.
+        if (s.progress >= 1 && s.def.loop === false) { s.progress = 0; s.simT = 0; }
+        else { s.simT = s.progress * runTime; }
+        s.playing = true;
+        s.simState = 'run';
+        s.emit();
+      },
+      pause: () => { s.playing = false; s.emit(); },
+      toggle: () => (s.playing ? api.pause() : api.play()),
+      get progress() { return s.progress; },
+      get playing() { return s.playing; },
+      get finished() { return s.progress >= 1 && !s.playing; },
+      _slot: s,     // ladicí přístup (stav simulace, ruční krokování)
     };
-    document.dispatchEvent(new CustomEvent('house3d:ready', { detail: window.RekoSim }));
+    sims[key] = api;
+  });
+
+  if (Object.keys(sims).length) {
+    window.RekoSims = sims;
+    window.RekoSim = sims.villa || sims[Object.keys(sims)[0]];   // zpětná kompatibilita
+    document.dispatchEvent(new CustomEvent('house3d:ready', {
+      detail: { sim: window.RekoSim, all: sims },
+    }));
   }
 
   const io = new IntersectionObserver(

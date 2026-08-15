@@ -254,7 +254,8 @@
     if (!bar || !range || !playBtn) return;
 
     var czk = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 0 });
-    var V0 = 6500000, V1 = 9500000, INVEST = 1500000, FEE = 0.037;
+    // Stejná čísla jako příběh pana Nováka a výchozí nastavení kalkulačky.
+    var V0 = 3800000, V1 = 6000000, INVEST = 900000, FEE = 0.037;
 
     var PHASES = [
       [0.10, 'Původní stav', 'Dům tak, jak dnes stojí'],
@@ -323,6 +324,8 @@
     }
 
     doc.addEventListener('house3d:progress', function (e) {
+      // Na stránce běží dvě časové osy — hero karty patří jen té v hero.
+      if (!e.target || e.target.dataset.house !== 'villa') return;
       paint(e.detail.progress);
       bar.classList.toggle('is-paused', !e.detail.playing);
       playBtn.setAttribute('aria-pressed', e.detail.playing ? 'true' : 'false');
@@ -345,13 +348,92 @@
     }
 
     // Modul se může nabootovat před i po tomto skriptu — pokrýváme obě pořadí.
-    doc.addEventListener('house3d:ready', function (e) { wire(e.detail); });
+    doc.addEventListener('house3d:ready', function (e) { wire((e.detail && e.detail.sim) || e.detail); });
     if (window.RekoSim) wire(window.RekoSim);
 
     paint(0);
   })();
 
-  /* ---------------------------------------------------------- 7. Formulář */
+  /* ------------------------------------- 7. Příběh pana Nováka (ukázka) ---
+     Vyprávěná 3D ukázka ovládaná jako video: tlačítko, posuvník, titulky
+     a čísla, která se rozsvěcují podle toho, kam příběh došel.
+  ------------------------------------------------------------------------ */
+  (function novakStory() {
+    var stage = doc.getElementById('storyStage');
+    var range = doc.getElementById('storyRange');
+    if (!stage || !range) return;
+
+    var story = stage.closest('.story');
+    var big = doc.getElementById('storyBig');
+    var playBtn = doc.getElementById('storyPlay');
+    var stepEl = doc.getElementById('storyStep');
+    var textEl = doc.getElementById('storyText');
+    var nums = Array.prototype.slice.call(doc.querySelectorAll('.story__num'));
+
+    var CHAPTERS = [
+      [0.16, 'Pan Novák zdědil dům po rodičích. Roky v něm nikdo nebydlel.'],
+      [0.34, 'Chtěl ho prodat. Jenže byl plný věcí a dávno se do něj nic nedalo.'],
+      [0.50, 'Stavební firmy chtěly zálohy dopředu. Ty neměl. A čas na to taky ne.'],
+      [0.68, 'Ozval se nám. Přijeli jsme, dům ocenili a spočítali rozpočet.'],
+      [0.88, 'Vyklidili jsme ho a zrekonstruovali. Pan Novák nezaplatil ani korunu.'],
+      [1.01, 'Dům se prodal za 6 000 000 Kč. Naše peníze jsme si vzali až z prodeje.'],
+    ];
+
+    var dragging = false;
+    var lastIdx = -1;
+
+    function paint(p) {
+      for (var i = 0; i < CHAPTERS.length; i++) {
+        if (p < CHAPTERS[i][0]) {
+          if (i !== lastIdx) {
+            lastIdx = i;
+            stepEl.textContent = (i + 1) + ' / ' + CHAPTERS.length;
+            textEl.textContent = CHAPTERS[i][1];
+          }
+          break;
+        }
+      }
+      nums.forEach(function (n) {
+        n.classList.toggle('is-on', p >= parseFloat(n.getAttribute('data-at') || '0'));
+      });
+      if (!dragging) range.value = String(Math.round(p * 1000));
+    }
+
+    doc.addEventListener('house3d:progress', function (e) {
+      if (!e.target || e.target.dataset.house !== 'novak') return;
+      paint(e.detail.progress);
+      story.classList.toggle('is-playing', e.detail.playing);
+      var lbl = e.detail.playing ? 'Pozastavit' : (e.detail.progress >= 1 ? 'Přehrát znovu' : 'Přehrát');
+      playBtn.setAttribute('aria-label', lbl);
+      playBtn.parentElement.classList.toggle('is-paused', !e.detail.playing);
+    });
+
+    var wired = false;
+    function wire(sims) {
+      var sim = sims && sims.novak;
+      if (wired || !sim) return;
+      wired = true;
+
+      function toggle() { sim.toggle(); }
+      big.addEventListener('click', toggle);
+      playBtn.addEventListener('click', toggle);
+
+      range.addEventListener('pointerdown', function () { dragging = true; });
+      range.addEventListener('pointerup', function () { dragging = false; });
+      range.addEventListener('input', function () { sim.seek(+range.value / 1000); });
+
+      paint(sim.progress);
+      story.classList.toggle('is-playing', sim.playing);
+      playBtn.parentElement.classList.toggle('is-paused', !sim.playing);
+    }
+
+    doc.addEventListener('house3d:ready', function (e) { wire(e.detail && e.detail.all); });
+    if (window.RekoSims) wire(window.RekoSims);
+
+    paint(0);
+  })();
+
+  /* ---------------------------------------------------------- 8. Formulář */
   doc.querySelectorAll("[data-demo-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();

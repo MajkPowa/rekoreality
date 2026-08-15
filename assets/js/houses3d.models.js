@@ -938,6 +938,125 @@ function buildAerial(THREE, M, U) {
   return g;
 }
 
+
+/* --------------------------------------------------------------------------
+   NOVAK — modelová ukázka: zděděný dům pana Nováka před vyklizením a po prodeji
+   Stejná hmota, dvě fáze. Před: zašlá omítka, malá okna, kůlna, nepořádek,
+   přerostlá zeleň. Po: světlá fasáda, velké prosklení, dřevěný akcent,
+   terasa a upravená zahrada.
+   -------------------------------------------------------------------------- */
+function buildNovak(THREE, M, U) {
+  const g = new THREE.Group();
+  const DZ = -3.5;                               // dům v zadní části pozemku
+  const HW = 12, HD = 9, GH = 3.0, UH = 2.6;     // půdorys a výšky podlaží
+  const EY = GH + UH;                            // úroveň okapu
+  const FZ = HD / 2;                             // rovina hlavní fasády
+
+  /* ---------- společné ---------- */
+  g.add(U.plot(40, 34, 2.2, M.grass, M.soil, 3.0));
+  g.add(U.softShadow(54, 48, -2.35, 0.42));
+  g.add(U.tree(-16.5, -12.0, 1.45));
+  g.add(U.tree(16.0, -13.0, 1.3));
+
+  /* ---------- PŘED REKONSTRUKCÍ ---------- */
+  const old = new THREE.Group();
+  old.userData.phase = 'old';
+  g.add(old);
+  const oh = new THREE.Group();
+  oh.position.z = DZ;
+  old.add(oh);
+
+  oh.add(U.box(HW + 0.4, 0.4, HD + 0.4, M.renderOld2, 0, 0, 0));
+  oh.add(U.box(HW, GH - 0.4, HD, M.renderOld, 0, 0.4, 0));
+  oh.add(U.box(HW, UH, HD, M.renderOld, 0, GH, 0));
+  const oroof = U.gableRoof(HD, HW, 3.2, M.roofOld, 0, EY, 0, 0.55);
+  oroof.rotation.y = Math.PI / 2;
+  oh.add(oroof);
+  oh.add(U.box(0.9, 3.6, 0.9, M.brick, 3.2, EY, -1.4));
+  oh.add(U.box(HW + 0.8, 0.14, 0.14, M.metal, 0, EY - 0.24, FZ + 0.5));
+
+  [-4.0, -0.6, 3.0].forEach(function (x) {
+    oh.add(U.box(1.3, 1.2, 0.12, M.glassOld, x, 1.2, FZ + 0.02));
+    oh.add(U.windowFrame(1.4, 1.3, M.frame, x, 1.15, FZ + 0.09, 0.1));
+    oh.add(U.box(1.2, 1.1, 0.12, M.glassOld, x, 3.7, FZ + 0.02));
+    oh.add(U.windowFrame(1.3, 1.2, M.frame, x, 3.65, FZ + 0.09, 0.1));
+  });
+  oh.add(U.box(1.1, 2.1, 0.14, M.woodOld, 5.0, 0.4, FZ + 0.03));
+  oh.add(U.windowFrame(1.2, 2.2, M.frame, 5.0, 0.35, FZ + 0.1, 0.1));
+
+  // kůlna a věci na zahradě
+  old.add(U.box(4.2, 2.3, 3.2, M.woodOld, -11.5, 0, -1.0));
+  old.add(U.box(4.8, 0.2, 3.8, M.roofOld, -11.5, 2.3, -1.0));
+  old.add(U.box(1.4, 1.0, 1.0, M.woodOld, -7.4, 0, 2.6));
+  old.add(U.box(1.0, 0.8, 0.9, M.concreteMid, -6.0, 0, 3.6));
+  old.add(U.box(1.2, 0.6, 1.2, M.woodOld, 8.6, 0, 3.0));
+  old.add(U.box(0.9, 1.1, 0.9, M.concreteMid, 9.9, 0, 4.2));
+
+  // přerostlá zeleň, popraskaný chodník, starý plot
+  old.add(U.bush(-9.0, 6.0, 1.9, M.foliage));
+  old.add(U.bush(-6.8, 7.6, 1.5, M.foliage));
+  old.add(U.bush(9.2, 6.4, 1.8, M.foliage));
+  old.add(U.bush(11.2, 8.0, 1.3, M.foliage));
+  old.add(U.bush(0.5, 12.0, 1.4, M.foliage));
+  old.add(U.slab(2.2, 12, M.concreteMid, 4.4, 0.06, 8.0));
+  for (let i = 0; i < 5; i++) {
+    old.add(U.box(0.14, 1.0, 0.14, M.woodOld, -14 + i * 7, 0, 15.6));
+  }
+  old.add(U.box(30, 0.1, 0.1, M.woodOld, 0, 0.85, 15.6));
+
+  /* ---------- PO REKONSTRUKCI ---------- */
+  const nw = new THREE.Group();
+  nw.userData.phase = 'new';
+  g.add(nw);
+  const nh = new THREE.Group();
+  nh.position.z = DZ;
+  nw.add(nh);
+
+  nh.add(U.box(HW + 0.4, 0.4, HD + 0.4, M.concreteMid, 0, 0, 0));
+  nh.add(U.box(HW, GH - 0.4, HD, M.render, 0, 0.4, 0));
+  nh.add(U.box(HW, UH, HD, M.render, 0, GH, 0));
+  const nroof = U.gableRoof(HD, HW, 3.2, M.roof, 0, EY, 0, 0.75);
+  nroof.rotation.y = Math.PI / 2;
+  nh.add(nroof);
+  nh.add(U.box(HW + 1.0, 0.16, 0.16, M.metal, 0, EY - 0.26, FZ + 0.68));
+
+  // velké prosklení
+  nh.add(U.box(6.4, 2.2, 0.16, M.glassWarm, -2.6, 0.5, FZ + 0.02));
+  [-4.5, -2.6, -0.7].forEach(function (x) {
+    nh.add(U.box(0.1, 2.2, 0.24, M.frame, x, 0.5, FZ + 0.06));
+  });
+  nh.add(U.windowFrame(6.5, 2.3, M.frame, -2.6, 0.45, FZ + 0.1, 0.1));
+
+  // dřevěný obklad a vstup
+  nh.add(U.box(4.2, GH - 0.4, 0.2, M.wood, 3.6, 0.4, FZ + 0.02));
+  nh.add(U.slats(4.2, GH - 0.4, M.woodDark, 3.6, 0.4, FZ + 0.14, 9, 0.07));
+  nh.add(U.box(1.2, 2.2, 0.14, M.glassWarm, 4.6, 0.4, FZ + 0.2));
+  nh.add(U.windowFrame(1.3, 2.3, M.frame, 4.6, 0.35, FZ + 0.27, 0.09));
+  nh.add(U.slab(3.0, 1.4, M.concreteMid, 4.2, GH - 0.2, FZ + 0.8, 0.16));
+
+  // nová okna patra
+  [-3.8, -0.4, 3.2].forEach(function (x) {
+    nh.add(U.box(1.9, 1.5, 0.14, M.glassWarm, x, 3.5, FZ + 0.02));
+    nh.add(U.windowFrame(2.0, 1.6, M.frame, x, 3.45, FZ + 0.09, 0.1));
+  });
+
+  // terasa, chodník, stání
+  nw.add(U.slab(14, 4.6, M.deck, 0, 0.08, 3.6));
+  nw.add(U.slab(2.4, 9, M.deck, 4.4, 0.06, 10.5));
+  nw.add(U.slab(6.0, 5.0, M.deck, -12.0, 0.05, 4.0));
+
+  // upravená zahrada
+  nw.add(U.bush(-8.4, 6.2, 1.0));
+  nw.add(U.bush(-6.6, 7.2, 0.8));
+  nw.add(U.bush(8.6, 6.4, 1.05));
+  nw.add(U.bush(10.4, 7.4, 0.8));
+  nw.add(U.tree(-14.0, 8.5, 1.0));
+  nw.add(U.tree(13.5, 9.0, 0.95));
+  nw.add(U.box(30, 0.9, 0.5, M.hedge, 0, 0, 15.6));
+
+  return g;
+}
+
 /* ==========================================================================
    Registr modelů
    ========================================================================== */
@@ -956,5 +1075,16 @@ export const MODELS = {
   bungalow: { build: buildBungalow, radius: 26, view: { az: -0.5, el: 0.30, dist: 39.1, target: [0, 1.98, 0], fov: 32 }, spin: 0.05, sway: 0.15 },
   townvilla: { build: buildTownvilla, radius: 22, view: { az: -0.52, el: 0.28, dist: 31.5, target: [0, 3.9, 0.4], fov: 30 }, spin: 0.05, sway: 0.15 },
   cube: { build: buildCube, radius: 24, view: { az: 0.46, el: 0.29, dist: 31.4, target: [0.3, 3.24, -1.0], fov: 32 }, spin: 0.04, sway: 0.12 },
+  novak: {
+    build: buildNovak,
+    radius: 26,
+    timeline: true,
+    autoplay: false,      // příběh čeká na tlačítko přehrát
+    loop: false,          // přehraje se jednou a zůstane na konci
+    duration: 13,         // delší než hero — jde o vyprávění, ne o smyčku
+    view: { az: -0.48, el: 0.26, dist: 38, target: [0, 3.2, 0], fov: 32 },
+    spin: 0.03,
+    sway: 0.10,
+  },
   aerial: { build: buildAerial, radius: 52, view: { az: -0.05, el: 0.93, dist: 230, target: [0, 1.0, 0], fov: 28 }, spin: 0.02, sway: 0.05 },
 };

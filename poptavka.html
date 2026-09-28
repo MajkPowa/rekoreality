@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Nezávazné posouzení domu před prodejem. Pro první kontakt stačí místo, vaše jméno a e-mail nebo telefon."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <meta name="theme-color" content="#265b45" />
+    <title>Nezávazné posouzení domu — REKOREALITY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=6" />
+    <link rel="stylesheet" href="assets/css/premium.css?v=6" />
+    <link rel="stylesheet" href="assets/css/request.css?v=6" />
+    <script src="assets/js/main.js?v=6" defer></script>
+    <script src="assets/js/ui.js?v=6" defer></script>
+    <script src="assets/js/request.js?v=6" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít k obsahu</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
+          ><svg
+            class="brand-icon"
+            viewBox="0 0 36 38"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 16 18 9l8 7"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+            /></svg
+          ><span>reko<em>reality</em></span></a
+        >
+        <nav class="desktop-nav" aria-label="Hlavní navigace">
+          <a href="jak-to-funguje.html">Jak to funguje</a
+          ><a href="pro-majitele.html">Pro majitele</a
+          ><a href="kalkulacka.html">Kalkulačka</a
+          ><a href="faq.html">Časté otázky</a>
+          <a href="pro-maklere.html">Pro makléře</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          id="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="navsheet"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="mobile-menu" id="navsheet" aria-label="Mobilní navigace" hidden>
+      <a href="index.html">Úvod</a
+      ><a href="jak-to-funguje.html">Jak to funguje</a
+      ><a href="pro-majitele.html">Pro majitele</a
+      ><a href="kalkulacka.html">Kalkulačka</a
+      ><a href="faq.html">Časté otázky</a
+      ><a href="pro-maklere.html">Pro makléře</a
+      ><a class="btn btn--primary" href="poptavka.html"
+        >Nezávazně posoudit dům
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 12h15m-6-6 6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+      ></a>
+    </nav>
+    <main id="main-content" class="request-page">
+      <div class="shell request-layout">
+        <section class="request-intro" aria-labelledby="request-title">
+          <a class="request-back" href="index.html"
+            ><span aria-hidden="true">←</span> Zpět na úvod</a
+          >
+          <p class="eyebrow">Nezávazné posouzení domu</p>
+          <h1 id="request-title">
+            Má rekonstrukce před prodejem <em>smysl?</em>
+          </h1>
+          <p class="lead">
+            Zjistěte, jaké opravy by se mohly vyplatit. Pro první kontakt stačí
+            obec, jméno a e-mail nebo telefon.
+          </p>
+          <p class="request-meta">
+            <span>Přibližně 1 minuta</span><span>Bez závazku</span>
+          </p>
+        </section>
+        <section class="request-card" aria-labelledby="request-form-title">
+          <div class="request-card-heading" id="request-card-heading">
+            <div class="request-heading-row">
+              <h2 id="request-form-title">Údaje pro posouzení</h2>
+              <span class="request-count">3 údaje</span>
+            </div>
+            <p>Bez ceny domu, fotografií a dokumentů.</p>
+          </div>
+          <div class="request-demo-note" id="request-demo-note">
+            <span class="request-demo-dot" aria-hidden="true"></span>
+            <p>
+              <strong>Ukázka formuláře.</strong> Údaje se neodesílají ani
+              neukládají.
+            </p>
+          </div>
+          <form
+            id="request-form"
+            novalidate
+            aria-describedby="request-demo-note"
+          >
+            <div class="request-field">
+              <label for="request-location">Kde se dům nachází?</label>
+              <input
+                id="request-location"
+                name="location"
+                type="text"
+                autocomplete="address-level2"
+                placeholder="Např. Benešov"
+                maxlength="120"
+                required
+                aria-describedby="request-location-hint request-location-error"
+              />
+              <p class="request-hint" id="request-location-hint">
+                Stačí obec nebo město, bez přesné adresy.
+              </p>
+              <p class="request-error" id="request-location-error" hidden></p>
+            </div>
+            <div class="request-field">
+              <label for="request-name">Vaše jméno</label>
+              <input
+                id="request-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Např. Jana Nováková"
+                maxlength="100"
+                required
+                aria-describedby="request-name-error"
+              />
+              <p class="request-error" id="request-name-error" hidden></p>
+            </div>
+            <div class="request-field">
+              <div class="request-contact-heading">
+                <label for="request-contact" id="request-contact-label"
+                  >Váš e-mail</label
+                >
+                <div
+                  class="request-contact-mode"
+                  role="group"
+                  aria-label="Způsob kontaktu"
+                >
+                  <button
+                    type="button"
+                    data-contact-mode="email"
+                    aria-pressed="true"
+                  >
+                    E-mail
+                  </button>
+                  <button
+                    type="button"
+                    data-contact-mode="tel"
+                    aria-pressed="false"
+                  >
+                    Telefon
+                  </button>
+                </div>
+              </div>
+              <input
+                id="request-contact"
+                name="contact"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="např. jana@example.cz"
+                maxlength="254"
+                spellcheck="false"
+                autocapitalize="none"
+                required
+                aria-describedby="request-contact-hint request-contact-error"
+              />
+              <p class="request-hint" id="request-contact-hint">
+                Jeden kontakt úplně stačí.
+              </p>
+              <p class="request-error" id="request-contact-error" hidden></p>
+            </div>
+            <details class="request-details">
+              <summary>
+                <span class="request-details-label"
+                  >Něco navíc o domě <small>nepovinné</small></span
+                ><span class="request-details-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="request-details-content">
+                <div class="request-field">
+                  <label for="request-role">Váš vztah k domu</label>
+                  <select id="request-role" name="role">
+                    <option value="">Vyberte, pokud chcete</option>
+                    <option value="owner">
+                      Jsem majitel nebo spolumajitel
+                    </option>
+                    <option value="family">Řeším prodej v rodině</option>
+                    <option value="agent">Jsem realitní makléř</option>
+                    <option value="other">Jiná situace</option>
+                  </select>
+                </div>
+                <div class="request-field">
+                  <label for="request-note">Co bychom měli vědět?</label>
+                  <textarea
+                    id="request-note"
+                    name="note"
+                    rows="3"
+                    maxlength="1000"
+                    placeholder="Např. dům je několik let prázdný a s prodejem nespěcháme."
+                    aria-describedby="request-note-hint"
+                  ></textarea>
+                  <p class="request-hint" id="request-note-hint">
+                    Stav domu, vaše plány nebo otázka. Maximálně 1 000 znaků.
+                  </p>
+                </div>
+              </div>
+            </details>
+            <div class="request-consent">
+              <label for="request-consent"
+                ><input
+                  id="request-consent"
+                  name="request_consent"
+                  value="yes"
+                  type="checkbox"
+                  required
+                  aria-describedby="request-consent-error"
+                /><span
+                  >Souhlasím s použitím údajů k vyřízení této žádosti.</span
+                ></label
+              >
+              <p class="request-error" id="request-consent-error" hidden></p>
+            </div>
+            <p
+              class="request-summary"
+              id="request-summary"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+            <button
+              class="btn btn--primary request-submit"
+              id="request-submit"
+              type="submit"
+              disabled
+            >
+              Zkontrolovat údaje <span aria-hidden="true">→</span>
+            </button>
+            <p class="request-submit-note">
+              Ukázkový režim · žádost se neodešle.
+            </p>
+            <noscript
+              ><p class="request-noscript">
+                Pro vyzkoušení formuláře zapněte JavaScript. Z této ukázky se
+                žádné údaje neodesílají.
+              </p></noscript
+            >
+          </form>
+          <section
+            class="request-result"
+            id="request-result"
+            tabindex="-1"
+            aria-labelledby="request-result-title"
+            hidden
+          >
+            <span class="request-result-icon" aria-hidden="true">✓</span>
+            <p class="eyebrow">Kontrola ukázkové žádosti</p>
+            <h2 id="request-result-title">Údaje jsou v pořádku.</h2>
+            <p>
+              <strong>Žádost nebyla odeslána.</strong> Toto je ukázka formuláře.
+              Údaje se neuložily a na základě této ukázky vás nikdo nebude
+              kontaktovat.
+            </p>
+            <dl class="request-review" aria-label="Vaše vyplněné údaje">
+              <div>
+                <dt>Místo</dt>
+                <dd id="request-review-location"></dd>
+              </div>
+              <div>
+                <dt>Jméno</dt>
+                <dd id="request-review-name"></dd>
+              </div>
+              <div>
+                <dt id="request-review-contact-label">Kontakt</dt>
+                <dd id="request-review-contact"></dd>
+              </div>
+            </dl>
+            <button class="btn btn--outline" id="request-edit" type="button">
+              Upravit údaje
+            </button>
+            <button class="request-clear" id="request-clear" type="button">
+              Vymazat a začít znovu
+            </button>
+          </section>
+        </section>
+        <section class="request-next" aria-labelledby="request-next-title">
+          <p class="eyebrow">Po první žádosti</p>
+          <h2 id="request-next-title">Jak by spolupráce pokračovala</h2>
+          <ol>
+            <li>
+              <span class="request-step" aria-hidden="true">1</span>
+              <div>
+                <h3>Probereme stav domu</h3>
+                <p>Probereme stav domu a vaše plány s prodejem.</p>
+              </div>
+            </li>
+            <li>
+              <span class="request-step" aria-hidden="true">2</span>
+              <div>
+                <h3>Navrhneme další postup</h3>
+                <p>
+                  Pokud bude rekonstrukce dávat smysl, domluvíme prohlídku a
+                  návrh postupu.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="request-step" aria-hidden="true">3</span>
+              <div>
+                <h3>Schválíte podmínky</h3>
+                <p>
+                  Nejdřív uvidíte rozsah, rozpočet a podmínky. Teprve potom se
+                  rozhodnete.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
+              ><svg
+                class="brand-icon"
+                viewBox="0 0 36 38"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 16 18 9l8 7"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                /></svg
+              ><span>reko<em>reality</em></span></a
+            >
+            <p>Financujeme a řídíme rekonstrukce domů před prodejem.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Vše o spolupráci</h2>
+            <a href="jak-to-funguje.html">Jak to funguje</a
+            ><a href="pro-majitele.html">Pro majitele</a
+            ><a href="pro-maklere.html">Pro realitní makléře</a>
+          </div>
+          <div class="footer-col">
+            <h2>Začněte tady</h2>
+            <a href="poptavka.html">Nezávazné posouzení</a
+            ><a href="kalkulacka.html">Orientační kalkulačka</a
+            ><a href="faq.html">Otázky a odpovědi</a
+            ><a href="pro-majitele.html#zastava">Vlastnictví a zástava</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 REKOREALITY</span>
+          <p>
+            Web je ve zkušebním provozu. Formulář žádosti neodesílá. Uvedené
+            propočty jsou modelové, fotografie jsou AI ilustrace. Konkrétní
+            podmínky spolupráce určuje smlouva.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

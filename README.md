@@ -1,180 +1,69 @@
-# REKOREALITY — web prototyp
+# REKOREALITY
 
-Statický web bez build kroku. Otevřete `index.html` v prohlížeči.
+Statický web v češtině pro rekonstrukci rodinného domu před prodejem. Bez build kroku a bez frameworku.
 
-**Živá verze:** <https://majkpowa.github.io/rekoreality/>
+[Veřejný náhled na GitHub Pages](https://majkpowa.github.io/rekoreality/)
 
-## Nasazení
+## Lokální náhled
 
-Hostováno na GitHub Pages z větve `main`, složka `/` (kořen). Publikace = `git push` na `main`;
-build se spustí sám a trvá zpravidla do minuty.
-
-```bash
-git add -A && git commit -m "popis změny" && git push
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-Web je **záměrně mimo vyhledávače**: každá stránka nese `<meta name="robots" content="noindex, nofollow">`.
-Procházení v `robots.txt` je povolené schválně — kdyby bylo zakázané, crawler by meta tag nikdy nepřečetl
-a URL by se do výsledků mohla dostat i tak. Odkaz tedy funguje komukoli, kdo ho dostane, ale web
-nikdo nenajde přes Google. Před ostrým spuštěním je potřeba `noindex` ze všech `.html` odstranit.
+Otevřete `http://127.0.0.1:4173/`. Lze také otevřít `index.html` přímo. Pro písma Manrope a Instrument Serif je potřeba připojení; bez něj se použijí systémová písma.
 
-Repozitář je veřejný, protože GitHub Pages na bezplatném účtu ze soukromého repozitáře nefungují.
-Obsah včetně obchodního modelu je tedy technicky veřejně čitelný.
+## Stránky a cesta k žádosti
 
-## Struktura
+- `index.html`: nabídka, tři fáze spolupráce, fotorealistické ilustrace, modelové vypořádání a hlavní otázky.
+- `poptavka.html`: jediná společná žádost; tři povinné údaje, souhlas a nepovinné podrobnosti. Vstup `?role=agent` předvybere makléře.
+- `jak-to-funguje.html`: tři fáze a informace potřebné před podpisem.
+- `pro-majitele.html`: přínosy, rozhodování, zástava a vhodnost domu.
+- `pro-maklere.html`: rozdělení rolí a odkaz na společnou žádost.
+- `kalkulacka.html`: samostatný volitelný propočet. Není podmínkou žádosti.
+- `faq.html`: otázky po tématech s hledáním bez diakritiky; odpovědi lze otevřít i bez JavaScriptu.
 
-```
-index.html            Úvodní stránka (hero, trust strip, proces, scénáře, bento, modelový výpočet, zástava, FAQ)
-jak-to-funguje.html   10 fází s branami, rozhodovací matice, vstupní kritéria, skóre 100 b., právní rámec
-pro-majitele.html     B2C stránka — co získáte, 7 kroků, vhodnost, 7 otázek před podpisem
-pro-maklere.html      Partner promise, proces se SLA, nástroje, referral ekonomika, intake formulář
-kalkulacka.html       Interaktivní kalkulačka vypořádání + 6krokový formulář posouzení
-faq.html              14 odpovědí ve 3 skupinách + zdroje
-assets/css/style.css  Design systém (tokeny, komponenty, responsivita)
-assets/js/main.js     Navigace, reveal animace, carousel, akordeon, kalkulačka
-assets/img/*.svg      Vektorové vizuály (zástupné za fotografie)
-```
+Všechny hlavní akce vedou přímo na krátkou žádost. Staré adresy `kalkulacka.html#formular`, `pro-majitele.html#krok-za-krokem`, `#zastava`, `#kdy-ne` a `pro-maklere.html#intake` zůstávají použitelné.
 
-## Vizuální systém
+## Vzhled a média
 
-Layout, typografie a kompozice vycházejí z dodaných referenčních maket: plovoucí tmavá nav pilulka
-s logem uprostřed, hero s modrým gradientem a skleněnými kartami, pastelové gradientní panely,
-bento grid, nakloněné karty v carouselu, editorial nadpisy kombinující geometrický sans s kurzívní
-patkovou antikvou.
+Základní styly jsou v `assets/css/style.css`, rozložení jednotlivých stránek a responzivní úpravy v `premium.css`. Formulář má `request.css`, kalkulačka `calculator.css`. Sdílené menu zajišťuje `main.js`, galerii, výběr situace a hledání v otázkách `ui.js`. Formulář a kalkulačka mají vlastní skripty. Vzhled používá krémové plochy, tmavou zelenou, čitelnou typografii a statické fotografie místo animovaných 3D maket. Stránky nenačítají Three.js, nespouštějí animované modely a neobsahují skrytý obsah čekající na animaci.
 
-- Písma: **Poppins** (nadpisy), **Manrope** (text/UI), **Instrument Serif** kurzíva (akcenty) — z Google Fonts.
-- Barvy a rádiusy jsou v `:root` v `style.css`. Tokeny z brand manuálu (`#1C211F` ink, `#F5F1E9` cream,
-  `#738D7E` sage, `#E86E4D` terracotta) jsou v souboru k dispozici jako `--terracotta` a `--sage`;
-  hlavní paleta ale záměrně sleduje referenční makety. Změna na brand paletu = úprava tokenů, ne šablon.
+Fotografie jsou **AI ilustrace**, nikoli doložené realizace. Na stránkách jsou tak označené. Web načítá optimalizované WebP s responzivními variantami, PNG originály jsou uložené vedle nich. Přesné prompty, původ a rozměry: [assets/img/IMAGE-CREDITS.md](assets/img/IMAGE-CREDITS.md).
 
-## 3D modely domů
+Původní SVG a `houses3d*.js` zůstávají v repozitáři jako starší zdroje, současné stránky je nepoužívají.
 
-Domy nejsou obrázky, ale procedurální 3D scény (Three.js, WebGL).
+## Formulář je ukázka
 
-```
-assets/js/houses3d.js         engine — sdílený renderer, kamera, časová osa, boot
-assets/js/houses3d.lib.js     materiály (M), stavební pomocníci (U), časová osa
-assets/js/houses3d.models.js  jednotlivé modely + registr MODELS
-dev/preview.mjs               vývojový ASCII náhled (žádná stránka ho nelinkuje)
+**Žádost se nikam neodesílá.** Formulář to oznamuje před vyplněním i po kontrole údajů. Nezobrazuje falešné potvrzení přijetí. Klientská validace kontroluje prázdné hodnoty, obec, jméno, e-mail nebo telefon a souhlas. První chybné pole získá fokus, chyby mají vazby ARIA a textový souhrn. Nepovinné údaje nejsou podmínkou pokračování. Bez JavaScriptu zůstává tlačítko vypnuté.
+
+Osobní údaje se neukládají do localStorage, cookies ani na server. Zůstávají v aktuálním formuláři a lze je vymazat. Pro ostré použití je nutné připojit server/CRM, zavést validaci i na serveru a skutečné úspěšné/chybové stavy. Až poté je možné změnit demo texty a povolit skutečné odesílání.
+
+## Modelový výpočet
+
+```text
+hodnota navíc = prodejní cena − původní hodnota − investice − náklady prodeje
+podíl REKO = 40 % z kladné hodnoty navíc
+majiteli zbývá = původní hodnota + hodnota navíc − podíl REKO
 ```
 
-**Jeden WebGL kontext pro všechny sloty.** Engine renderuje do jednoho offscreen
-framebufferu a výsledek přenáší do 2D canvasu každého slotu (`drawImage`). Renderuje
-se jen to, co je právě ve výřezu; při skryté kartě se smyčka zastaví.
+Výchozí model: původní hodnota 3 800 000 Kč, investice 900 000 Kč, prodej 6 000 000 Kč, náklady prodeje 3,7 % (222 000 Kč). Hodnota navíc je 1 078 000 Kč; majiteli zbývá **4 446 800 Kč**, REKO má podíl 431 200 Kč a vrací se mu investice.
 
-**Plovoucí diorama.** Scény nemají nekonečný terén — stojí na zaobleném pozemku
-(`U.plot`) s měkkým stínem (`U.softShadow`) a průhledným pozadím, takže prosvítá
-gradient karty. Bez toho se trávník přepaloval a vyplnil 70 % plochy.
+Při záporné hodnotě navíc nevzniká podíl na zisku, investice se ale nadále vypořádává a ztráta snižuje částku pro majitele. Pokud prodej nepokryje náklady, UI výslovně zobrazí schodek. Kalkulačka neuděluje zdánlivé schválení projektu. Nezahrnuje daně, hypotéku ani další individuální náklady.
 
-**Fallback.** Každý slot obsahuje původní SVG jako poster. Když chybí WebGL, selže
-CDN nebo prohlížeč neumí ES moduly, zůstane viditelný obrázek a nic se nerozbije.
-Model se vykreslí až po prvním úspěšném snímku (`.is-live`).
+## Publikace a otevřené body
 
-**Cena:** three.js z CDN ≈ 257 kB (gzip). Verze je připnutá v importmapě v `index.html`.
+Stávající hosting je GitHub Pages z větve `main`, kořen repozitáře. Push do `main` publikuje změny. Úpravy designu samy o sobě neznamenají souhlas s ostrým spuštěním služby.
 
-### Modely
+Všechny stránky včetně nové poptávky mají `noindex, nofollow`. Před ostrým spuštěním zůstávají k dořešení:
 
-| Klíč | Slot | Meshů | Obsah |
-|---|---|---|---|
-| `villa` | hero | 151 | simulace před → po (běží ve smyčce) |
-| `novak` | příběh | 125 | zděděný dům pana Nováka, před → po, přehrává se na tlačítko |
-| `gable` | karta 1 | 113 | zděděný dům se sedlovou střechou, garáž, komín, anténa |
-| `poolvilla` | karta 2 | 103 | moderní vila s bazénem, dřevo + beton |
-| `bungalow` | karta 3 | 75 | přízemní bungalov s markýzou a živým plotem |
-| `townvilla` | karta 4 | 114 | městská vila, cihlový sokl, kus ulice se stromořadím |
-| `cube` | pro makléře | 86 | kubická vila s vodním prvkem |
-| `aerial` | pro majitele | 105 | ptačí pohled na pět domů, cesty, bazény, solární panely |
+1. Právní posouzení zamýšleného modelu a zajištění odpovídajícího režimu provozu.
+2. Daňové a účetní nastavení včetně DPH a podílu na vytvořené hodnotě.
+3. Skutečný příjem žádostí a informace o zpracování osobních údajů.
+4. Identifikace provozovatele, kontakty, smluvní a reklamační podmínky.
+5. Doložené realizace a případové studie, pokud mají nahradit ilustrace.
 
-Nový model = přidat `build…(THREE, M, U)` do `houses3d.models.js` a zaregistrovat
-ho v `MODELS` s `view` a `radius`. Kompozici lze ladit bez screenshotů:
+Web neslibuje garantovaný výnos, pevnou dobu prodeje ani rekonstrukci zdarma. Zástava a riziko nižšího výsledku jsou vysvětlené v obsahu.
 
-```js
-const p = await import('/dev/preview.mjs');
-await p.preview('cube', { aspect: 900/620, cols: 60, rows: 16 });
-```
+## Revize obsahu a ověření
 
-### Jedna sada čísel pro celý web
-
-Hero, příběh pana Nováka i výchozí nastavení kalkulačky pracují se **stejným
-příkladem**: dům za 3 800 000 Kč, rekonstrukce za 900 000 Kč, prodej za 6 000 000 Kč,
-hodnota navíc 1 078 000 Kč, majiteli zůstane 4 446 800 Kč. Kdyby se čísla měnila,
-mění se na třech místech: `main.js` (konstanty `V0/V1/INVEST` a sekce příběhu),
-`kalkulacka.html` (výchozí hodnoty posuvníků) a `index.html` (dlaždice příběhu).
-
-### Příběh pana Nováka
-
-Modelová ukázka v sekci `#pribeh` je 3D scéna ovládaná jako video: tlačítko přehrát,
-posuvník, titulky v šesti kapitolách a čtyři čísla, která se rozsvěcují podle toho,
-kam příběh došel. Na rozdíl od hera se přehraje jednou a zůstane stát na konci
-(`loop: false`, `autoplay: false`, `duration: 13`).
-
-### Simulace „před → po" v hero
-
-Hero model má dvě fáze označené `userData.phase = 'old' | 'new'`. Engine je prolíná
-vlnou, která postupuje zleva doprava — každý prvek se mění podle své pozice na ose X.
-Původní dům z konce 70. let se sedlovou střechou se promění v dvoupodlažní vilu
-s terasou a bazénem.
-
-Cyklus: rozjezd 7,5 s → výdrž 3,4 s na hotovém stavu → přetočení 1,1 s. Posuvník
-v hero umožňuje fázi přetáhnout ručně (tím se přehrávání pozastaví).
-Při `prefers-reduced-motion` se rovnou zobrazí hotový stav a nic se nehýbe.
-
-Obě skleněné karty jsou na simulaci navázané (`house3d:progress`):
-
-| Postup | Hodnota | Investice | Hodnota navíc |
-|---|---|---|---|
-| 0 % | 3 800 000 Kč | 0 Kč | 0 Kč |
-| 50 % | 4 900 000 Kč | 450 000 Kč | 468 700 Kč |
-| 100 % | 6 000 000 Kč | 900 000 Kč | 1 078 000 Kč |
-
-Čísla používají stejný vzorec jako kalkulačka (externí náklady 3,7 % z ceny), takže
-hero a `kalkulacka.html` nemohou ukázat rozdílný výsledek. Karta je označená
-**„Modelový příklad"** — nejde o příslib zhodnocení, což by odporovalo kapitole 12
-blueprintu.
-
-## Obrázky
-
-`assets/img/*.svg` jsou vektorové architektonické vizuály, aby web fungoval offline a bez externích
-závislostí. Pro ostrou verzi je nahraďte skutečnými fotografiemi českých domů (stejné názvy, přípona
-`.jpg`/`.webp`, a v HTML upravte `src`):
-
-| Soubor | Použití | Doporučený poměr |
-|---|---|---|
-| `hero-house.svg` | hero na úvodní stránce | 1600 × 760 |
-| `dream-house.svg` | showcase banner (průhledné pozadí) | 900 × 620 |
-| `prop-1…4.svg` | karty typových scénářů | 800 × 520 |
-| `aerial.svg` | bento karta „Data z lokality" | 700 × 900 |
-
-## Kalkulačka
-
-Vzorec odpovídá blueprintu:
-
-```
-čistá vytvořená hodnota = kupní cena − výchozí hodnota − schválená investice − externí náklady prodeje
-majitel  = výchozí hodnota + 60 % z kladné čisté hodnoty
-REKO     = návrat investice + 40 % z kladné čisté hodnoty
-```
-
-Externí náklady jsou počítány jako **procento z kupní ceny** (výchozí 3,7 %), proto se prodejní minimum
-počítá jako `(výchozí hodnota + investice) / (1 − sazba)` = 8 307 373 Kč pro modelový případ.
-Blueprint uvádí 8 350 000 Kč, protože pracuje s fixní částkou 350 000 Kč. Obojí je konzistentní,
-liší se jen model nákladů.
-
-Při **záporné** čisté hodnotě kalkulačka nezobrazuje majiteli plnou výchozí hodnotu: schválená investice
-se z kupní ceny vypořádává tak jako tak, takže majiteli zbývá `výchozí hodnota + (záporná čistá hodnota)`.
-REKOREALITY v takovém případě nemá nárok na podíl ze zisku.
-
-## Co web záměrně netvrdí
-
-Podle kapitoly 12 blueprintu se na webu nevyskytuje „zdarma", „bez rizika", „garantujeme vyšší cenu",
-„zástava je jen formalita" ani konkrétní procento zhodnocení či doba prodeje. Scénáře v carouselu jsou
-označené jako **modelové**; skutečné případové studie mají nahradit až doložené pilotní projekty.
-
-## Otevřené body před ostrým spuštěním
-
-1. **Regulatorní stanovisko** k zákonu č. 257/2016 Sb. (odložená platba spotřebiteli zajištěná nemovitostí).
-   Bez něj se web nemá spustit — je to launch gate č. 1 blueprintu.
-2. Daňové a účetní memorandum včetně DPH a účtování success share.
-3. Napojení formulářů na backend/CRM (nyní jen klientská demonstrace, nic se neodesílá ani neukládá).
-4. Doplnit skutečné IČO, sídlo, odpovědné osoby, pojištění a reklamační proces do patičky.
-5. Nahradit zástupné vizuály fotografiemi a doplnit `Organization` / `Service` / `FAQPage` schema.
+Texty prošly úpravou podle [no-ai-slop](https://github.com/petergyang/no-ai-slop): konkrétní popis služby místo obecných sloganů, zachování podstatných nákladů, omezení a pravidel. Kompletní desktopové a mobilní screenshoty a přehled ověření jsou v [output/design-review/REPORT.md](output/design-review/REPORT.md).

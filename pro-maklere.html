@@ -1,293 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pro makléře — partnerství místo další slevy | REKOREALITY</title>
-<meta name="description" content="Klient i prodej zůstávají vám. REKOREALITY dodá kapitál, technické posouzení a kompletní realizaci rekonstrukce. Odměnu za doporučení vyplácíme až po prodeji.">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#14161a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5af3'/%3E%3Cpath d='M9 15l7-6 7 6v8a1 1 0 0 1-1 1h-4v-5h-4v5h-4a1 1 0 0 1-1-1z' fill='white'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://unpkg.com/three@0.160.1/build/three.module.js"
-  }
-}
-</script>
-</head>
-<body>
-
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <nav class="nav__group">
-      <a class="nav__link" href="index.html">Domů</a><span class="nav__dot"></span>
-      <a class="nav__link" href="pro-majitele.html">Pro majitele</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Partner pro rekonstrukci před prodejem | REKOREALITY</title>
+    <meta
+      name="description"
+      content="Vy řešíte prodej a vztah s klientem. My technické posouzení, rozpočet a rekonstrukci rodinného domu."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#265b45" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=6" />
+    <link rel="stylesheet" href="assets/css/premium.css?v=6" />
+    <script src="assets/js/main.js?v=6" defer></script>
+    <script src="assets/js/ui.js?v=6" defer></script>
+  </head>
+  <body class="partner-page">
+    <a class="skip-link" href="#main-content">Přejít k obsahu</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
+          ><svg
+            class="brand-icon"
+            viewBox="0 0 36 38"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 16 18 9l8 7"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+            /></svg
+          ><span>reko<em>reality</em></span></a
+        >
+        <nav class="desktop-nav" aria-label="Hlavní navigace">
+          <a href="jak-to-funguje.html">Jak to funguje</a
+          ><a href="pro-majitele.html">Pro majitele</a
+          ><a href="kalkulacka.html">Kalkulačka</a
+          ><a href="faq.html">Časté otázky</a>
+          <a href="pro-maklere.html" aria-current="page">Pro makléře</a>
+        </nav>
+        <a class="btn btn--primary header-cta" href="poptavka.html?role=agent"
+          >Předat dům k posouzení
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M4 12h15m-6-6 6 6-6 6"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg></a
+        ><button
+          class="menu-toggle"
+          id="burger"
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="navsheet"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <nav class="mobile-menu" id="navsheet" aria-label="Mobilní navigace" hidden>
+      <a href="index.html">Úvod</a
+      ><a href="jak-to-funguje.html">Jak to funguje</a
+      ><a href="pro-majitele.html">Pro majitele</a
+      ><a href="kalkulacka.html">Kalkulačka</a
+      ><a href="faq.html">Časté otázky</a
+      ><a href="pro-maklere.html">Pro makléře</a
+      ><a class="btn btn--primary" href="poptavka.html?role=agent"
+        >Předat dům k posouzení
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 12h15m-6-6 6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+      ></a>
     </nav>
-    <a class="nav__mark" href="index.html" aria-label="REKOREALITY — domů">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.2 12 4.6l8 6.6V19a1.4 1.4 0 0 1-1.4 1.4h-4.1V14h-5v6.4H5.4A1.4 1.4 0 0 1 4 19z" fill="#fff"/></svg>
-    </a>
-    <nav class="nav__group">
-      <a class="nav__link is-active" href="pro-maklere.html">Pro makléře</a><span class="nav__dot"></span>
-      <a class="nav__link" href="kalkulacka.html">Spočítat</a>
-    </nav>
-    <a class="btn btn--light nav__cta" href="kalkulacka.html">Posoudit dům</a>
-    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<div class="navsheet" id="navsheet">
-  <a href="index.html">Domů</a>
-  <a href="pro-majitele.html">Pro majitele</a>
-  <a href="pro-maklere.html">Pro makléře</a>
-  <a href="kalkulacka.html">Spočítat</a>
-  <a href="faq.html">Otázky</a>
-  <a class="btn btn--light" href="kalkulacka.html">Posoudit dům zdarma</a>
-</div>
-
-<main class="page">
-
-  <section class="subhero">
-    <div class="shell subhero__inner">
-      <div>
-        <div class="pill-row">
-          <span class="pill pill--peach">Pro makléře</span>
-          <span class="pill pill--mint">Verdikt do 48 hodin</span>
-        </div>
-        <h1 class="display display--l">Nesnižujte cenu. Změňte <span class="ital">produkt, který prodáváte</span></h1>
-        <div class="subhero__actions">
-          <a class="btn btn--ink" href="#intake">Předat dům k posouzení
-            <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn--ghost" href="#odmena">Jak funguje odměna</a>
-        </div>
-      </div>
-      <div>
-        <div class="house3d subhero__house" data-house="cube">
-          <canvas class="house3d__canvas"></canvas>
-          <img class="house3d__poster" src="assets/img/dream-house.svg" alt="Dům připravený k prodeji" width="900" height="620" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNER PROMISE -->
-  <section class="section shell">
-    <div class="sechead sechead--center reveal">
-      <div class="pill-row"><span class="pill pill--pink">Co vám slibujeme</span></div>
-      <h2 class="display display--l">Čtyři věci, které vám <span class="ital">garantujeme písemně</span></h2>
-    </div>
-
-    <div class="grid-2">
-      <article class="plaincard reveal">
-        <h3>Klienta vám nebereme</h3>
-        <p class="body">Bez vašeho vědomí s majitelem nic nepodepisujeme a prodej nepřebíráme. Smlouva se uzavírá trojstranně.</p>
-      </article>
-      <article class="plaincard reveal" data-d="1">
-        <h3>Provizi si chráníte</h3>
-        <p class="body">Vaše smlouva s klientem platí dál. Naše spolupráce se k ní přidává, nenahrazuje ji.</p>
-      </article>
-      <article class="plaincard reveal" data-d="2">
-        <h3>Technickou část přebíráme</h3>
-        <p class="body">Prohlídka, rozpočet, řemeslníci, kontrola i týdenní hlášení jsou na nás. Žádnou stavbu řídit nebudete.</p>
-      </article>
-      <article class="plaincard reveal" data-d="3">
-        <h3>Odměna je transparentní</h3>
-        <p class="body">Odměnu za doporučení sjednáme předem. Klientovi ji řekneme tam, kde to vyžaduje zákon nebo obyčejná slušnost, a vyplácíme ji až po prodeji.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PROCES A TERMÍNY -->
-  <section class="section section--flush-top shell">
-    <div class="sechead reveal">
-      <div><h2 class="display display--m sechead__title">Šest kroků a jasné <span class="ital">termíny</span></h2></div>
-      <div class="sechead__aside"><p class="body">Vy zůstáváte tváří obchodu. My držíme termíny, čísla a stavbu.</p></div>
-    </div>
-
-    <div class="tablecard reveal">
-      <div class="tablescroll">
-        <table class="data">
-          <thead><tr><th>Krok</th><th>Co udělá makléř</th><th>Co udělá REKOREALITY</th><th>Do kdy</th></tr></thead>
-          <tbody>
-            <tr><td>1. Poptávka</td><td>Odkaz, list vlastnictví, fotografie, očekávání</td><td>Potvrdí přijetí a úplnost dat</td><td>1 pracovní den</td></tr>
-            <tr><td>2. První posouzení</td><td>Doplní kontext a klienta</td><td>Trh, vlastnictví, ekonomika, co by projekt zastavilo</td><td>Do 48 hodin</td></tr>
-            <tr><td>3. Návrh</td><td>Společná schůzka s klientem</td><td>Audit, odhady, rozpočet, scénáře</td><td>7–10 dnů</td></tr>
-            <tr><td>4. Realizace</td><td>Průběžně zná stav</td><td>Kompletní řízení a report</td><td>Dle harmonogramu</td></tr>
-            <tr><td>5. Prodej</td><td>Řídí inzerci a kupující</td><td>Dodá dokumentaci a připraví dům na prohlídky</td><td>Společný plán</td></tr>
-            <tr><td>6. Vyrovnání</td><td>Uzavře transakci</td><td>Vyúčtování, odměna za doporučení, výmaz zástavy</td><td>Z úschovy</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- NÁSTROJE -->
-  <section class="section section--flush-top shell">
-    <div class="sechead sechead--center reveal">
-      <div class="pill-row"><span class="pill">Partnerské nástroje</span></div>
-      <h2 class="display display--l">Abyste to uměli <span class="ital">odprezentovat sami</span></h2>
-    </div>
-
-    <div class="grid-3">
-      <article class="plaincard reveal"><h3>Kalkulačka projektu</h3><p class="body--tight">Jeden výpočet, opatrná varianta a jednostránkové PDF pro klienta.</p></article>
-      <article class="plaincard reveal" data-d="1"><h3>Prezentace s vaším logem</h3><p class="body--tight">Podklad pro schůzku s majitelem s vaším logem i naším procesem.</p></article>
-      <article class="plaincard reveal" data-d="2"><h3>Stav poptávky online</h3><p class="body--tight">Checklist chybějících dokumentů, termíny a odpovědné osoby.</p></article>
-      <article class="plaincard reveal"><h3>Týdenní report</h3><p class="body--tight">Rozpočet plán/skutečnost, fotografie z kontrolních dnů a rizika.</p></article>
-      <article class="plaincard reveal" data-d="1"><h3>Balíček pro kupující</h3><p class="body--tight">Co bylo opraveno, kým, kdy a s jakou zárukou — argument do prohlídky.</p></article>
-      <article class="plaincard reveal" data-d="2"><h3>Školení</h3><p class="body--tight">„Jak poznat vhodnou dům do 15 minut“ — první posouzeníing v praxi.</p></article>
-    </div>
-  </section>
-
-  <!-- ODMĚNA -->
-  <section class="section section--flush-top shell" id="odmena">
-    <div class="grid-2">
-      <div class="plaincard reveal" style="padding:clamp(28px,3.4vw,44px)">
-        <div class="pill-row"><span class="pill pill--mint">Odměna za doporučení ekonomika</span></div>
-        <h2 class="display display--m mt-s">Odměna z <span class="ital">naší odměny</span>, ne z ceny domu</h2>
-        <p class="body mt-s">Pro pilot pracujeme s jednoduchou sazbou: <b>5–10 % z čisté odměny REKOREALITY</b> — tedy z podílu na vytvořené hodnotě. Nikoli z investice a nikoli z celé kupní ceny. Splatnost až po vyrovnání projektu.</p>
-
-        <div class="result-panel mt-m" style="background:var(--grad-panel)">
-          <div class="result-row"><span>Hodnota navíc (model)</span><b>1 150 000 Kč</b></div>
-          <div class="result-row"><span>Odměna REKOREALITY 40 %</span><b>460 000 Kč</b></div>
-          <div class="result-row"><span>Odměna za doporučení 5–10 %</span><b>23 000 – 46 000 Kč</b></div>
-          <div class="result-hero">
-            <small>Vaše provize z prodeje</small>
-            <strong>zůstává vám</strong>
-            <p class="small" style="margin-top:6px">Odměna za doporučení je nad rámec vaší standardní provize, nikoli místo ní.</p>
+    <main id="main-content">
+      <section class="page-hero partner-hero">
+        <div class="shell">
+          <nav class="breadcrumb" aria-label="Drobečková navigace">
+            <a href="index.html">Úvod</a><span aria-hidden="true">/</span
+            ><span aria-current="page">Pro makléře</span>
+          </nav>
+          <div class="page-hero--split">
+            <div>
+              <span class="eyebrow">Partnerství pro realitní makléře</span>
+              <h1>
+                Zajistíme rekonstrukci <span class="ital">vaší zakázky.</span>
+              </h1>
+              <p class="lead">
+                Vy vedete prodej a jednáte s klientem. My posoudíme přínos oprav
+                a po schválení majitelem zajistíme jejich financování i
+                provedení.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn--lime" href="poptavka.html?role=agent"
+                  >Předat dům k posouzení<svg
+                    class="arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 12h15m-6-6 6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </div>
+              <p class="quiet-meta">
+                Pro první kontakt stačí obec a spojení na vás.
+              </p>
+            </div>
+            <figure class="editorial-photo">
+              <img
+                src="assets/img/renovation-interior.webp"
+                srcset="
+                  assets/img/renovation-interior-768.webp  768w,
+                  assets/img/renovation-interior.webp     1536w
+                "
+                sizes="(max-width: 760px) calc(100vw - 44px), 600px"
+                alt="AI ilustrace obývacího pokoje připraveného na prezentaci při prodeji"
+                width="1536"
+                height="1024"
+              />
+              <figcaption class="photo-caption">
+                Ilustrační návrh · vytvořeno pomocí AI
+              </figcaption>
+            </figure>
           </div>
         </div>
-      </div>
-
-      <div class="stack-md reveal" data-d="1">
-        <div class="callout callout--warn">
-          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 8.5v5m0 3.5h.01M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </section>
+      <section class="section shell">
+        <div class="section-head">
           <div>
-            <p class="callout__label">Zakázaný obchodní vzorec</p>
-            <p class="callout__text">Neslibujeme makléři výnos z navýšené ceny bez ohledu na výsledek, neskrýváme odměna za doporučení před klientem a nevytváříme tlak, aby majitel uzavřel kupní smlouvu za předem určených okolností. Pokud vám to někdo nabídne, není to náš model.</p>
+            <span class="eyebrow">Jasné rozdělení odpovědnosti</span>
+            <h2>Kdo se o co <span class="ital">postará.</span></h2>
+          </div>
+          <p class="lead">
+            Majitel zůstává u důležitých rozhodnutí. Spolupráci nastavíme
+            společně s ním a s vámi.
+          </p>
+        </div>
+        <div class="roles-grid">
+          <article class="role-column">
+            <span class="eyebrow">Vy · realitní makléř</span>
+            <h3>Vztah s klientem<br />a vedení prodeje.</h3>
+            <ul>
+              <li>Znáte majitele, očekávání a historii nabídky.</li>
+              <li>Přinášíte kontext trhu a dosavadní poptávky.</li>
+              <li>Řídíte prezentaci, zájemce a prohlídky.</li>
+              <li>Vedete prodej podle své smlouvy s klientem.</li>
+            </ul>
+          </article>
+          <article class="role-column">
+            <span class="eyebrow">My · REKOREALITY</span>
+            <h3>Návrh, financování<br />a realizace oprav.</h3>
+            <ul>
+              <li>Prověříme technický stav a přínos oprav.</li>
+              <li>Připravíme rozpočet a varianty výsledku.</li>
+              <li>Financujeme a řídíme schválené práce.</li>
+              <li>Dodáme dokumentaci provedených oprav.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="partner-assurance">
+          <article>
+            <h3>Provize má své vlastní podmínky.</h3>
+            <p>
+              Vaše zprostředkovatelská smlouva se řeší samostatně. Rozdělení
+              rolí a odměn musí být srozumitelné i majiteli.
+            </p>
+          </article>
+          <article>
+            <h3>Doporučení se dohodne zvlášť.</h3>
+            <p>
+              Případnou odměnu za doporučení sjednáme předem. Vyplácí se až po
+              vypořádání projektu, ne při předání kontaktu.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section section--soft partner-steps">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Od předání zakázky k prodeji</span>
+              <h2>Jak předat dům k posouzení</h2>
+            </div>
+          </div>
+          <div class="step-grid">
+            <article class="step">
+              <span class="step-number">01</span>
+              <h3>Předáte základní informace.</h3>
+              <p>
+                Obec, svůj kontakt a případně pár slov o zakázce. Domluvíme si,
+                jaké podklady je potřeba doplnit.
+              </p>
+              <small>Údaje klienta předávejte s jeho souhlasem</small>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <h3>Společně projdeme návrh.</h3>
+              <p>
+                Posoudíme dům a připravíme rozpočet. Majitel dostane podmínky a
+                rozhodne se, zda spolupráci přijme.
+              </p>
+              <small>Opravy až po schválení a smlouvách</small>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <h3>Připravíme dům pro vaši nabídku.</h3>
+              <p>
+                Zajistíme schválené práce a podklady k nim. Vy vedete prodej,
+                majitel schvaluje nabídku. Následuje dohodnuté vypořádání.
+              </p>
+              <small>Role i odměny jsou předem známé</small>
+            </article>
           </div>
         </div>
-
-        <div class="plaincard">
-          <h3>Právní rámec spolupráce</h3>
-          <p class="body">Pokud REKOREALITY samo vyhledává kupujícího, musí respektovat zákon č. 39/2020 Sb. o realitním zprostředkování: písemnou smlouvu, informační povinnosti, pojištění a spotřebitelské limity. Praktickou variantou pilotu je ponechat prodej licencovanému partnerskému makléři a technicko-investiční vztah vést odděleně — realitní smlouva a smlouva o zprostředkování jako oddělené listiny.</p>
-        </div>
-
-        <div class="plaincard plaincard--soft">
-          <h3>Kdy projekt odmítneme</h3>
-          <p class="body--tight">Nevyřešené dědictví, sporné spoluvlastnictví, exekuce bez řešení, nesouhlas banky se zástavou, statické riziko, nelikvidní lokalita nebo očekávání majitele výrazně nad tržním odhadem. Řekneme to hned — abyste neztráceli čas ani důvěru klienta.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTAKE -->
-  <section class="section section--flush-top shell" id="intake">
-    <div class="sechead sechead--center reveal">
-      <h2 class="display display--l">Předat dům <span class="ital">k posouzení</span></h2>
-      <p class="lead">Vyplnění zabere pár minut. Přijetí potvrdíme do jednoho pracovního dne, první posouzení dodáme do 48 hodin.</p>
-    </div>
-
-    <form class="formcard reveal" data-demo-form="brokerDone" novalidate>
-      <div class="field-row">
-        <div class="field"><label for="b-name">Jméno makléře</label><input id="b-name" type="text" placeholder="Jan Novák" required></div>
-        <div class="field"><label for="b-office">Kancelář / IČO</label><input id="b-office" type="text" placeholder="RK Příklad s.r.o. / 12345678"></div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="b-email">E-mail</label><input id="b-email" type="email" placeholder="jan@rkpriklad.cz" required></div>
-        <div class="field"><label for="b-phone">Telefon</label><input id="b-phone" type="tel" placeholder="+420 …"></div>
-      </div>
-      <div class="field">
-        <label for="b-link">Odkaz na inzerát nebo interní ID zakázky</label>
-        <input id="b-link" type="text" placeholder="https://…">
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="b-contract">Stav smlouvy</label>
-          <select id="b-contract">
-            <option>Exkluzivní</option>
-            <option>Nevýhradní</option>
-            <option>Před podpisem</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="b-next">Další krok</label>
-          <select id="b-next">
-            <option>Nejdřív interní první posouzení</option>
-            <option>Rovnou společná schůzka s klientem</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field"><label for="b-asis">Odhad „as-is“ (Kč)</label><input id="b-asis" type="text" inputmode="numeric" placeholder="6 500 000"></div>
-        <div class="field"><label for="b-expect">Očekávání majitele (Kč)</label><input id="b-expect" type="text" inputmode="numeric" placeholder="8 000 000"></div>
-      </div>
-      <div class="field">
-        <label for="b-note">Dosavadní poptávka a důvod stagnace</label>
-        <textarea id="b-note" placeholder="Kolik prohlídek, jaké námitky kupujících, jak dlouho v nabídce…"></textarea>
-        <span class="hint">Fotografie, list vlastnictví a technické dokumenty doplníme po potvrzení přijetí — nechceme je sbírat dřív, než víme, že má smysl pokračovat.</span>
-      </div>
-
-      <label class="consent"><input type="checkbox" required><span>Mám souhlas klienta s předáním údajů o domu za účelem posouzení.</span></label>
-      <label class="consent"><input type="checkbox"><span>Chci dostávat partnerské materiály a pozvánky na školení. (Volitelné, lze kdykoli odvolat.)</span></label>
-
-      <button class="btn btn--ink btn--wide mt-s" type="submit">Odeslat k posouzení
-        <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <p class="small mt-s">Prototyp: formulář se neodesílá na server a žádná data se neukládají.</p>
-    </form>
-
-    <div class="ctablock hide" id="brokerDone">
-      <span class="pill pill--mint">Přijato</span>
-      <h2 class="display display--m mt-s balance">Díky. Teď prověříme, zda čísla <span class="ital">dávají smysl</span>.</h2>
-      <p class="lead">Přijetí potvrdíme do 1 pracovního dne. Do 48 hodin dostanete první posouzení: má potenciál / potřebujeme doplnit / pro náš model není vhodné.</p>
-      <p class="ctablock__note">První posouzení není nabídka financování ani závazek uzavřít smlouvu.</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="shell">
-      <div class="footer__grid footer__grid--slim">
-        <div>
-          <div class="footer__brand">
-            <span class="footer__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.2 12 4.6l8 6.6V19a1.4 1.4 0 0 1-1.4 1.4h-4.1V14h-5v6.4H5.4A1.4 1.4 0 0 1 4 19z" fill="#fff"/></svg></span>
-            <span class="footer__word">reko<em>reality</em></span>
+      </section>
+      <section class="section shell" id="intake">
+        <div class="partner-cta">
+          <div>
+            <span class="eyebrow">Máte vhodnou zakázku?</span>
+            <h2>Předejte nám dům k posouzení.</h2>
+            <p>
+              Stačí obec a kontakt na vás. Stručný popis zakázky můžete doplnit,
+              dokumenty až podle potřeby.
+            </p>
           </div>
-          <p class="footer__tag">Rekonstrukci zaplatíme my. Dům zůstává váš.</p>
-          <div class="footer__social">
-            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.7 21H1.5l7.5-8.6L1.2 3h6.6l4.5 5.6zm-1.1 16h1.8L7.7 4.8H5.8z"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
-            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.5 1.6-1.5h1.6V3.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V13h2.7v8z"/></svg></a>
+          <a class="btn btn--primary" href="poptavka.html?role=agent"
+            >Předat dům k posouzení<svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 12h15m-6-6 6 6-6 6"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
+              ><svg
+                class="brand-icon"
+                viewBox="0 0 36 38"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 16 18 9l8 7"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                /></svg
+              ><span>reko<em>reality</em></span></a
+            >
+            <p>Financujeme a řídíme rekonstrukce domů před prodejem.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Vše o spolupráci</h2>
+            <a href="jak-to-funguje.html">Jak to funguje</a
+            ><a href="pro-majitele.html">Pro majitele</a
+            ><a href="pro-maklere.html">Pro realitní makléře</a>
+          </div>
+          <div class="footer-col">
+            <h2>Začněte tady</h2>
+            <a href="poptavka.html">Nezávazné posouzení</a
+            ><a href="kalkulacka.html">Orientační kalkulačka</a
+            ><a href="faq.html">Otázky a odpovědi</a
+            ><a href="pro-majitele.html#zastava">Vlastnictví a zástava</a>
           </div>
         </div>
-        <div class="footer__col"><h4>Pro vás</h4><ul>
-          <li><a href="pro-majitele.html">Pro majitele domu</a></li>
-          <li><a href="pro-maklere.html">Pro makléře</a></li>
-          <li><a href="kalkulacka.html">Spočítat a poslat dům</a></li>
-          <li><a href="faq.html">Otázky a odpovědi</a></li>
-        </ul></div>
-        <div class="footer__col"><h4>Podrobnosti</h4><ul>
-          <li><a href="pro-majitele.html#krok-za-krokem">Krok za krokem</a></li>
-          <li><a href="pro-majitele.html#zastava">Co je zástava</a></li>
-          <li><a href="pro-majitele.html#kdy-ne">Kdy dům nebereme</a></li>
-          <li><a href="jak-to-funguje.html">Celý proces a právní rámec</a></li>
-        </ul></div>
+        <div class="footer-bottom">
+          <span>© 2026 REKOREALITY</span>
+          <p>
+            Web je ve zkušebním provozu. Formulář žádosti neodesílá. Uvedené
+            propočty jsou modelové, fotografie jsou AI ilustrace. Konkrétní
+            podmínky spolupráce určuje smlouva.
+          </p>
+        </div>
       </div>
-      <div class="footer__bar">
-        <nav><a href="#">Podmínky</a><a href="#">Osobní údaje</a><a href="#">Cookies</a></nav>
-        <span>© 2026 REKOREALITY</span>
-      </div>
-      <p class="disclaimer">Tento web je zkušební verze. Čísla na něm jsou modelová, nejde o nabídku financování ani o právní či daňové poradenství. Skutečné podmínky vždy určuje podepsaná smlouva.</p>
+    </footer>
+    <div class="mobile-cta">
+      <a class="btn btn--primary" href="poptavka.html?role=agent"
+        >Předat dům k posouzení
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 12h15m-6-6 6 6-6 6"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+      ></a>
     </div>
-  </footer>
-</main>
-
-<a class="btn btn--ink sticky-cta" id="stickyCta" href="#intake">Předat dům</a>
-<script src="assets/js/main.js?v=3"></script>
-<script type="module" src="assets/js/houses3d.js"></script>
-</body>
+  </body>
 </html>

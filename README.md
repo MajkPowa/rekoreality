@@ -21,6 +21,7 @@ Otevřete `http://127.0.0.1:4173/`. Lze také otevřít `index.html` přímo. Pr
 - `pro-maklere.html`: rozdělení rolí a odkaz na společnou žádost.
 - `kalkulacka.html`: samostatný volitelný propočet. Není podmínkou žádosti.
 - `faq.html`: otázky po tématech s hledáním bez diakritiky; odpovědi lze otevřít i bez JavaScriptu.
+- `poradna/`: šest článků o rozhodování před prodejem, výběru oprav, přípravě nabídky, rozpočtu, dokumentech a dědictví.
 
 Všechny hlavní akce vedou přímo na krátkou žádost. Staré adresy `kalkulacka.html#formular`, `pro-majitele.html#krok-za-krokem`, `#zastava`, `#kdy-ne` a `pro-maklere.html#intake` zůstávají použitelné.
 
@@ -54,7 +55,7 @@ Při záporné hodnotě navíc nevzniká podíl na zisku, investice se ale nadá
 
 Stávající hosting je GitHub Pages z větve `main`, kořen repozitáře. Push do `main` publikuje změny. Úpravy designu samy o sobě neznamenají souhlas s ostrým spuštěním služby.
 
-Všechny stránky včetně nové poptávky mají `noindex, nofollow`. Před ostrým spuštěním zůstávají k dořešení:
+Sedm původních stránek služby včetně poptávky má `noindex, follow`. Poradna a jejích šest článků mají povolenou indexaci. Před ostrým spuštěním služby zůstávají k dořešení:
 
 1. Právní posouzení zamýšleného modelu a zajištění odpovídajícího režimu provozu.
 2. Daňové a účetní nastavení včetně DPH a podílu na vytvořené hodnotě.
@@ -67,3 +68,17 @@ Web neslibuje garantovaný výnos, pevnou dobu prodeje ani rekonstrukci zdarma. 
 ## Revize obsahu a ověření
 
 Texty prošly úpravou podle [no-ai-slop](https://github.com/petergyang/no-ai-slop): konkrétní popis služby místo obecných sloganů, zachování podstatných nákladů, omezení a pravidel. Kompletní desktopové a mobilní screenshoty a přehled ověření jsou v [output/design-review/REPORT.md](output/design-review/REPORT.md).
+
+## Poradna a SEO
+
+Zdrojový obsah je v `content/articles/*.json`, šablony v `scripts/build_articles.py` a styly v `assets/css/journal.css`. Po úpravě obsahu spusťte:
+
+```powershell
+python scripts/build_articles.py
+```
+
+Skript vygeneruje statické HTML v `poradna/`, výběr článků na úvodu a `sitemap.xml`. Menu a patičku přebírá z `index.html`. Výsledné soubory jsou součástí repozitáře a GitHub Pages nepotřebuje Python ani další build. Při podstatné aktualizaci článku přidejte `dateModified` ve formátu `YYYY-MM-DD`; `datePublished` zachovejte. Výchozí datum této série je 2026-09-28. Časy čtení se počítají z obsahu, nejde o slib přesné doby.
+
+Každý článek má vlastní titulek, popis, canonical URL, metadata sdílení, strukturovaná data BlogPosting a BreadcrumbList, obsah s kotvami, citované primární zdroje a související články. Přehled používá CollectionPage a ItemList. Články jsou čitelné i bez JavaScriptu. Modelové výpočty a AI ilustrace jsou označené, formulář zůstává výslovně ukázkový.
+
+[Sitemap](https://majkpowa.github.io/rekoreality/sitemap.xml) obsahuje pouze sedm indexovatelných stránek poradny. Na projektovém GitHub Pages nemá `rekoreality/robots.txt` účinek jako soubor v kořeni hostitele; procházení nespoléhá na něj. Sitemap lze odeslat v ověřené službě Google Search Console, což tento repozitář automaticky neprovádí. Indexace ani pořadí ve vyhledávání nejsou zaručené. Při změně domény upravte `BASE` v generátoru a odkaz v `robots.txt`.

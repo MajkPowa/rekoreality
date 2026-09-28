@@ -1,0 +1,110 @@
+[
+  {
+    "page": "index.html",
+    "clientWidth": 305,
+    "desktopNav": "none",
+    "headerHeight": 75,
+    "menuButton": "block",
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "page": "poradna/",
+    "clientWidth": 305,
+    "desktopNav": "none",
+    "headerHeight": 75,
+    "menuButton": "block",
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "page": "poradna/rozpocet-rekonstrukce-domu.html",
+    "clientWidth": 305,
+    "desktopNav": "none",
+    "headerHeight": 75,
+    "menuButton": "block",
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "page": "index.html",
+    "clientWidth": 752,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 752,
+    "width": 767
+  },
+  {
+    "page": "poradna/",
+    "clientWidth": 752,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 752,
+    "width": 767
+  },
+  {
+    "page": "poradna/rozpocet-rekonstrukce-domu.html",
+    "clientWidth": 752,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 752,
+    "width": 767
+  },
+  {
+    "page": "index.html",
+    "clientWidth": 975,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 975,
+    "width": 990
+  },
+  {
+    "page": "poradna/",
+    "clientWidth": 975,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 975,
+    "width": 990
+  },
+  {
+    "page": "poradna/rozpocet-rekonstrukce-domu.html",
+    "clientWidth": 975,
+    "desktopNav": "none",
+    "headerHeight": 85,
+    "menuButton": "block",
+    "scrollWidth": 975,
+    "width": 990
+  },
+  {
+    "page": "index.html",
+    "clientWidth": 1086,
+    "desktopNav": "flex",
+    "headerHeight": 85,
+    "menuButton": "none",
+    "scrollWidth": 1086,
+    "width": 1101
+  },
+  {
+    "page": "poradna/",
+    "clientWidth": 1086,
+    "desktopNav": "flex",
+    "headerHeight": 85,
+    "menuButton": "none",
+    "scrollWidth": 1086,
+    "width": 1101
+  },
+  {
+    "page": "poradna/rozpocet-rekonstrukce-domu.html",
+    "clientWidth": 1086,
+    "desktopNav": "flex",
+    "headerHeight": 85,
+    "menuButton": "none",
+    "scrollWidth": 1086,
+    "width": 1101
+  }
+]

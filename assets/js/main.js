@@ -40,7 +40,7 @@
       }
     });
     window
-      .matchMedia("(min-width: 981px)")
+      .matchMedia("(min-width: 1101px)")
       .addEventListener("change", function (event) {
         if (event.matches) closeMenu(false);
       });

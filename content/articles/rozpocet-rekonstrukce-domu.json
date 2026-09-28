@@ -1,0 +1,64 @@
+{
+  "slug": "rozpocet-rekonstrukce-domu",
+  "title": "Rozpočet rekonstrukce domu před prodejem: na co nezapomenout",
+  "seoTitle": "Rozpočet rekonstrukce domu před prodejem",
+  "description": "Jak sestavit rozpočet oprav před prodejem domu: rozsah prací, srovnání nabídek, rezerva, průběžné výdaje a modelový přehled peněz potřebných na projekt.",
+  "category": "Náklady",
+  "lead": "Při sestavování rozpočtu rekonstrukce před prodejem popište rozsah prací, srovnejte nabídky a sepište výdaje až do předání domu. Při vlastním financování si hlídejte rezervu a termíny plateb, abyste měli peníze připravené i na zálohy před zahájením prací.",
+  "summary": [
+    "Dodavatelům pošlete stejné zadání a zkontrolujte, co jejich nabídky zahrnují.",
+    "Rezervu držte odděleně od objednaných prací a skutečně utracených peněz.",
+    "Do porovnání s prodejem bez oprav zahrňte také prodej a držení domu."
+  ],
+  "sections": [
+    {
+      "id": "zadani-oprav",
+      "title": "Začněte soupisem prací po místnostech",
+      "html": "<p>U každé místnosti napište, co zůstává a co se mění. „Oprava koupelny“ je pro nacenění příliš široké zadání. Rozepište odstranění vybavení, práci s rozvody, povrchy, nové zařizovací předměty a dokončení. Připojte rozměry, fotografie a požadovaný výsledek.</p><p>ČKAIT uvádí, že podrobný rozpočet vychází z množství jednotlivých prací, jejich jednotkových cen a dalších souvisejících nákladů. Podrobnost podkladů přitom ovlivňuje přesnost propočtu. <a href=\"https://profesis.ckait.cz/dokumenty-ckait/tp-3-1/\">Zdroj: Rozpočtování staveb, ČKAIT</a>.</p><p>Otevřené otázky napište přímo do zadání. Pokud například neznáte stav podlahy pod krytinou, domluvte způsob ověření před objednávkou dalších vrstev. Jinak mohou dvě firmy počítat s odlišným rozsahem a výsledné součty nebudou srovnatelné.</p>"
+    },
+    {
+      "id": "nabidky-dodavatelu",
+      "title": "Porovnávejte stejnou práci ve stejném provedení",
+      "html": "<p>Vytvořte jednu tabulku a nabídky do ní přepište. U každého řádku potřebujete množství, popis provedení a částku k zaplacení. Nejasnou položku vraťte dodavateli k doplnění. Prázdné políčko nepovažujte za práci zdarma.</p><ul><li>Ověřte, zda částka zahrnuje materiál, montáž a potřebné přípravné práce.</li><li>U vybavení požadujte konkrétní typ nebo popsaný standard včetně cenového limitu.</li><li>Sjednoťte, zda porovnáváte konečné částky včetně případné DPH.</li><li>Oddělte potvrzenou cenu od orientační částky, která závisí na dalším zjištění.</li></ul><p>Nabídka na nové podlahy může zahrnovat i odstranění staré vrstvy, zatímco druhá začíná až pokládkou. Rozdíl v součtu pak vypovídá o jiném zadání. Před rozhodnutím si nechte obě nabídky doplnit na stejný rozsah.</p>"
+    },
+    {
+      "id": "vedlejsi-vydaje",
+      "title": "Projděte dům od vyklizení po závěrečný úklid",
+      "html": "<p>K rozpočtu samotných oprav připojte výdaje, které objednáváte samostatně. Začněte přípravou domu. Kdo odveze starý nábytek, kde bude uložen materiál a jak se dostane do patra? U každého úkolu určete odpovědnou osobu a způsob nacenění.</p><p>Stejně projděte dokončení. Zkontrolujte, zda máte zahrnuté potřebné kontroly provedených prací, odstranění zbytků materiálu, úklid a přípravu domu na fotografování. V nabídce mohou být zahrnuté jen některé z těchto činností.</p><p>U výdaje sdíleného několika pracemi zvolte jediné místo v tabulce. Například jeden společný kontejner na odpad nezapisujte znovu k podlahám i koupelně, pokud jejich nabídky už s tímto společným odvozem počítají.</p>"
+    },
+    {
+      "id": "model-rozpoctu",
+      "title": "Modelový rozpočet rozlišuje práce a rezervu",
+      "html": "<p>Následuje vlastní početní příklad bez vazby na konkrétní dům. Částky nejsou ceníkem stavebních prací. Ukazují, jak odlišit plánované výdaje od peněz připravených na případné změny.</p><div class=\"article-table\"><table><thead><tr><th scope=\"col\">Položka</th><th scope=\"col\">Modelová částka</th></tr></thead><tbody><tr><th scope=\"row\">Posouzení stavu a příprava zadání</th><td>45 000 Kč</td></tr><tr><th scope=\"row\">Práce a materiál</th><td>620 000 Kč</td></tr><tr><th scope=\"row\">Doprava, odpad a zázemí prací</th><td>45 000 Kč</td></tr><tr><th scope=\"row\">Kontroly a dokončení</th><td>20 000 Kč</td></tr><tr><th scope=\"row\">Plánované výdaje celkem</th><td>730 000 Kč</td></tr><tr><th scope=\"row\">Samostatná rezerva</th><td>110 000 Kč</td></tr><tr><th scope=\"row\">Připravené financování oprav</th><td>840 000 Kč</td></tr></tbody></table></div><p>Pokud plánované práce skutečně stojí 730 000 Kč a ze schválených změn přibude 40 000 Kč, utratíte 770 000 Kč. Z rezervy zůstane 70 000 Kč. Do konečného vyúčtování nákladů patří skutečně utracená částka. Výši rezervy pro konkrétní dům odvoďte od neověřených prací a jejich možného rozsahu.</p>"
+    },
+    {
+      "id": "platby-a-zmeny",
+      "title": "Vedle rozpočtu veďte termíny plateb",
+      "html": "<p>Při vlastním financování ke každé objednávce doplňte, kdy se platí záloha, průběžná platba a doplatek. Porovnejte tyto termíny s dostupnými penězi. Jestliže výnos z prodeje přijde až po dokončení oprav, nemůže bez dalšího financování uhradit předchozí zálohy. Pokud opravy financuje partner, předem určete, které položky hradí a kdo schvaluje případné navýšení.</p><p>Novou práci nejprve nechte popsat a ocenit. Do přehledu doplňte důvod změny, cenu, dopad na termín a jméno osoby, která ji schválila. Změny sledujte i tehdy, když se jednotlivě vejdou do rezervy. Několik menších objednávek může dohromady vyčerpat celý zbytek.</p><p>Při pravidelné kontrole rozlišujte zaplacené částky, objednané práce čekající na fakturu a zbývající odhad. Ze zůstatku na účtu samotného nezjistíte, kolik peněz ještě můžete použít.</p>"
+    },
+    {
+      "id": "naklady-do-prodeje",
+      "title": "Přičtěte náklady až do prodeje domu",
+      "html": "<p>Pro rozhodnutí o rekonstrukci potřebujete také částky za prodej a další držení nemovitosti. Zapište cenu služeb při prodeji, prezentace a své průběžné výdaje za dobu, kdy dům opravujete a nabízíte. Už zahrnuté položky podruhé neodečítejte.</p><p>K modelovým 840 000 Kč připraveným na opravy přidejme 180 000 Kč za prodej a 60 000 Kč za držení domu. Pro toto plánování tedy počítáme s 1 080 000 Kč včetně rezervy. Konečný výdaj se změní podle jejího skutečného čerpání a skutečné délky projektu.</p><p>Prodejní cena je částka za nemovitost. Čistý výnos pro majitele zjistíte po odečtení jeho nákladů a dalších souvisejících plateb. Při financování partnerem do výpočtu zahrňte i jeho dohodnutou odměnu či podíl.</p>"
+    },
+    {
+      "id": "limit-investice",
+      "title": "Ověřte, zda se rozpočet vejde do očekávaného výnosu",
+      "html": "<p>Hotový rozpočet postavte vedle dvou odhadů prodeje: v současném stavu a po přesně popsaných opravách. U obou zjistěte, zda vycházejí z uskutečněných obchodů, nebo z cen v inzerci. Inzerovaná částka sama nepotvrzuje uzavřený obchod; ČSÚ ve statistice cen nemovitostí používá kupní ceny z katastru. <a href=\"https://csu.gov.cz/docs/107508/19584d64-ab08-e7a3-ada5-d683e2b45fa7/01401623u.pdf?version=1.0\">Zdroj: metodika ČSÚ</a>.</p><p>Pro obě varianty odečtěte příslušné náklady. Pak snižte očekávanou cenu opraveného domu a přidejte další měsíc průběžných výdajů. Zapište částku, nad kterou už opravy neschválíte bez nového propočtu. Tento limit přiložte k zadání společně s pravidly pro čerpání rezervy.</p>"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ČKAIT: Rozpočtování staveb (TP 3.1)",
+      "url": "https://profesis.ckait.cz/dokumenty-ckait/tp-3-1/"
+    },
+    {
+      "title": "ČSÚ: Metodika statistiky cen nemovitostí",
+      "url": "https://csu.gov.cz/docs/107508/19584d64-ab08-e7a3-ada5-d683e2b45fa7/01401623u.pdf?version=1.0"
+    }
+  ],
+  "related": [
+    "rekonstrukce-domu-pred-prodejem",
+    "co-opravit-pred-prodejem-domu"
+  ]
+}

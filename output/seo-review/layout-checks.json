@@ -1,0 +1,128 @@
+[
+  {
+    "page": "index",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Před prodejem domu\nse rozhodujte podle podkladů.",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "rekonstrukce-domu-pred-prodejem",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Rekonstrukce domu před prodejem: kdy se vyplatí",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "co-opravit-pred-prodejem-domu",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Co opravit před prodejem domu a co nechat kupujícímu",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "jak-pripravit-dum-na-prodej",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Jak připravit starší dům na prodej",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "rozpocet-rekonstrukce-domu",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Rozpočet rekonstrukce domu před prodejem: na co nezapomenout",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "dokumenty-k-prodeji-domu",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Jaké dokumenty připravit k prodeji domu",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "prodej-zdedeneho-domu",
+    "viewport": "desktop",
+    "clientWidth": 1425,
+    "h1": "Prodej zděděného domu: co vyřešit před nabídkou",
+    "loadedImages": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "page": "index",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": null,
+    "width": 390
+  },
+  {
+    "page": "rekonstrukce-domu-pred-prodejem",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  },
+  {
+    "page": "co-opravit-pred-prodejem-domu",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  },
+  {
+    "page": "jak-pripravit-dum-na-prodej",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  },
+  {
+    "page": "rozpocet-rekonstrukce-domu",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  },
+  {
+    "page": "dokumenty-k-prodeji-domu",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  },
+  {
+    "page": "prodej-zdedeneho-domu",
+    "viewport": "mobile",
+    "clientWidth": 375,
+    "loadedImages": true,
+    "scrollWidth": 375,
+    "tocOpen": false,
+    "width": 390
+  }
+]

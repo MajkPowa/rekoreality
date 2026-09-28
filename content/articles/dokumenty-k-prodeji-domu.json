@@ -1,0 +1,56 @@
+{
+  "slug": "dokumenty-k-prodeji-domu",
+  "title": "Jaké dokumenty připravit k prodeji domu",
+  "seoTitle": "Jaké dokumenty připravit k prodeji domu | REKOREALITY",
+  "description": "Přehled podkladů k prodeji domu: list vlastnictví, stavební dokumentace, PENB i doklady o opravách. Co ověřit a jak si uspořádat chybějící dokumenty.",
+  "category": "Dokumenty",
+  "lead": "Ještě před focením nabídky si založte složku s podklady k domu. Zjistíte, které údaje můžete doložit a co potřebujete dohledat, než zájemci slíbíte termín prodeje.",
+  "summary": "Začněte vlastnictvím a rozsahem prodávaných pozemků. Potom porovnejte stavební dokumentaci se skutečným stavem, vyřešte PENB a připravte doklady o provozu a opravách.",
+  "sections": [
+    {
+      "id": "slozka-podkladu",
+      "title": "Sepište, co máte a co chybí",
+      "html": "<p>Prohledejte domácí archiv, e-mail a složky po předchozím vlastníkovi. Dokumenty rozdělte na vlastnictví, stavbu, energie a opravy. Ke každému souboru přidejte srozumitelný název a datum. Originály ponechte pohromadě; pro společnou práci připravte čitelné kopie včetně příloh a zadních stran.</p><p>V jednoduchém seznamu uveďte název podkladu, kde je uložený, kdo ho může dodat a co je potřeba ověřit. Nález starého půdorysu označte jako půdorys s neověřenou aktuálností. Sloupec „chybí“ pomůže rozdělit práci mezi vás, makléře a odborníky. Ne každý užitečný dokument je povinnou přílohou každého prodeje; rozsah potřebných podkladů určete podle konkrétního domu.</p>"
+    },
+    {
+      "id": "vlastnictvi-a-pozemky",
+      "title": "Ověřte vlastníky, pozemky a zápisy v katastru",
+      "html": "<p>Na listu vlastnictví zkontrolujte vlastníky a jejich podíly, seznam nemovitostí i omezení, například zástavní práva nebo věcná břemena. Plomba upozorňuje na probíhající změnu právních vztahů; související číslo řízení najdete ve výpisu. Strukturu vysvětluje <a href=\"https://www.cuzk.gov.cz/Katastr-nemovitosti/Poskytovani-udaju-z-KN/Dalkovy-pristup/Vystupy-z-KN-poskytovane-prostrednictvim-DP.aspx\">ČÚZK v přehledu výstupů z katastru</a>.</p><p>Porovnejte výpis s tím, co chcete nabídnout. Patří vám také zahrada za plotem, garáž a celá příjezdová cesta? Zapište parcelní čísla a nejasnosti. Připravte nabývací listinu, například kupní smlouvu nebo rozhodnutí o dědictví. U zápisu, kterému nerozumíte, vyhledejte i příslušnou listinu. Samotný stručný název břemene nemusí odpovědět na otázku, kdo může používat cestu nebo část domu. Plombu neodhadujte podle data; nechte si vysvětlit konkrétní řízení.</p>"
+    },
+    {
+      "id": "stavebni-dokumentace",
+      "title": "Porovnejte stavební dokumentaci s domem",
+      "html": "<p>Připravte dochované výkresy, povolení a doklady k užívání stavby. Vedle původního projektu hledejte podklady k přístavbě, vestavbě podkroví nebo změně využití místností. Projděte dům s půdorysem a poznamenejte odlišnosti. Nákres vytvořený pro inzerát vám pomůže ukázat dispozici, ale neřeší původ změn ani jejich povolení.</p><p>Pokud se dokumentace nedochovala nebo není v náležitém stavu, řeší se pasport. Podle <a href=\"https://portal.gov.cz/sluzby-vs/overeni-pasportu-stavby-S47342\">gov.cz ke službě ověření pasportu</a> tento postup předpokládá stavbu, která byla povolena nebo povolení tehdy nepotřebovala. Portál také popisuje povinnost uchovávat dokumentaci odpovídající skutečnému provedení. Před objednáním pasportu proto s projektantem a stavebním úřadem vyjasněte, jaký stav lze doložit. Do seznamu otázek uveďte konkrétní přístavbu či místnost, ne pouze „chybí papíry“.</p>"
+    },
+    {
+      "id": "penb",
+      "title": "PENB řešte před zveřejněním nabídky",
+      "html": "<p>Při prodeji budovy má vlastník obecně povinnost opatřit PENB, předložit jej zájemci a předat kupujícímu. Energetická třída patří také do inzerce. Průkaz zpracovává oprávněný energetický specialista. Podmínky a výjimky uvádí <a href=\"https://mpo.gov.cz/cz/energetika/uspory-energie/uspory-v-praxi/prukazy-energeticke-narocnosti-budov/prukaz-energeticke-narocnosti-budovy--277417/\">MPO v přehledu pravidel pro PENB</a>. Případnou výjimku ověřte pro svůj dům, nepřebírejte ji z jiného inzerátu.</p><p>Máte-li průkaz v archivu, připravte celý dokument a přehled pozdějších úprav. Specialistovi popište změny oken, zateplení nebo vytápění a ověřte použitelnost podkladu. Vyúčtování energií si uložte zvlášť: zájemci ukáže skutečný provoz domácnosti v daném období. Připište, kolik lidí v domě bydlelo a které prostory vytápěli. Částku z účtu nepřevádějte na slib budoucí spotřeby.</p>"
+    },
+    {
+      "id": "opravy-a-provoz",
+      "title": "Doložte opravy a popište známé závady",
+      "html": "<p>Do provozní složky dejte dostupné revizní a servisní zprávy, návody k zařízení a faktury za větší opravy. U střechy, rozvodů nebo kotle zaznamenejte rok a rozsah prací, pokud je znáte. Rozlišujte doklad od rodinné vzpomínky. Faktura za část střechy není podkladem pro tvrzení, že prošla rekonstrukcí celá střecha.</p><ul><li>U vody, kanalizace a vytápění sepište používané řešení a dostupné podklady.</li><li>K opravované závadě připojte popis zásahu a případné fotografie.</li><li>U přetrvávajícího problému napište, kde se projevuje a co zatím nebylo posouzeno.</li><li>U zařízení ponechaného v domě dohledávejte návody a servisní kontakty.</li></ul><p>Chybějící doklad označte otevřeně. Zájemce pak může zadat technikovi konkrétní otázku místo obecné kontroly všeho, o čem se nic nedozvěděl.</p>"
+    },
+    {
+      "id": "sdileni-podkladu",
+      "title": "Připravte podklady podle příjemce",
+      "html": "<p>Do veřejného inzerátu nevkládejte celý osobní archiv. Vytvořte stručný přehled domu a úplné dokumenty sdílejte účelně s lidmi, kteří je pro přípravu převodu nebo prověření domu potřebují. Před odesláním zkontrolujte osobní údaje dalších osob a čísla účtů.</p><div class=\"article-table\"><table><thead><tr><th>Pro koho</th><th>Co připravit k projití</th></tr></thead><tbody><tr><td>Makléř a fotograf</td><td>Ověřený rozsah nabídky, dispozici, energetické údaje a seznam známých nedostatků.</td></tr><tr><td>Vážný zájemce a jeho technik</td><td>Stavební podklady, informace o opravách, provozu a nevyřešených otázkách.</td></tr><tr><td>Advokát nebo notář</td><td>Doklady k vlastnictví, související smlouvy a úplné podklady k právním omezením.</td></tr></tbody></table></div><p>Konkrétní převod a potřebné listiny nechte posoudit advokátem nebo notářem. Před podpisem mu předejte také seznam nejasností, včetně případného úvěru, zastupování vlastníka a rozporů mezi dokumenty. Na předání domu si průběžně chystejte seznam dokumentů, klíčů a zařízení, která kupující převezme.</p>"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ČÚZK: Výstupy z katastru nemovitostí poskytované prostřednictvím dálkového přístupu",
+      "url": "https://www.cuzk.gov.cz/Katastr-nemovitosti/Poskytovani-udaju-z-KN/Dalkovy-pristup/Vystupy-z-KN-poskytovane-prostrednictvim-DP.aspx"
+    },
+    {
+      "title": "gov.cz: Ověření pasportu stavby",
+      "url": "https://portal.gov.cz/sluzby-vs/overeni-pasportu-stavby-S47342"
+    },
+    {
+      "title": "MPO: Průkaz energetické náročnosti budovy",
+      "url": "https://mpo.gov.cz/cz/energetika/uspory-energie/uspory-v-praxi/prukazy-energeticke-narocnosti-budov/prukaz-energeticke-narocnosti-budovy--277417/"
+    }
+  ],
+  "related": ["prodej-zdedeneho-domu", "jak-pripravit-dum-na-prodej"]
+}

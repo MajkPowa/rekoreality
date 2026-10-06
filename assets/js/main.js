@@ -8,6 +8,7 @@
     menu.hidden = true;
     burger.setAttribute("aria-expanded", "false");
     burger.setAttribute("aria-label", "Otevřít menu");
+    if (burger.querySelector("b")) burger.querySelector("b").textContent = "Menu";
     document.body.classList.remove("nav-open");
     if (returnFocus) burger.focus();
   }
@@ -17,6 +18,7 @@
       menu.hidden = !open;
       burger.setAttribute("aria-expanded", String(open));
       burger.setAttribute("aria-label", open ? "Zavřít menu" : "Otevřít menu");
+      if (burger.querySelector("b")) burger.querySelector("b").textContent = open ? "Zavřít" : "Menu";
       document.body.classList.toggle("nav-open", open);
       if (open) menu.querySelector("a").focus();
     });

@@ -1,0 +1,959 @@
+/* Supporting service pages. Load after the shared theme and page-specific styles. */
+.service-page {
+  --service-muted: #f5f7f6;
+  --service-border: #dfe5e2;
+}
+.service-page :is(h1, h2, h3) {
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.service-page h1 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.15;
+}
+.service-page h2 {
+  font-size: clamp(25px, 2.5vw, 33px);
+  line-height: 1.22;
+}
+.service-page h3 {
+  font-size: 19px;
+  line-height: 1.35;
+  letter-spacing: -0.018em;
+}
+.service-page :is(.ital, h1 em) {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+.service-page p {
+  text-wrap: pretty;
+}
+.service-page .lead {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 22px;
+  max-width: 620px;
+}
+.service-page .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-bottom: 15px;
+}
+.service-page .btn {
+  border-radius: 10px;
+  gap: 14px;
+}
+.service-page .hero-actions {
+  gap: 12px 22px;
+  margin-top: 26px;
+}
+.service-page .text-link {
+  text-decoration-thickness: 1px;
+}
+.service-hero {
+  padding-block: 30px 54px;
+}
+.service-hero .breadcrumb {
+  margin-bottom: 36px;
+}
+.service-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(36px, 5vw, 78px);
+  align-items: center;
+}
+.service-hero-grid > * {
+  min-width: 0;
+}
+.service-overview {
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+  padding: 29px;
+  background: #fff;
+}
+.service-overview h2 {
+  font-size: 21px;
+  margin-bottom: 24px;
+}
+.service-overview ol {
+  display: grid;
+  gap: 21px;
+}
+.service-overview li {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.service-overview li > span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #edf3f0;
+  color: var(--green);
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 750;
+}
+.service-overview b {
+  font-size: 15px;
+  font-weight: 700;
+}
+.service-overview li p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+.service-overview-note {
+  border-top: 1px solid var(--service-border);
+  margin-top: 23px;
+  padding-top: 17px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.service-section {
+  padding-block: 58px;
+}
+.service-section--muted {
+  background: var(--service-muted);
+  border-block: 1px solid #e9edeb;
+}
+.service-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px 50px;
+  margin-bottom: 30px;
+}
+.service-section-heading > p {
+  max-width: 460px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  font-size: 15px;
+}
+.service-process {
+  display: grid;
+  gap: 22px;
+}
+.service-process-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 25px;
+  padding: 32px;
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+  background: #fff;
+  scroll-margin-top: 110px;
+}
+.service-step-number {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  background: #edf3f0;
+  font-family: var(--font-ui);
+  color: var(--green);
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+.service-process-row .eyebrow {
+  margin-bottom: 8px;
+}
+.service-process-row h2 {
+  font-size: 25px;
+}
+.service-process-row > div > p {
+  margin-top: 17px;
+  max-width: 860px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.service-responsibilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 35px;
+  margin: 23px 0 18px;
+  padding-top: 22px;
+  border-top: 1px solid var(--service-border);
+}
+.service-responsibilities dt {
+  font-weight: 700;
+  font-size: 14px;
+}
+.service-responsibilities dd {
+  margin: 7px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  font-size: 14px;
+}
+.service-process .faq-item {
+  border-bottom: 0;
+  border-top: 1px solid var(--service-border);
+}
+.service-process .faq-item summary {
+  padding-block: 16px;
+  font-size: 14px;
+}
+.service-process .faq-answer {
+  padding-bottom: 0;
+  font-size: 14px;
+}
+.service-notice {
+  margin-top: 24px;
+  padding: 19px 22px;
+  border-radius: 10px;
+  background: var(--service-muted);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.service-notice strong {
+  color: var(--ink);
+}
+.service-four-grid,
+.service-three-grid,
+.service-two-grid {
+  display: grid;
+  gap: 20px;
+}
+.service-four-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.service-three-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.service-two-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.service-info-card {
+  border: 1px solid var(--service-border);
+  border-radius: 12px;
+  padding: 25px;
+  background: #fff;
+  min-width: 0;
+}
+.service-info-card p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.service-info-card .text-link {
+  margin-top: 12px;
+}
+.service-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 50px;
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+  background: #f1f6f3;
+  padding: 35px;
+  margin-block: 38px 68px;
+}
+.service-next h2 {
+  font-size: 29px;
+}
+.service-next p {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  max-width: 680px;
+  line-height: 1.75;
+}
+.service-next > .btn {
+  flex-shrink: 0;
+}
+.service-crosslink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 30px;
+  margin-top: 28px;
+  border-bottom: 1px solid var(--service-border);
+}
+.service-crosslink strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+.service-crosslink p {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.service-crosslink .text-link {
+  flex-shrink: 0;
+}
+.service-project-photo {
+  border: 1px solid var(--service-border);
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.service-project-photo > a {
+  display: block;
+}
+.service-project-photo img {
+  width: 100%;
+  height: auto;
+}
+.service-project-photo figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 20px;
+}
+.service-project-photo figcaption span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+.service-project-photo figcaption strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.service-project-photo figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.service-project-photo figcaption a span {
+  font-size: 16px;
+  color: inherit;
+}
+.service-quiet {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  margin-top: 20px;
+}
+.service-situation {
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.service-situation .situation-tabs {
+  padding: 17px 24px;
+  border-bottom: 1px solid var(--service-border);
+  margin: 0;
+  gap: 10px;
+  background: var(--service-muted);
+}
+.service-situation .situation-tab {
+  border-radius: 8px;
+  font-size: 14px;
+  min-height: 44px;
+  padding: 10px 17px;
+  font-weight: 650;
+}
+.service-situation .situation-panel {
+  padding: 30px;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: 195px;
+}
+.service-situation .situation-panel h3 {
+  font-size: 23px;
+}
+.service-situation .situation-panel p {
+  max-width: 720px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 14px;
+  color: var(--ink-soft);
+}
+.service-situation .situation-panel .text-link {
+  max-width: 210px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  line-height: 1.7;
+}
+.service-security {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px 54px;
+  padding: 32px;
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+  background: #fff;
+}
+.service-security > div > p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin-top: 17px;
+}
+.service-security aside {
+  background: var(--service-muted);
+  border-radius: 10px;
+  padding: 26px;
+}
+.service-security aside .text-link {
+  margin-top: 12px;
+}
+.service-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 17px 0 0;
+  display: grid;
+  gap: 12px;
+}
+.service-checklist li {
+  position: relative;
+  padding-left: 19px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.service-checklist li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #789487;
+}
+.service-security-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--service-border);
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.service-security-note strong {
+  color: var(--ink);
+}
+.service-fit {
+  padding-top: 6px;
+}
+.service-roles .service-info-card {
+  padding: 30px;
+}
+.service-terms {
+  margin-top: 28px;
+  gap: 35px;
+}
+.service-terms h3 {
+  font-size: 17px;
+}
+.service-terms p {
+  color: var(--ink-soft);
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.service-handoff .service-step-number {
+  margin-bottom: 20px;
+}
+.service-handoff small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--service-border);
+  padding-top: 16px;
+  margin-top: 19px;
+}
+/* Existing interactive tools retain their tested DOM and behavior. */
+.service-calculator .calculator-hero {
+  padding-block: 42px 30px;
+}
+.service-calculator .calculator-hero__grid {
+  gap: 45px;
+  align-items: start;
+  grid-template-columns: 1.4fr 1fr;
+}
+.service-calculator .calculator-hero h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+.service-calculator .calculator-hero .lead {
+  font-size: 16px;
+}
+.service-calculator .calculator-intro {
+  border: 1px solid var(--service-border);
+  border-radius: 12px;
+  padding: 23px;
+  max-width: none;
+  background: #fff;
+}
+.service-calculator .calculator-intro__label {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+.service-calculator .calculator-ratio {
+  gap: 22px;
+  margin-block: 14px;
+}
+.service-calculator .calculator-ratio > span {
+  font-family: var(--font-ui);
+  font-size: 32px;
+  font-weight: 750;
+}
+.service-calculator .calculator-ratio > .calculator-ratio__divider {
+  font-size: 32px;
+  margin-top: 0;
+  font-weight: 400;
+}
+.service-calculator .calculator-ratio small {
+  font-size: 12px;
+  font-weight: 500;
+}
+.service-calculator .calculator-intro .text-link {
+  min-height: 30px;
+  margin-top: 8px;
+}
+.service-calculator .calculator-section {
+  padding-top: 13px;
+}
+.service-calculator .calc-inputs,
+.service-calculator .money-card {
+  border: 1px solid var(--service-border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: none;
+}
+.service-calculator .calculator-shortcut {
+  margin-bottom: 25px;
+  padding-bottom: 21px;
+}
+.service-faq .page-hero {
+  padding-block: 30px 34px;
+}
+.service-faq .page-hero h1 {
+  font-size: 42px;
+}
+.service-faq .page-hero .breadcrumb {
+  margin-bottom: 32px;
+}
+.service-faq .faq-directory {
+  padding-block: 27px 35px;
+}
+.service-faq .faq-sidebar nav {
+  border: 1px solid var(--service-border);
+  border-radius: 12px;
+  overflow: hidden;
+  padding-inline: 17px;
+  background: #fff;
+}
+.service-faq .faq-sidebar nav a:last-child {
+  border-bottom: 0;
+}
+.service-faq .sidebar-contact {
+  border: 1px solid var(--service-border);
+  background: var(--service-muted);
+  border-radius: 12px;
+}
+.service-faq .faq-group {
+  padding: 27px;
+  border: 1px solid var(--service-border);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 23px;
+}
+.service-faq .faq-group h2 {
+  font-size: 23px;
+}
+.service-faq .faq-group .faq-item:last-child {
+  border-bottom: 0;
+}
+.service-faq .faq-item summary {
+  font-size: 15px;
+}
+.service-faq .faq-answer {
+  font-size: 15px;
+}
+.service-faq .service-crosslink {
+  margin-bottom: 36px;
+}
+.service-faq .closing {
+  border-radius: 14px;
+  padding: 32px;
+}
+.service-faq .closing h2 {
+  font-size: 30px;
+}
+.service-faq .closing p {
+  font-size: 15px;
+}
+.service-request.request-page {
+  background: #f7f9f8;
+  padding-block: 34px 65px;
+}
+.service-request .request-layout {
+  gap: 30px 65px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 550px);
+}
+.service-request .request-intro h1 {
+  font-size: 42px;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+.service-request .request-intro .lead {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.service-request .request-back {
+  margin-bottom: 24px;
+}
+.service-request .request-card {
+  border-radius: 14px;
+  box-shadow: none;
+  padding: 30px;
+  border-color: var(--service-border);
+}
+.service-request .request-card-heading h2 {
+  font-size: 25px;
+}
+.service-request .request-buyer-link {
+  font-size: 13px;
+  line-height: 1.8;
+  padding-top: 17px;
+  margin-top: 20px;
+  border-top: 1px solid var(--service-border);
+  color: var(--ink-soft);
+  max-width: 420px;
+}
+.service-request .request-buyer-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--green);
+  font-weight: 650;
+  min-height: 32px;
+}
+.service-request .request-meta {
+  font-size: 12px;
+  margin-top: 17px;
+}
+.service-request .request-next {
+  padding-top: 24px;
+}
+.service-request .request-next h2 {
+  font-size: 21px;
+}
+.service-request .request-next h3 {
+  font-size: 14px;
+}
+@media (max-width: 1050px) {
+  .service-hero-grid {
+    gap: 32px;
+  }
+  .service-four-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .service-section-heading {
+    align-items: flex-start;
+  }
+  .service-section-heading > p {
+    max-width: 40%;
+  }
+  .service-security {
+    gap: 25px;
+  }
+  .service-situation .situation-panel {
+    display: block;
+  }
+  .service-situation .situation-panel .text-link {
+    max-width: none;
+    margin-top: 15px;
+  }
+  .service-next {
+    padding: 28px;
+  }
+  .service-next h2 {
+    font-size: 26px;
+  }
+  .service-request .request-layout {
+    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.13fr);
+  }
+  .service-request .request-intro h1 {
+    font-size: 36px;
+  }
+  .service-request .request-card {
+    padding: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .service-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .service-hero-grid--photo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .service-hero-grid--photo .service-project-photo {
+    max-width: 610px;
+  }
+  .service-overview {
+    max-width: 610px;
+  }
+  .service-three-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .service-three-grid .service-info-card {
+    padding: 24px;
+  }
+  .service-section-heading {
+    display: block;
+  }
+  .service-section-heading > p {
+    max-width: 600px;
+    margin-top: 16px;
+  }
+  .service-security {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .service-security aside {
+    padding: 23px;
+  }
+  .service-next {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .service-crosslink {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .service-calculator .calculator-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+  .service-calculator .calculator-intro {
+    max-width: none;
+  }
+}
+@media (max-width: 760px) {
+  .service-request .request-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+  .service-request .request-intro h1 {
+    font-size: 34px;
+  }
+  .service-request .request-intro .lead {
+    font-size: 16px;
+  }
+  .service-request .request-buyer-link {
+    max-width: none;
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+  .service-faq .faq-group {
+    padding: 21px;
+  }
+}
+@media (max-width: 600px) {
+  .service-page h1,
+  .service-faq .page-hero h1,
+  .service-calculator .calculator-hero h1 {
+    font-size: 33px;
+    line-height: 1.2;
+  }
+  .service-page h2 {
+    font-size: 26px;
+  }
+  .service-hero {
+    padding-block: 23px 34px;
+  }
+  .service-hero .breadcrumb {
+    margin-bottom: 28px;
+  }
+  .service-page .lead {
+    font-size: 16px;
+    margin-top: 17px;
+  }
+  .service-page .hero-actions {
+    gap: 9px;
+  }
+  .service-page .hero-actions .btn {
+    width: 100%;
+  }
+  .service-page .hero-actions .text-link {
+    justify-content: center;
+    width: 100%;
+  }
+  .service-overview {
+    padding: 23px;
+  }
+  .service-overview h2 {
+    font-size: 20px;
+  }
+  .service-section {
+    padding-block: 36px;
+  }
+  .service-section-heading {
+    margin-bottom: 24px;
+  }
+  .service-four-grid,
+  .service-two-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .service-info-card {
+    padding: 23px;
+  }
+  .service-process-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 19px;
+    padding: 23px;
+  }
+  .service-process-row h2 {
+    font-size: 23px;
+  }
+  .service-responsibilities {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .service-process-row .faq-item summary {
+    padding-right: 30px;
+  }
+  .service-notice {
+    padding: 18px;
+  }
+  .service-situation .situation-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px;
+  }
+  .service-situation .situation-tab {
+    font-size: 12px;
+    padding: 9px 12px;
+    flex: 1 1 auto;
+  }
+  .service-situation .situation-panel {
+    padding: 23px;
+    min-height: 0;
+  }
+  .service-situation .situation-panel h3 {
+    font-size: 21px;
+  }
+  .service-security {
+    padding: 23px;
+  }
+  .service-security aside {
+    padding: 20px;
+  }
+  .service-fit {
+    padding-top: 0;
+  }
+  .service-project-photo figcaption {
+    padding: 15px;
+    gap: 9px;
+  }
+  .service-project-photo figcaption strong {
+    font-size: 14px;
+  }
+  .service-project-photo figcaption a {
+    font-size: 12px;
+    gap: 5px;
+  }
+  .service-roles .service-info-card {
+    padding: 23px;
+  }
+  .service-terms {
+    gap: 24px;
+  }
+  .service-next {
+    padding: 24px;
+    margin-block: 28px 44px;
+  }
+  .service-next h2 {
+    font-size: 25px;
+  }
+  .service-next .btn {
+    width: 100%;
+  }
+  .service-calculator .calculator-hero {
+    padding-block: 28px 21px;
+  }
+  .service-calculator .calculator-intro {
+    padding: 21px;
+  }
+  .service-calculator .calculator-section {
+    padding-top: 9px;
+  }
+  .service-faq .page-hero {
+    padding-block: 24px 25px;
+  }
+  .service-faq .faq-group h2 {
+    font-size: 20px;
+  }
+  .service-faq .faq-group {
+    padding: 20px;
+  }
+  .service-faq .faq-directory {
+    padding-block: 15px 20px;
+  }
+  .service-faq .closing {
+    padding: 25px;
+  }
+  .service-faq .closing h2 {
+    font-size: 25px;
+  }
+  .service-request.request-page {
+    padding-block: 28px 48px;
+  }
+  .service-request .request-card {
+    padding: 23px;
+  }
+  .service-request .request-card-heading h2 {
+    font-size: 23px;
+  }
+  .service-request .request-next h2 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 360px) {
+  .service-page h1,
+  .service-request .request-intro h1,
+  .service-faq .page-hero h1,
+  .service-calculator .calculator-hero h1 {
+    font-size: 30px;
+  }
+  .service-request .request-card {
+    padding-inline: 18px;
+  }
+  .service-project-photo figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .service-situation .situation-tab {
+    flex-basis: 100%;
+  }
+}

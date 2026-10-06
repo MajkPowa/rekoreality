@@ -13,403 +13,260 @@
     <link rel="icon" href="assets/img/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css?v=7" />
     <link rel="stylesheet" href="assets/css/premium.css?v=7" />
-    <script src="assets/js/main.js?v=7" defer></script>
-    <script src="assets/js/ui.js?v=6" defer></script>
-  </head>
+    <script src="assets/js/main.js?v=20261006" defer></script>
+    <script src="assets/js/ui.js?v=20261006" defer></script>
+  <link rel="stylesheet" href="assets/css/estate.css?v=20261006"><link rel="stylesheet" href="assets/css/service-pages.css?v=20261006">
+</head>
   <body class="owner-page">
     <a class="skip-link" href="#main-content">Přejít k obsahu</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
-          ><svg
-            class="brand-icon"
-            viewBox="0 0 36 38"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
-              stroke="currentColor"
-              stroke-width="2.3"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 16 18 9l8 7"
-              stroke="currentColor"
-              stroke-width="2.3"
-              stroke-linecap="round"
-            /></svg
-          ><span>reko<em>reality</em></span></a
-        >
-        <nav class="desktop-nav" aria-label="Hlavní navigace">
-          <a href="jak-to-funguje.html">Jak to funguje</a
-          ><a href="pro-majitele.html" aria-current="page">Pro majitele</a
-          ><a href="kalkulacka.html">Kalkulačka</a
-          ><a href="faq.html">Časté otázky</a>
-          <a href="pro-maklere.html">Pro makléře</a><a href="poradna/">Poradna</a>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="REKO Reality – úvod"><svg class="brand-icon" viewBox="0 0 36 38" fill="none" aria-hidden="true"><path d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M10 16 18 9l8 7" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span>reko<em>reality</em></span></a><nav class="desktop-nav" aria-label="Hlavní navigace"><a href="jak-to-funguje.html">Jak to funguje</a><a href="nemovitosti.html">Nemovitosti</a><a href="pro-majitele.html" aria-current="page">Pro majitele</a><a href="kalkulacka.html">Kalkulačka</a><a href="poradna/">Poradna</a></nav><a class="btn btn--primary header-cta" href="poptavka.html">Posoudit můj dům <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="menu-toggle" id="burger" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navsheet"><span></span><span></span><b>Menu</b></button></div></header>
+<nav class="mobile-menu" id="navsheet" aria-label="Mobilní navigace" hidden><a href="index.html">Úvod</a><a href="jak-to-funguje.html">Jak to funguje</a><a href="nemovitosti.html">Nemovitosti</a><a href="pro-majitele.html" aria-current="page">Pro majitele</a><a href="kalkulacka.html">Kalkulačka</a><a href="poradna/">Poradna</a><a href="faq.html">Časté otázky</a><a href="pro-maklere.html">Pro makléře</a><a class="btn btn--primary" href="poptavka.html">Posoudit můj dům <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+    <main id="main-content" class="service-page">
+      <section class="service-hero shell">
+        <nav class="breadcrumb" aria-label="Drobečková navigace">
+          <a href="index.html">Úvod</a><span aria-hidden="true">/</span
+          ><span aria-current="page">Pro majitele</span>
         </nav>
-        <a class="btn btn--primary header-cta" href="poptavka.html"
-          >Posoudit můj dům
-          <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path
-              d="M4 12h15m-6-6 6 6-6 6"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            /></svg></a
-        ><button
-          class="menu-toggle"
-          id="burger"
-          type="button"
-          aria-label="Otevřít menu"
-          aria-expanded="false"
-          aria-controls="navsheet"
-        >
-          <span></span><span></span>
-        </button>
-      </div>
-    </header>
-    <nav class="mobile-menu" id="navsheet" aria-label="Mobilní navigace" hidden>
-      <a href="index.html">Úvod</a
-      ><a href="jak-to-funguje.html">Jak to funguje</a
-      ><a href="pro-majitele.html" aria-current="page">Pro majitele</a
-      ><a href="kalkulacka.html">Kalkulačka</a
-      ><a href="faq.html">Časté otázky</a
-      ><a href="pro-maklere.html">Pro makléře</a
-      ><a href="poradna/">Poradna</a><a class="btn btn--primary" href="poptavka.html"
-        >Nezávazně posoudit dům
-        <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path
-            d="M4 12h15m-6-6 6 6-6 6"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          /></svg
-      ></a>
-    </nav>
-    <main id="main-content">
-      <section class="page-hero owner-hero">
-        <div class="shell">
-          <nav class="breadcrumb" aria-label="Drobečková navigace">
-            <a href="index.html">Úvod</a><span aria-hidden="true">/</span
-            ><span aria-current="page">Pro majitele</span>
-          </nav>
-          <div class="page-hero--split">
-            <div>
-              <span class="eyebrow">Pro majitele rodinných domů</span>
-              <h1>Připravíme váš dům <span class="ital">na prodej.</span></h1>
-              <p class="lead">
-                Posoudíme, zda se opravy před prodejem mohou vyplatit. Pokud se
-                domluvíme, rekonstrukci zaplatíme, zajistíme řemeslníky a
-                dohlédneme na práce.
-              </p>
-              <div class="hero-actions">
-                <a class="btn btn--primary" href="poptavka.html"
-                  >Nezávazně posoudit dům<svg
-                    class="arrow"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M4 12h15m-6-6 6 6-6 6"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    /></svg
-                ></a>
-              </div>
-              <p class="quiet-meta">
-                Bez odhadu ceny, fotek i dokumentů na začátku.
-              </p>
+        <div class="service-hero-grid service-hero-grid--photo">
+          <div>
+            <span class="eyebrow">Pro majitele domů</span>
+            <h1>Zajistíme rekonstrukci vašeho domu před prodejem.</h1>
+            <p class="lead">
+              Posoudíme, které opravy mohou zvýšit jeho hodnotu. Schválenou
+              rekonstrukci financujeme, řídíme a připravíme dům k prodeji. Náklady
+              se vrátí z prodejní ceny.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="poptavka.html"
+                >Posoudit můj dům <span aria-hidden="true">→</span></a
+              ><a class="text-link" href="jak-to-funguje.html"
+                >Jak spolupracujeme</a
+              >
             </div>
-            <figure class="editorial-photo">
-              <img
-                src="assets/img/renovation-gable.webp"
+            <p class="service-quiet">Na začátku stačí obec, jméno a kontakt.</p>
+          </div>
+          <figure class="service-project-photo">
+            <a href="nemovitosti/hlinsko-kouty.html"
+              ><img
+                src="assets/img/properties/hlinsko-kouty-01.webp"
                 srcset="
-                  assets/img/renovation-gable-768.webp  768w,
-                  assets/img/renovation-gable.webp     1536w
+                  assets/img/properties/hlinsko-kouty-01-768.webp  768w,
+                  assets/img/properties/hlinsko-kouty-01.webp     1200w
                 "
-                sizes="(max-width: 760px) calc(100vw - 44px), 600px"
-                alt="AI ilustrace citlivě opraveného českého rodinného domu se zahradou"
-                width="1536"
-                height="1024"
-              />
-              <figcaption class="photo-caption">
-                Ilustrační návrh · vytvořeno pomocí AI
-              </figcaption>
-            </figure>
-          </div>
+                sizes="(max-width: 800px) calc(100vw - 40px), 48vw"
+                width="1200"
+                height="799"
+                alt="Dům v Hlinsku–Koutech s garáží, pohled z ulice"
+                fetchpriority="high"
+            /></a>
+            <figcaption>
+              <div>
+                <span>Z našich realizací</span
+                ><strong>Dům v Hlinsku–Koutech</strong>
+              </div>
+              <a href="nemovitosti/hlinsko-kouty.html"
+                >Prohlédnout <span aria-hidden="true">→</span></a
+              >
+            </figcaption>
+          </figure>
         </div>
       </section>
-      <section class="section shell" id="situace">
-        <div class="situation-layout">
-          <div class="situation-intro">
+      <section class="service-section shell" id="situace">
+        <div class="service-section-heading">
+          <div>
             <span class="eyebrow">Vaše situace</span>
-            <h2>S čím vám <span class="ital">můžeme pomoci.</span></h2>
-            <p>
-              Vyberte, co právě řešíte. Cenu domu a rozsah oprav probereme
-              společně.
-            </p>
+            <h2>S čím vám můžeme pomoci.</h2>
           </div>
-          <div>
-            <div
-              class="situation-tabs"
-              role="tablist"
-              aria-label="Vaše situace"
-            >
-              <button
-                class="situation-tab"
-                id="tab-inherited"
-                role="tab"
-                aria-selected="true"
-                aria-controls="panel-inherited"
-                tabindex="0"
-              >
-                Zděděný dům</button
-              ><button
-                class="situation-tab"
-                id="tab-repairs"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-repairs"
-                tabindex="-1"
-              >
-                Dům před opravou</button
-              ><button
-                class="situation-tab"
-                id="tab-time"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-time"
-                tabindex="-1"
-              >
-                Nemám čas
-              </button>
-            </div>
-            <section
-              class="situation-panel"
-              id="panel-inherited"
-              role="tabpanel"
-              aria-labelledby="tab-inherited"
-            >
-              <h3>Prodej zděděného domu</h3>
-              <p>
-                Chcete dům prodat, ale nevíte, zda jej nabídnout v původním
-                stavu, nebo nejdřív opravit. Začneme porovnáním obou možností.
-              </p>
-              <ul class="principles">
-                <li>Zohledníme stav domu i poptávku v místě.</li>
-                <li>
-                  Před spoluprací musí být vyřešené vlastnictví a souhlas
-                  vlastníků.
-                </li>
-                <li>Opravy navrhneme jen tehdy, když mají ekonomický smysl.</li>
-              </ul>
-              <a class="btn btn--outline" href="poptavka.html"
-                >Probrat svůj dům<svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 12h15m-6-6 6 6-6 6"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  /></svg
-              ></a>
-            </section>
-            <section
-              class="situation-panel"
-              id="panel-repairs"
-              role="tabpanel"
-              aria-labelledby="tab-repairs"
-              hidden
-            >
-              <h3>Výběr oprav před prodejem</h3>
-              <p>
-                Nemusíte dům před prodejem kompletně přestavět. Prověříme, co
-                kupujícím vadí a jaký přínos může mít rozumný rozsah oprav.
-              </p>
-              <ul class="principles">
-                <li>Získáte návrh s konkrétním rozpočtem.</li>
-                <li>Schválenou investici financujeme my.</li>
-                <li>Náklady se vypořádají až z prodeje domu.</li>
-              </ul>
-              <a class="btn btn--outline" href="poptavka.html"
-                >Probrat možnosti oprav<svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 12h15m-6-6 6 6-6 6"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  /></svg
-              ></a>
-            </section>
-            <section
-              class="situation-panel"
-              id="panel-time"
-              role="tabpanel"
-              aria-labelledby="tab-time"
-              hidden
-            >
-              <h3>Rekonstrukce bez koordinace řemeslníků</h3>
-              <p>
-                Bydlíte daleko, máte vlastní práci nebo nechcete koordinovat
-                jednotlivé řemeslníky. Technickou část můžeme převzít my.
-              </p>
-              <ul class="principles">
-                <li>Zajistíme dodavatele a kontrolu prací.</li>
-                <li>Podstatná rozhodnutí zůstávají na vás.</li>
-                <li>Počítejte s časem na rekonstrukci a následný prodej.</li>
-              </ul>
-              <a class="btn btn--outline" href="poptavka.html"
-                >Zjistit možnosti spolupráce<svg
-                  class="arrow"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 12h15m-6-6 6 6-6 6"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  /></svg
-              ></a>
-            </section>
-          </div>
+          <p>
+            Ne každý dům potřebuje kompletní rekonstrukci. Rozsah volíme podle stavu
+            a přínosu pro prodej.
+          </p>
         </div>
-        <div class="owner-benefits" id="krok-za-krokem">
-          <div>
-            <span class="eyebrow">My zařídíme</span>
-            <h3>Opravy od plánu po předání.</h3>
-            <p>
-              Financování schválených prací, řemeslníky, koordinaci a kontrolu
-              průběhu.
-            </p>
+        <div class="service-situation">
+          <div class="situation-tabs" role="tablist" aria-label="Vaše situace">
+            <button
+              class="situation-tab"
+              id="tab-inherited"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-inherited"
+              tabindex="0"
+            >
+              Zděděný dům</button
+            ><button
+              class="situation-tab"
+              id="tab-repairs"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-repairs"
+              tabindex="-1"
+            >
+              Dům před opravou</button
+            ><button
+              class="situation-tab"
+              id="tab-time"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-time"
+              tabindex="-1"
+            >
+              Nemám čas na opravy
+            </button>
           </div>
-          <div>
-            <span class="eyebrow">Vy rozhodujete</span>
-            <h3>Rozpočet i konečnou nabídku.</h3>
-            <p>
-              Schvalujete rozsah, pravidla změn a přijetí nabídky kupujícího.
-            </p>
+          <section
+            class="situation-panel"
+            id="panel-inherited"
+            role="tabpanel"
+            aria-labelledby="tab-inherited"
+          >
+            <div>
+              <h3>Nejdřív porovnáme obě možnosti.</h3>
+              <p>
+                Nabídnout zděděný dům v původním stavu, nebo jej před prodejem
+                opravit? Zohledníme technický stav, poptávku v místě a náklady. Před
+                spoluprací musí být vyřešené vlastnictví a souhlas vlastníků.
+              </p>
+            </div>
+            <a class="text-link" href="poradna/prodej-zdedeneho-domu.html"
+              >Co připravit u zděděného domu <span aria-hidden="true">→</span></a
+            >
+          </section>
+          <section
+            class="situation-panel"
+            id="panel-repairs"
+            role="tabpanel"
+            aria-labelledby="tab-repairs"
+            hidden
+          >
+            <div>
+              <h3>Vybereme opravy s přínosem pro prodej.</h3>
+              <p>
+                Prověříme, co kupujícím vadí a kolik má smysl do domu vložit.
+                Získáte návrh s rozpočtem. Schválenou investici financujeme my a
+                vypořádáme ji z prodeje.
+              </p>
+            </div>
+            <a class="text-link" href="poradna/co-opravit-pred-prodejem-domu.html"
+              >Které opravy zvážit <span aria-hidden="true">→</span></a
+            >
+          </section>
+          <section
+            class="situation-panel"
+            id="panel-time"
+            role="tabpanel"
+            aria-labelledby="tab-time"
+            hidden
+          >
+            <div>
+              <h3>Koordinaci řemeslníků převezmeme my.</h3>
+              <p>
+                Zajistíme dodavatele, kontrolu prací a přehled o jejich průběhu.
+                Podstatná rozhodnutí zůstávají na vás. Počítejte s časem na
+                rekonstrukci a následný prodej.
+              </p>
+            </div>
+            <a class="text-link" href="jak-to-funguje.html"
+              >Jak vypadá průběh spolupráce <span aria-hidden="true">→</span></a
+            >
+          </section>
+        </div>
+      </section>
+      <section class="service-section service-section--muted" id="krok-za-krokem">
+        <div class="shell">
+          <div class="service-section-heading">
+            <div>
+              <span class="eyebrow">Rozdělení rolí</span>
+              <h2>My zajišťujeme. Vy schvalujete.</h2>
+            </div>
           </div>
-          <div>
-            <span class="eyebrow">Dohodneme předem</span>
-            <h3>Jak se rozdělí peníze.</h3>
-            <p>
-              Z prodeje se vrací investice a náklady. Dělí se až kladná hodnota
-              navíc.
-            </p>
-            <a class="text-link" href="kalkulacka.html"
-              >Zobrazit modelový výpočet
-              <svg
-                class="arrow"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
+          <div class="service-three-grid">
+            <article class="service-info-card">
+              <h3>Financování a práce</h3>
+              <p>
+                Zajistíme schválenou investici, dodavatele, koordinaci a kontrolu
+                rekonstrukce.
+              </p>
+            </article>
+            <article class="service-info-card">
+              <h3>Vaše rozhodnutí</h3>
+              <p>
+                Schvalujete rozsah, limit rozpočtu, pravidla změn a konečnou nabídku
+                kupujícího.
+              </p>
+            </article>
+            <article class="service-info-card">
+              <h3>Pravidla vypořádání</h3>
+              <p>
+                Z prodeje se vrací investice a náklady. Dělí se až kladná hodnota
+                navíc.
+              </p>
+              <a class="text-link" href="kalkulacka.html"
+                >Modelový výpočet <span aria-hidden="true">→</span></a
               >
-                <path
-                  d="M4 12h15m-6-6 6 6-6 6"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
+            </article>
           </div>
         </div>
       </section>
-      <section class="section section--soft" id="zastava">
-        <div class="shell security-layout">
-          <div
-            class="security-visual"
-            aria-label="Dům až do prodeje vlastníte vy"
-          >
-            <span>Po dobu spolupráce</span
-            ><svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
-              <path
-                d="m14 44 36-31 36 31v44H60V62H40v26H14V44Z"
-                stroke-width="1.5"
-              />
-              <path
-                d="m31 40 19-16 19 16M23 51h9v13h-9m45-13h9v13h-9"
-                stroke-width="1.3"
-              />
-            </svg>
-            <p>Vlastníkem zůstáváte až do prodeje.</p>
-            <div class="security-tags">
-              <span>Vy rozhodujete</span><span>My financujeme opravy</span>
-            </div>
-          </div>
-          <div class="security-copy">
-            <span class="eyebrow">Zajištění investice</span>
-            <h2>
-              Vlastníkem jste vy.<br />Investici
-              <span class="ital">zajišťuje zástava.</span>
-            </h2>
+      <section class="service-section shell" id="zastava">
+        <div class="service-security">
+          <div>
+            <span class="eyebrow">Vlastnictví a financování</span>
+            <h2>Dům zůstává váš. Investici zajišťuje zástava.</h2>
             <p>
-              Vkládáme do domu peníze před jeho prodejem. Jejich návrat
-              zajišťuje zástavní právo zapsané v katastru.
+              Peníze do oprav vkládáme před prodejem. Jejich návrat zajišťuje
+              zástavní právo zapsané v katastru. Rozsah, maximální výši a podmínky
+              výmazu sjednáme předem.
             </p>
-            <ul class="detail-list">
-              <li><b>Konkrétní rozsah a strop</b> jsou ve smlouvě.</li>
-              <li><b>Podmínky výmazu</b> znáte ještě před podpisem.</li>
-              <li><b>Hypotéku a další zajištění</b> nejdřív prověříme.</li>
-            </ul>
+            <p>
+              Pokud už na domě máte hypotéku nebo jiné zajištění, nejdřív prověříme
+              možnost spolupráce.
+            </p>
           </div>
-          <p class="security-disclosure">
-            <b>Zástava je skutečný závazek.</b> Při nesplnění zajištěného dluhu
-            může vést k jeho vymáhání z nemovitosti. Dokumenty si můžete projít
+          <aside>
+            <h3>Co musí být jasné ve smlouvě</h3>
+            <ul class="service-checklist">
+              <li>Rozsah a strop zajištěné investice.</li>
+              <li>Pořadí zástavy a podmínky jejího výmazu.</li>
+              <li>Postup při nižší ceně nebo neprodeji.</li>
+            </ul>
+            <a class="text-link" href="faq.html#otazka-penize-3"
+              >Více o vlastnictví <span aria-hidden="true">→</span></a
+            >
+          </aside>
+          <p class="service-security-note">
+            <strong>Zástava je skutečný závazek.</strong> Při nesplnění zajištěného
+            dluhu může vést k jeho vymáhání z nemovitosti. Podmínky si můžete projít
             s vlastním právníkem.
           </p>
         </div>
       </section>
-      <section class="section shell" id="kdy-ne">
-        <div class="section-head">
+      <section class="service-section shell service-fit" id="kdy-ne">
+        <div class="service-section-heading">
           <div>
-            <span class="eyebrow">Kdy spolupráce dává smysl</span>
-            <h2>Které domy posuzujeme</h2>
+            <span class="eyebrow">Vhodnost domu</span>
+            <h2>Kdy má smysl se ozvat.</h2>
           </div>
-          <p class="lead">
-            U každého domu ověříme stav, vlastnictví a očekávaný přínos oprav.
-            Žádost sama o sobě neznamená schválení projektu.
+          <p>
+            Posouzení samo o sobě neznamená schválení projektu. Rozhodují náklady,
+            rizika a očekávaný přínos oprav.
           </p>
         </div>
-        <div class="fit-columns">
-          <article class="fit-column">
-            <h3>Stojí za to se ozvat</h3>
-            <ul>
+        <div class="service-two-grid">
+          <article class="service-info-card">
+            <h3>Stojí za to probrat možnosti</h3>
+            <ul class="service-checklist">
               <li>Máte rodinný dům určený k prodeji.</li>
               <li>Opravy mohou pomoci jeho prodeji.</li>
               <li>Vlastníci se na záměru shodnou.</li>
               <li>Máte čas na opravy a následný prodej.</li>
             </ul>
           </article>
-          <article class="fit-column fit-column--careful">
+          <article class="service-info-card">
             <h3>Nejdřív je potřeba vyřešit</h3>
-            <ul>
+            <ul class="service-checklist">
               <li>Potřebu okamžité hotovosti z prodeje.</li>
               <li>Sporné vlastnictví či nedořešené dědictví.</li>
               <li>Dluhy a zástavy bez jasného řešení.</li>
@@ -417,90 +274,22 @@
             </ul>
           </article>
         </div>
-        <p class="calc-hint">
-          Pokud očekávaný přínos nepokryje náklady a rizika, rekonstrukci
-          nedoporučíme. Vyšší prodejní cenu ani zisk negarantujeme.
+        <p class="service-quiet">
+          Vyšší prodejní cenu ani zisk negarantujeme. Pokud očekávaný přínos
+          nepokryje náklady a rizika, rekonstrukci nedoporučíme.
         </p>
       </section>
-      <section class="closing-wrap shell">
-        <div class="closing">
-          <div>
-            <span class="eyebrow">První krok je na vás</span>
-            <h2>Popište nám dům, který chcete prodat.</h2>
-            <p>
-              Nemusíte znát cenu domu ani rozpočet oprav. Začněme základními
-              údaji.
-            </p>
-          </div>
-          <a class="btn btn--lime" href="poptavka.html"
-            >Nezávazně posoudit dům<svg
-              class="arrow"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 12h15m-6-6 6 6-6 6"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              /></svg
-          ></a>
+      <section class="service-next shell">
+        <div>
+          <h2>Proberme možnosti vašeho domu.</h2>
+          <p>Cenu domu ani rozsah oprav znát nemusíte. Začněme základními údaji.</p>
         </div>
+        <a class="btn btn--primary" href="poptavka.html"
+          >Posoudit můj dům <span aria-hidden="true">→</span></a
+        >
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="shell">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a class="brand" href="index.html" aria-label="REKOREALITY — úvod"
-              ><svg
-                class="brand-icon"
-                viewBox="0 0 36 38"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z"
-                  stroke="currentColor"
-                  stroke-width="2.3"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10 16 18 9l8 7"
-                  stroke="currentColor"
-                  stroke-width="2.3"
-                  stroke-linecap="round"
-                /></svg
-              ><span>reko<em>reality</em></span></a
-            >
-            <p>Financujeme a řídíme rekonstrukce domů před prodejem.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Vše o spolupráci</h2>
-            <a href="jak-to-funguje.html">Jak to funguje</a
-            ><a href="pro-majitele.html">Pro majitele</a
-            ><a href="pro-maklere.html">Pro realitní makléře</a>
-          </div>
-          <div class="footer-col">
-            <h2>Začněte tady</h2>
-            <a href="poptavka.html">Nezávazné posouzení</a
-            ><a href="kalkulacka.html">Orientační kalkulačka</a
-            ><a href="poradna/">Poradna pro majitele</a><a href="faq.html">Otázky a odpovědi</a
-            ><a href="pro-majitele.html#zastava">Vlastnictví a zástava</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© 2026 REKOREALITY</span>
-          <p>
-            Web je ve zkušebním provozu. Formulář žádosti neodesílá. Uvedené
-            propočty jsou modelové, fotografie jsou AI ilustrace. Konkrétní
-            podmínky spolupráce určuje smlouva.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="shell"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html" aria-label="REKO Reality – úvod"><svg class="brand-icon" viewBox="0 0 36 38" fill="none" aria-hidden="true"><path d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M10 16 18 9l8 7" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span>reko<em>reality</em></span></a><p>Zajišťujeme a financujeme rekonstrukci nemovitosti před prodejem.</p><span class="footer-descriptor">Rekonstrukce a prodej nemovitostí</span></div><div class="footer-col"><h2>Pro majitele</h2><a href="jak-to-funguje.html">Jak spolupráce probíhá</a><a href="pro-majitele.html" aria-current="page">Rekonstrukce před prodejem</a><a href="kalkulacka.html">Modelový výpočet</a><a href="poptavka.html">Posouzení nemovitosti</a></div><div class="footer-col"><h2>Nemovitosti a informace</h2><a href="nemovitosti.html">Aktuální nabídka a realizace</a><a href="poradna/">Poradna pro majitele</a><a href="faq.html">Časté otázky</a><a href="pro-maklere.html">Spolupráce s makléři</a></div></div><div class="footer-bottom"><span>© 2026 REKO Reality</span><p>Formulář posouzení je zatím ukázkový a žádost neodesílá. Prohlídku nabízené nemovitosti domluvíte přes její inzerát. Podmínky spolupráce určuje smlouva.</p></div></div></footer>
     <div class="mobile-cta">
       <a class="btn btn--primary" href="poptavka.html"
         >Nezávazně posoudit dům

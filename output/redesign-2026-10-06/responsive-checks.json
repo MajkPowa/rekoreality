@@ -1,0 +1,297 @@
+[
+  {
+    "route": "index.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "nemovitosti.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "nemovitosti/hlinsko-kouty.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "nemovitosti/byt-karlstejn.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "jak-to-funguje.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "pro-majitele.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "pro-maklere.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "kalkulacka.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [
+      {
+        "class": "calc-sr-only",
+        "content": 95,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 83,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 96,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 39,
+        "tag": "SPAN",
+        "width": 1
+      }
+    ],
+    "scroll": 305
+  },
+  {
+    "route": "faq.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poptavka.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/rekonstrukce-domu-pred-prodejem.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [
+      {
+        "class": "article-table",
+        "content": 299,
+        "tag": "DIV",
+        "width": 263
+      }
+    ],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/co-opravit-pred-prodejem-domu.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/jak-pripravit-dum-na-prodej.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/rozpocet-rekonstrukce-domu.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/dokumenty-k-prodeji-domu.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "poradna/prodej-zdedeneho-domu.html",
+    "width": 320,
+    "client": 305,
+    "overflowing": [],
+    "scroll": 305
+  },
+  {
+    "route": "index.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "nemovitosti.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "nemovitosti/hlinsko-kouty.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "nemovitosti/byt-karlstejn.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "jak-to-funguje.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "pro-majitele.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "pro-maklere.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "kalkulacka.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [
+      {
+        "class": "calc-sr-only",
+        "content": 95,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 83,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 96,
+        "tag": "SPAN",
+        "width": 1
+      },
+      {
+        "class": "calc-sr-only",
+        "content": 39,
+        "tag": "SPAN",
+        "width": 1
+      }
+    ],
+    "scroll": 753
+  },
+  {
+    "route": "faq.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poptavka.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/rekonstrukce-domu-pred-prodejem.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/co-opravit-pred-prodejem-domu.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/jak-pripravit-dum-na-prodej.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/rozpocet-rekonstrukce-domu.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/dokumenty-k-prodeji-domu.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  },
+  {
+    "route": "poradna/prodej-zdedeneho-domu.html",
+    "width": 768,
+    "client": 753,
+    "overflowing": [],
+    "scroll": 753
+  }
+]

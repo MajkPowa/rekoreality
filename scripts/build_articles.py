@@ -68,15 +68,16 @@ def head(title, description, url, graph, article=False):
 <meta property="og:type" content="{social_type}"><meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="REKOREALITY"><meta property="og:url" content="{url}">
 <meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}">
-<meta property="og:image" content="{BASE}assets/img/renovation-hero.webp">
-<meta property="og:image:alt" content="AI ilustrace rodinného domu po rekonstrukci">
+<meta property="og:image" content="{BASE}assets/img/properties/hlinsko-kouty-02.webp">
+<meta property="og:image:alt" content="Kuchyně v dokončené realizaci REKO Reality v Hlinsku">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css?v=7"><link rel="stylesheet" href="../assets/css/premium.css?v=7">
 <link rel="stylesheet" href="../assets/css/journal.css?v=1">
-<script src="../assets/js/main.js?v=7" defer></script><script src="../assets/js/journal.js?v=1" defer></script>
+<link rel="stylesheet" href="../assets/css/estate.css?v=20261006">
+<script src="../assets/js/main.js?v=20261006" defer></script><script src="../assets/js/journal.js?v=1" defer></script>
 <script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@graph':graph}, ensure_ascii=False).replace('<','\\u003c')}</script>
 </head>'''
 
@@ -150,8 +151,8 @@ def build_hub(articles, header, footer):
     return head(title,description,url,graph)+f'''
 <body class="journal-page"><a class="skip-link" href="#main-content">Přejít k obsahu</a>{header}
 <main id="main-content"><section class="journal-intro shell"><nav class="breadcrumb" aria-label="Drobečková navigace"><a href="../index.html">Úvod</a><span aria-hidden="true">/</span><span aria-current="page">Poradna</span></nav>
-<span class="eyebrow">Poradna pro majitele domů</span><h1>Před prodejem domu<br> <span class="ital">se rozhodujte podle podkladů.</span></h1><p class="lead">Co opravit, kolik do domu vložit a co připravit k prodeji. Praktické postupy pro chvíli, kdy zvažujete další krok.</p></section>
-<section class="featured-story shell" aria-labelledby="featured-title"><div class="featured-copy"><span class="eyebrow">Začněte rozhodnutím o opravách</span>{meta(featured)}<h2 id="featured-title"><a href="{featured['slug']}.html">{escape(featured['title'])}</a></h2><p>{escape(featured['description'])}</p><a class="btn btn--primary" href="{featured['slug']}.html">Přečíst článek <span aria-hidden="true">→</span></a></div><figure><img src="../assets/img/renovation-hero.webp" srcset="../assets/img/renovation-hero-768.webp 768w, ../assets/img/renovation-hero.webp 1536w" sizes="(max-width: 760px) calc(100vw - 44px), 50vw" width="1536" height="1024" alt="AI ilustrace rodinného domu po opravě fasády a terasy" fetchpriority="high"><figcaption>Ilustrační návrh rekonstrukce vytvořený pomocí AI.</figcaption></figure></section>
+<span class="eyebrow">Poradna pro majitele domů</span><h1>Prakticky o rekonstrukci<br> a prodeji domu.</h1><p class="lead">Co opravit, kolik do domu vložit a co připravit k prodeji. Praktické postupy pro chvíli, kdy zvažujete další krok.</p></section>
+<section class="featured-story shell" aria-labelledby="featured-title"><div class="featured-copy"><span class="eyebrow">Začněte rozhodnutím o opravách</span>{meta(featured)}<h2 id="featured-title"><a href="{featured['slug']}.html">{escape(featured['title'])}</a></h2><p>{escape(featured['description'])}</p><a class="btn btn--primary" href="{featured['slug']}.html">Přečíst článek <span aria-hidden="true">→</span></a></div><figure><img src="../assets/img/properties/hlinsko-kouty-02.webp" srcset="../assets/img/properties/hlinsko-kouty-02-768.webp 768w, ../assets/img/properties/hlinsko-kouty-02.webp 1200w" sizes="(max-width: 760px) calc(100vw - 44px), 50vw" width="1200" height="799" alt="Kuchyně v dokončené realizaci REKO Reality v Hlinsku" fetchpriority="high"><figcaption>Realizace REKO Reality, Hlinsko – Kouty. Fotografie z prodejní nabídky.</figcaption></figure></section>
 <section class="journal-library shell" aria-labelledby="library-title"><div class="journal-section-head"><h2 id="library-title">Další otázky před prodejem</h2><span class="journal-count">5 praktických průvodců</span></div><div class="story-grid">{cards}</div></section>
 <section class="journal-help shell"><div><span class="eyebrow">Pro konkrétní dům</span><h2>Čísla pro své rozhodnutí<br><span class="ital">si můžete propočítat.</span></h2><p>Kalkulačka ukáže rozdělení prodejní ceny i dopad nižšího výnosu. Jde o model, nikoli odhad tržní ceny domu.</p></div><a class="btn btn--primary" href="../kalkulacka.html">Vyzkoušet kalkulačku <span aria-hidden="true">→</span></a></section>
 </main>{footer}</body></html>'''
@@ -179,7 +180,10 @@ def main():
     else:
         home = home.replace('<section class="closing-wrap shell">',preview+'\n<section class="closing-wrap shell">',1)
     home_path.write_text(home,encoding='utf-8')
-    urls = [(BASE+'poradna/',max(a['modified'] for a in articles))]+[(BASE+'poradna/'+a['slug']+'.html',a['modified']) for a in articles]
+    properties = json.loads((ROOT/'content/properties.json').read_text(encoding='utf-8'))['properties']
+    urls = [(BASE+'nemovitosti.html',max(p['verifiedAt'] for p in properties))]
+    urls += [(BASE+'nemovitosti/'+p['slug']+'.html',p['verifiedAt']) for p in properties]
+    urls += [(BASE+'poradna/',max(a['modified'] for a in articles))]+[(BASE+'poradna/'+a['slug']+'.html',a['modified']) for a in articles]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{escape(url)}</loc><lastmod>{date}</lastmod></url>\n' for url,date in urls)+'</urlset>\n'
     (ROOT/'sitemap.xml').write_text(sitemap,encoding='utf-8')
     print('Rendered advice hub and',len(articles),'articles:',sum(a['wordCount'] for a in articles),'words.')

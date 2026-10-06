@@ -1,0 +1,450 @@
+[
+  {
+    "route": "index.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Zajistíme rekonstrukci domu před prodejem | REKO Reality",
+    "width": 390
+  },
+  {
+    "route": "nemovitosti.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Nemovitosti v prodeji a dokončené realizace | REKO Reality",
+    "width": 390
+  },
+  {
+    "route": "nemovitosti/hlinsko-kouty.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-03.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Dům 2+1 se zahradou v Hlinsku | REKO Reality",
+    "width": 390
+  },
+  {
+    "route": "nemovitosti/byt-karlstejn.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-03.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Byt 3+1 s terasou v Karlštejně | REKO Reality",
+    "width": 390
+  },
+  {
+    "route": "jak-to-funguje.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Jak probíhá spolupráce | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "pro-majitele.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Prodej domu bez zařizování rekonstrukce | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "pro-maklere.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Partner pro rekonstrukci před prodejem | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "kalkulacka.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Orientační výpočet peněz z prodeje | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "faq.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Časté otázky a jasné odpovědi | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poptavka.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Nezávazné posouzení domu — REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/",
+    "device": "mobile",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-02.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "title": "Prodej a rekonstrukce domu: poradna pro majitele | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/rekonstrukce-domu-pred-prodejem.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Rekonstrukce domu před prodejem: kdy se vyplatí | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/co-opravit-pred-prodejem-domu.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Co opravit před prodejem domu | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/jak-pripravit-dum-na-prodej.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Jak připravit starší dům na prodej | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/rozpocet-rekonstrukce-domu.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Rozpočet rekonstrukce domu před prodejem | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/dokumenty-k-prodeji-domu.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Jaké dokumenty připravit k prodeji domu | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "poradna/prodej-zdedeneho-domu.html",
+    "device": "mobile",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 375,
+    "title": "Prodej zděděného domu: příprava před nabídkou | REKOREALITY",
+    "width": 390
+  },
+  {
+    "route": "index.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Zajistíme rekonstrukci domu před prodejem | REKO Reality",
+    "width": 1440
+  },
+  {
+    "route": "nemovitosti.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Nemovitosti v prodeji a dokončené realizace | REKO Reality",
+    "width": 1440
+  },
+  {
+    "route": "nemovitosti/hlinsko-kouty.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-03.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Dům 2+1 se zahradou v Hlinsku | REKO Reality",
+    "width": 1440
+  },
+  {
+    "route": "nemovitosti/byt-karlstejn.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-01.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-02.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/byt-karlstejn-03.webp"
+      },
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Byt 3+1 s terasou v Karlštejně | REKO Reality",
+    "width": 1440
+  },
+  {
+    "route": "jak-to-funguje.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Jak probíhá spolupráce | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "pro-majitele.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/hlinsko-kouty-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Prodej domu bez zařizování rekonstrukce | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "pro-maklere.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/img/properties/byt-karlstejn-01.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Partner pro rekonstrukci před prodejem | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "kalkulacka.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Orientační výpočet peněz z prodeje | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "faq.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Časté otázky a jasné odpovědi | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poptavka.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Nezávazné posouzení domu — REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/",
+    "device": "desktop",
+    "h1": 1,
+    "images": [
+      {
+        "loaded": true,
+        "src": "../assets/img/properties/hlinsko-kouty-02.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "title": "Prodej a rekonstrukce domu: poradna pro majitele | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/rekonstrukce-domu-pred-prodejem.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Rekonstrukce domu před prodejem: kdy se vyplatí | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/co-opravit-pred-prodejem-domu.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Co opravit před prodejem domu | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/jak-pripravit-dum-na-prodej.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Jak připravit starší dům na prodej | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/rozpocet-rekonstrukce-domu.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Rozpočet rekonstrukce domu před prodejem | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/dokumenty-k-prodeji-domu.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Jaké dokumenty připravit k prodeji domu | REKOREALITY",
+    "width": 1440
+  },
+  {
+    "route": "poradna/prodej-zdedeneho-domu.html",
+    "device": "desktop",
+    "h1": 1,
+    "images": [],
+    "scrollWidth": 1425,
+    "title": "Prodej zděděného domu: příprava před nabídkou | REKOREALITY",
+    "width": 1440
+  }
+]

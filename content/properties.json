@@ -1,0 +1,258 @@
+{
+  "properties": [
+    {
+      "slug": "hlinsko-kouty",
+      "title": "Dům 2+1 se zahradou v Hlinsku",
+      "type": "house",
+      "locality": "Hlinsko – Kouty",
+      "price": 3075000,
+      "currency": "CZK",
+      "area": 106,
+      "landArea": 625,
+      "layout": "2+1",
+      "condition": "Po rekonstrukci",
+      "energyClass": "G",
+      "sourceUrl": "https://www.sreality.cz/detail/prodej/dum/chalupa/hlinsko-kouty-/1411048268",
+      "verifiedAt": "2026-10-06",
+      "description": "Dům s dispozicí 2+1 na okraji Hlinska nabízí zahradu, dvorek a garáž. Kuchyň a jeden pokoj jsou v obytném podlaží, druhý pokoj v podkroví. Koupelna a WC se nacházejí v suterénu. Na garáž navazuje terasa. Nemovitost je v nabídce také jako chalupa.",
+      "facts": [
+        {
+          "label": "Dispozice",
+          "value": "2+1"
+        },
+        {
+          "label": "Užitná plocha",
+          "value": "106 m²"
+        },
+        {
+          "label": "Pozemek",
+          "value": "625 m²"
+        },
+        {
+          "label": "Zahrada",
+          "value": "519 m²"
+        },
+        {
+          "label": "Stav",
+          "value": "Po rekonstrukci"
+        },
+        {
+          "label": "Stavba",
+          "value": "Cihlová"
+        },
+        {
+          "label": "Parkování",
+          "value": "Garáž"
+        },
+        {
+          "label": "Koupelna a WC",
+          "value": "V suterénu"
+        },
+        {
+          "label": "Odpad",
+          "value": "Septik"
+        },
+        {
+          "label": "Energetická třída",
+          "value": "G podle inzerátu"
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/img/properties/hlinsko-kouty-01.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-01-768.webp",
+          "alt": "Dům v Hlinsku–Koutech s garáží, pohled z ulice",
+          "width": 1200,
+          "height": 799,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXCKKoTEBPEOtxaz/6d0f.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-02.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-02-768.webp",
+          "alt": "Kuchyň s jídelním prostorem v domě v Hlinsku",
+          "width": 1200,
+          "height": 800,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXBDWR9D8JEOtxUL/d0e8.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-03.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-03-768.webp",
+          "alt": "Pokoj s novou podlahou a bílými stěnami v Hlinsku",
+          "width": 1200,
+          "height": 800,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/kOes7N5Ni6D2x0TCvREOtxUl/072a.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-04.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-04-768.webp",
+          "alt": "Koupelna se sprchovým koutem v domě v Hlinsku",
+          "width": 1200,
+          "height": 800,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXB3JbEEEBEOtxXr/0cf5.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-05.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-05-768.webp",
+          "alt": "Obytný pokoj s oknem do zeleně v Hlinsku",
+          "width": 1200,
+          "height": 800,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXBjevbEB1EOtxVh/d6dc.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-06.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-06-768.webp",
+          "alt": "Dvůr u domu v Hlinsku–Koutech",
+          "width": 1200,
+          "height": 799,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXDb9A7D9OEOtxb5/cc81.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-07.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-07-768.webp",
+          "alt": "Zadní část domu a terasa nad garáží v Hlinsku",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/nO0bgvR9rXDo1QgD9fEOtxbV/8653.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/hlinsko-kouty-08.webp",
+          "smallSrc": "assets/img/properties/hlinsko-kouty-08-768.webp",
+          "alt": "Interiér garáže u domu v Hlinsku",
+          "width": 1200,
+          "height": 800,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_od_A/kOes7N5Ni6DuE0oCojEOtxYa/5bf5.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        }
+      ],
+      "listingId": 1411048268
+    },
+    {
+      "slug": "byt-karlstejn",
+      "title": "Byt 3+1 s terasou v Karlštejně",
+      "type": "apartment",
+      "locality": "Karlštejn, okres Beroun",
+      "price": 19321000,
+      "currency": "CZK",
+      "area": 139,
+      "terraceArea": 10,
+      "layout": "3+1",
+      "condition": "Nový, dosud neobývaný",
+      "energyClass": "G",
+      "sourceUrl": "https://www.sreality.cz/detail/prodej/byt/3+1/karlstejn-karlstejn-/1990271052",
+      "verifiedAt": "2026-10-06",
+      "description": "Dosud neobývaný byt v prvním nadzemním podlaží má terasu se vstupem na zahradu a dvě koupelny: jednu s vanou, druhou se sprchou. Součástí nabídky je garážové stání a privátní výtah přímo do bytu. K vybavení patří podlahové vytápění a systém chytré domácnosti.",
+      "facts": [
+        {
+          "label": "Dispozice",
+          "value": "3+1"
+        },
+        {
+          "label": "Užitná plocha",
+          "value": "139 m²"
+        },
+        {
+          "label": "Terasa",
+          "value": "10 m²"
+        },
+        {
+          "label": "Podlaží",
+          "value": "1. nadzemní podlaží"
+        },
+        {
+          "label": "Stav",
+          "value": "Nový, dosud neobývaný"
+        },
+        {
+          "label": "Vlastnictví",
+          "value": "Osobní"
+        },
+        {
+          "label": "Koupelny",
+          "value": "2 — vana a sprchový kout"
+        },
+        {
+          "label": "Parkování",
+          "value": "Vlastní garážové stání"
+        },
+        {
+          "label": "Výtah",
+          "value": "Privátní, z garáže do bytu"
+        },
+        {
+          "label": "Vytápění",
+          "value": "Podlahové"
+        },
+        {
+          "label": "Energetická třída",
+          "value": "G podle inzerátu"
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/img/properties/byt-karlstejn-01.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-01-768.webp",
+          "alt": "Obytný prostor s krbem a vstupem na terasu v Karlštejně",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/k0OqwCKRDbeZQkZH5Z1vm/db43.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-02.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-02-768.webp",
+          "alt": "Světlý pokoj s prosklenými dveřmi v bytě v Karlštejně",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/k0OqwCKRDgcHsBl3H5Z2A7/37ad.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-03.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-03-768.webp",
+          "alt": "Pokoj s oknem a vstupem ven v bytě v Karlštejně",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/k0OqwCKRBOXzTBG8H5Z2KE/91d0.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-04.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-04-768.webp",
+          "alt": "Koupelna s vanou v bytě v Karlštejně",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/nOdL4BtPEyD4lWfBusH5Z2Bk/5c9b.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-05.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-05-768.webp",
+          "alt": "Druhá koupelna se sprchovým koutem v Karlštejně",
+          "width": 900,
+          "height": 1200,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/nOdL4BtPEyBHthwBXxH5aAP8/6939.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-06.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-06-768.webp",
+          "alt": "Venkovní terasa u bytu v Karlštejně",
+          "width": 900,
+          "height": 1200,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/nOdL4BtPEyBiPBFBY3H5Z2RB/4930.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-07.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-07-768.webp",
+          "alt": "Garáž v domě v Karlštejně",
+          "width": 1200,
+          "height": 900,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/k0OqwCKRDgcHsBb2H5Z0Vv/459f.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        },
+        {
+          "src": "assets/img/properties/byt-karlstejn-08.webp",
+          "smallSrc": "assets/img/properties/byt-karlstejn-08-768.webp",
+          "alt": "Celkový pohled na bytový dům v Karlštejně",
+          "width": 900,
+          "height": 1200,
+          "sourceUrl": "https://d18-a.sdn.cz/d_18/c_img_qF_D/k0OqwCKRBOXzTBG8H5Z3To/06b9.jpeg?fl=res%2C1200%2C1200%2C1%7Cwrm%2C%2Fwatermark%2Fsreality.png%2C10%7Cshr%2C%2C20%7Cwebp%2C80"
+        }
+      ],
+      "listingId": 1990271052
+    }
+  ]
+}

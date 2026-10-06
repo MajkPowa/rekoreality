@@ -1,0 +1,102 @@
+"""Build the static homepage and property catalogue. --all also syncs shared chrome."""
+from pathlib import Path
+from html import escape
+import json
+import re
+import sys
+import build_articles
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = 'https://majkpowa.github.io/rekoreality/'
+VERSION = '20261006'
+ARROW = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+EXTERNAL = '<span aria-hidden="true">↗</span>'
+CHECK = '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
+def brand(prefix=''):
+    return f'''<a class="brand" href="{prefix}index.html" aria-label="REKO Reality – úvod"><svg class="brand-icon" viewBox="0 0 36 38" fill="none" aria-hidden="true"><path d="M3 17 18 4l15 13v17H22V23h-8v11H3V17Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M10 16 18 9l8 7" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span>reko<em>reality</em></span></a>'''
+
+def chrome(active='', prefix=''):
+    links = [('jak-to-funguje.html','Jak to funguje'),('nemovitosti.html','Nemovitosti'),('pro-majitele.html','Pro majitele'),('kalkulacka.html','Kalkulačka'),('poradna/','Poradna')]
+    def link(href,label):
+        state = ' aria-current="page"' if href == active else ''
+        return f'<a href="{prefix}{href}"{state}>{label}</a>'
+    nav=''.join(link(*item) for item in links)
+    header=f'''<header class="site-header"><div class="shell header-inner">{brand(prefix)}<nav class="desktop-nav" aria-label="Hlavní navigace">{nav}</nav><a class="btn btn--primary header-cta" href="{prefix}poptavka.html">Posoudit můj dům {ARROW}</a><button class="menu-toggle" id="burger" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navsheet"><span></span><span></span><b>Menu</b></button></div></header>
+<nav class="mobile-menu" id="navsheet" aria-label="Mobilní navigace" hidden>{link('index.html','Úvod')}{nav}{link('faq.html','Časté otázky')}{link('pro-maklere.html','Pro makléře')}<a class="btn btn--primary" href="{prefix}poptavka.html">Posoudit můj dům {ARROW}</a></nav>'''
+    footer=f'''<footer class="site-footer"><div class="shell"><div class="footer-grid"><div class="footer-brand">{brand(prefix)}<p>Zajišťujeme a financujeme rekonstrukci nemovitosti před prodejem.</p><span class="footer-descriptor">Rekonstrukce a prodej nemovitostí</span></div><div class="footer-col"><h2>Pro majitele</h2>{link('jak-to-funguje.html','Jak spolupráce probíhá')}{link('pro-majitele.html','Rekonstrukce před prodejem')}{link('kalkulacka.html','Modelový výpočet')}{link('poptavka.html','Posouzení nemovitosti')}</div><div class="footer-col"><h2>Nemovitosti a informace</h2>{link('nemovitosti.html','Aktuální nabídka a realizace')}{link('poradna/','Poradna pro majitele')}{link('faq.html','Časté otázky')}{link('pro-maklere.html','Spolupráce s makléři')}</div></div><div class="footer-bottom"><span>© 2026 REKO Reality</span><p>Formulář posouzení je zatím ukázkový a žádost neodesílá. Prohlídku nabízené nemovitosti domluvíte přes její inzerát. Podmínky spolupráce určuje smlouva.</p></div></div></footer>'''
+    return header,footer
+
+def head(title,desc,path,prefix='',index=False,graph=None,image_path='assets/img/properties/hlinsko-kouty-02.webp'):
+    schema = f'<script type="application/ld+json">{json.dumps(graph,ensure_ascii=False).replace("<",chr(92)+"u003c")}</script>' if graph else ''
+    return f'''<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(title)} | REKO Reality</title><meta name="description" content="{escape(desc,quote=True)}"><meta name="robots" content="{'index, follow, max-image-preview:large' if index else 'noindex, follow'}"><link rel="canonical" href="{BASE+path}"><meta name="theme-color" content="#175640"><meta property="og:type" content="website"><meta property="og:locale" content="cs_CZ"><meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(desc,quote=True)}"><meta property="og:url" content="{BASE+path}"><meta property="og:image" content="{BASE+image_path}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="{prefix}assets/img/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{prefix}assets/css/style.css?v=7"><link rel="stylesheet" href="{prefix}assets/css/premium.css?v=7"><link rel="stylesheet" href="{prefix}assets/css/journal.css?v=1"><link rel="stylesheet" href="{prefix}assets/css/estate.css?v={VERSION}"><script src="{prefix}assets/js/main.js?v={VERSION}" defer></script><script src="{prefix}assets/js/estate.js?v={VERSION}" defer></script>{schema}</head>'''
+
+def img(photo,prefix='',eager=False,sizes='(max-width: 700px) calc(100vw - 40px), (max-width: 1300px) 46vw, 590px'):
+    return f'''<img src="{prefix}{photo['src']}" srcset="{prefix}{photo['smallSrc']} 768w, {prefix}{photo['src']} {photo['width']}w" sizes="{sizes}" width="{photo['width']}" height="{photo['height']}" alt="{escape(photo['alt'],quote=True)}" {'fetchpriority="high"' if eager else 'loading="lazy"'} decoding="async">'''
+
+def price(p):
+    return f"{p['price']:,}".replace(',','\u00a0')+'\u00a0Kč'
+
+def property_card(p,prefix='',eager=False):
+    url=prefix+'nemovitosti/'+p['slug']+'.html'
+    type_name='Dům / chalupa' if p['type']=='house' else 'Byt'
+    third=f"Pozemek {p['landArea']} m²" if p.get('landArea') else f"Terasa {p['terraceArea']} m²"
+    return f'''<article class="estate-card" data-property-type="{p['type']}"><a class="estate-card-photo" href="{url}" tabindex="-1" aria-label="Fotografie: {escape(p['title'],quote=True)}">{img(p['photos'][0],prefix,eager)}<span class="property-badge">V prodeji</span><span class="photo-count">{len(p['photos'])} fotografií</span></a><div class="estate-card-content"><p class="estate-location">{escape(p['locality'])}</p><h3><a href="{url}">{escape(p['title'])}</a></h3><div class="estate-specs"><span>{type_name} {p['layout']}</span><span>{p['area']} m²</span><span>{third}</span></div><div class="estate-card-bottom"><strong>{price(p)}</strong><a href="{url}" class="estate-detail-link" aria-label="Detail: {escape(p['title'],quote=True)}">Detail {ARROW}</a></div></div></article>'''
+
+def callout(prefix=''):
+    return f'''<section class="owner-callout shell"><div><span class="eyebrow">Chystáte se prodat?</span><h2>Zjistěte, co může rekonstrukce<br> přinést vašemu domu.</h2><p>Začneme jeho stavem, rozpočtem a možnostmi prodeje.</p></div><a class="btn btn--primary" href="{prefix}poptavka.html">Posoudit můj dům {ARROW}</a></section>'''
+
+def build_home(properties):
+    header,footer=chrome()
+    p=properties[0]
+    preview=build_articles.build_home_preview(build_articles.load_articles())
+    return head('Zajistíme rekonstrukci domu před prodejem','Navrhneme a zajistíme rekonstrukci s cílem zvýšit hodnotu domu před prodejem. Prohlédněte si také dokončené realizace REKO Reality v aktuální nabídce.','index.html')+f'''<body class="estate-home"><a class="skip-link" href="#main-content">Přejít k obsahu</a>{header}<main id="main-content">
+<section class="estate-hero shell"><div class="estate-hero-copy"><span class="eyebrow"><span class="status-dot"></span>Rekonstrukce domu před prodejem</span><h1>Zrekonstruujeme váš dům <span>pro výhodnější prodej.</span></h1><p>Navrhneme úpravy, zajistíme financování i stavební práce. Cílem je zvýšit hodnotu domu a připravit ho na prodej.</p><div class="hero-actions"><a class="btn btn--primary" href="poptavka.html">Posoudit můj dům {ARROW}</a><a class="btn btn--outline" href="#nabidka">Prohlédnout nemovitosti</a></div><p class="hero-explainer">Nejprve společně ověříme, jestli se opravy vyplatí.</p><div class="hero-service-points"><span>{CHECK}Financování oprav</span><span>{CHECK}Řízení rekonstrukce</span><span>{CHECK}Příprava prodeje</span></div></div><a class="estate-hero-photo" href="nemovitosti/{p['slug']}.html">{img(p['photos'][1],eager=True)}<span class="hero-photo-label"><span><small>Dokončená realizace REKO Reality</small><b>Hlinsko – Kouty</b></span><span class="photo-open">{ARROW}</span></span></a></section>
+<section class="home-listings" id="nabidka" aria-labelledby="listing-title"><div class="shell"><div class="estate-section-heading"><div><span class="eyebrow">Dokončené realizace REKO Reality</span><h2 id="listing-title">Aktuálně v prodeji</h2><p>Dvě nemovitosti, které si můžete prohlédnout osobně.</p></div><a class="text-link" href="nemovitosti.html">Celá nabídka {ARROW}</a></div><div class="estate-grid">{''.join(property_card(item) for item in properties)}</div><p class="listing-update">Ceny a dostupnost podle inzerátů k 6. říjnu 2026. Aktuální stav ověříte u nabídky.</p></div></section>
+<section class="service-overview shell" aria-labelledby="service-title"><div class="estate-section-heading"><div><span class="eyebrow">Pro majitele nemovitostí</span><h2 id="service-title">Od prvního posouzení<br>k připravenému domu.</h2></div><p>Rekonstrukci stavíme na rozpočtu a reálných možnostech prodeje. Rozsah i vypořádání si domluvíme předem.</p></div><ol class="service-steps"><li><span class="step-index">01</span><h3>Ověříme, co dává smysl</h3><p>Posoudíme stav domu a porovnáme prodej s opravami i bez nich.</p></li><li><span class="step-index">02</span><h3>Zajistíme rekonstrukci</h3><p>Domluvíme rozsah, financování a termíny. Zkoordinujeme dodavatele a práce.</p></li><li><span class="step-index">03</span><h3>Připravíme dům k prodeji</h3><p>Navážeme prezentací a prodejem. Peníze se vypořádají podle smlouvy.</p></li></ol><a class="text-link" href="jak-to-funguje.html">Jak spolupráce probíhá {ARROW}</a></section>
+<section class="finance-teaser shell"><div class="finance-teaser-copy"><span class="eyebrow">Nejdřív propočet</span><h2>Rozhoduje, kolik vám<br>po prodeji zůstane.</h2><p>Vyšší prodejní cena sama o sobě nestačí. Do porovnání patří opravy, náklady prodeje i odměna za spolupráci.</p><a class="btn btn--outline" href="kalkulacka.html">Spočítat modelový výsledek {ARROW}</a></div><div class="finance-example"><span class="example-tag">Modelový příklad</span><dl><div><dt>Prodejní cena</dt><dd>6 000 000 Kč</dd></div><div><dt>Rekonstrukce</dt><dd>− 900 000 Kč</dd></div><div><dt>Náklady prodeje</dt><dd>− 222 000 Kč</dd></div><div><dt>Podíl REKO Reality</dt><dd>− 431 200 Kč</dd></div><div class="finance-example-total"><dt>Pro majitele zbývá</dt><dd>4 446 800 Kč</dd></div></dl><p>Původní hodnota 3,8 mil. Kč. Model rozděluje kladnou hodnotu navíc 60/40; nezahrnuje hypotéku a daně. Nižší cena může znamenat nižší výsledek.</p></div></section>
+{preview}{callout()}</main>{footer}</body></html>'''
+
+def build_catalog(properties):
+    header,footer=chrome('nemovitosti.html')
+    graph={'@context':'https://schema.org','@type':'CollectionPage','name':'Nemovitosti v prodeji | REKO Reality','url':BASE+'nemovitosti.html','mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'name':p['title'],'url':BASE+'nemovitosti/'+p['slug']+'.html'} for i,p in enumerate(properties)]}}
+    return head('Nemovitosti v prodeji a dokončené realizace','Aktuální nabídka dokončených realizací REKO Reality. Dům v Hlinsku a byt v Karlštejně: fotografie, ceny, parametry a odkaz pro domluvení prohlídky.','nemovitosti.html',index=True,graph=graph)+f'''<body class="catalog-page"><a class="skip-link" href="#main-content">Přejít k obsahu</a>{header}<main id="main-content"><section class="catalog-header shell"><nav class="breadcrumb" aria-label="Drobečková navigace"><a href="index.html">Úvod</a><span aria-hidden="true">/</span><span aria-current="page">Nemovitosti</span></nav><span class="eyebrow">Dokončené realizace REKO Reality</span><h1>Nemovitosti v prodeji</h1><p>Prohlédněte si hotové nemovitosti a najděte místo pro své další bydlení.</p></section><section class="catalog-results shell" aria-label="Aktuální nabídka"><div class="catalog-toolbar"><div class="property-filters" role="group" aria-label="Typ nemovitosti" data-filter-controls hidden><button type="button" data-filter="all" aria-pressed="true">Všechny <span>2</span></button><button type="button" data-filter="house" aria-pressed="false">Domy <span>1</span></button><button type="button" data-filter="apartment" aria-pressed="false">Byty <span>1</span></button></div><p id="property-result-count" role="status" aria-live="polite">2 nemovitosti v nabídce</p></div><div class="estate-grid">{''.join(property_card(p,eager=True) for p in properties)}</div><p class="listing-update">Údaje ověřené 6. října 2026. Dostupnost a cenu před prohlídkou potvrďte u prodejce.</p></section><section class="catalog-guide shell"><div>{CHECK}<h2>Skutečné fotografie</h2><p>Prohlédnete si konkrétní nemovitost, její interiér i zázemí.</p></div><div>{CHECK}<h2>Cena a parametry pohromadě</h2><p>Dispozice, plocha a další údaje mají v každém detailu stejné místo.</p></div><div>{CHECK}<h2>Prohlídka přes inzerát</h2><p>Odkaz u nemovitosti vás přivede přímo k jejímu prodejci.</p></div></section>{callout()}</main>{footer}</body></html>'''
+
+def build_detail(p,other):
+    header,footer=chrome('nemovitosti.html','../')
+    path='nemovitosti/'+p['slug']+'.html'
+    gallery=''.join(f'<a class="property-photo" href="../{photo["src"]}" data-gallery-item data-caption="{escape(photo["alt"],quote=True)}" aria-label="Zvětšit fotografii {i+1}: {escape(photo["alt"],quote=True)}">{img(photo,"../",i<3,"(max-width: 700px) calc(100vw - 40px), 65vw" if i==0 else "(max-width: 700px) 45vw, 32vw")}<span class="photo-expand" aria-hidden="true">↗</span></a>' for i,photo in enumerate(p['photos']))
+    facts=''.join(f'<div><dt>{escape(f["label"])}</dt><dd>{escape(f["value"])}</dd></div>' for f in p['facts'])
+    third=('Pozemek',f"{p['landArea']} m²") if p.get('landArea') else ('Terasa',f"{p['terraceArea']} m²")
+    summary=''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('Dispozice',p['layout']),('Užitná plocha',f"{p['area']} m²"),third,('Energetická třída',p['energyClass'])])
+    graph={'@context':'https://schema.org','@graph':[{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Úvod','item':BASE},{'@type':'ListItem','position':2,'name':'Nemovitosti','item':BASE+'nemovitosti.html'},{'@type':'ListItem','position':3,'name':p['title'],'item':BASE+path}]},{'@type':'WebPage','url':BASE+path,'name':p['title'],'description':p['description'],'dateModified':p['verifiedAt'],'image':[BASE+photo['src'] for photo in p['photos']]}]}
+    return head(p['title'],p['description'],path,'../',True,graph,p['photos'][0]['src'])+f'''<body class="property-page"><a class="skip-link" href="#main-content">Přejít k obsahu</a>{header}<main id="main-content"><div class="property-heading shell"><nav class="breadcrumb" aria-label="Drobečková navigace"><a href="../index.html">Úvod</a><span aria-hidden="true">/</span><a href="../nemovitosti.html">Nemovitosti</a><span aria-hidden="true">/</span><span aria-current="page">{escape(p['locality'])}</span></nav><div class="property-heading-row"><div><span class="eyebrow">Dokončená realizace REKO Reality</span><h1>{escape(p['title'])}</h1><p class="estate-location">{escape(p['locality'])}</p></div><div class="property-heading-price"><strong>{price(p)}</strong><span class="property-status"><span class="status-dot"></span>Aktuálně v prodeji</span></div></div></div><section class="property-media shell" aria-label="Fotografie nemovitosti"><div class="property-gallery">{gallery}</div><div class="gallery-bottom"><p>Fotografie nemovitosti z jejího prodejního inzerátu.</p><button class="btn btn--outline" type="button" data-show-all hidden>Zobrazit všech {len(p['photos'])} fotografií {ARROW}</button></div></section><div class="property-body shell"><div class="property-main"><dl class="property-summary">{summary}</dl><section class="property-description"><h2>O nemovitosti</h2><p>{escape(p['description'])}</p></section><section class="property-facts"><h2>Parametry nemovitosti</h2><dl>{facts}</dl></section><section class="property-source"><h2>Prohlídka a aktuální informace</h2><p>Termín prohlídky, dostupnost a podrobnosti domluvíte s prodejcem u této konkrétní nabídky.</p><a class="text-link" href="{escape(p['sourceUrl'],quote=True)}" target="_blank" rel="noopener">Otevřít inzerát na Sreality.cz {EXTERNAL}</a><p class="source-updated">Cena a údaje ověřené 6. října 2026. Dostupnost se může změnit.</p></section></div><aside class="property-enquiry" aria-label="Cena a prohlídka"><span class="eyebrow">Nabídková cena</span><strong>{price(p)}</strong><p>{escape(p['condition'])}</p><a class="btn btn--primary" href="{escape(p['sourceUrl'],quote=True)}" target="_blank" rel="noopener">Domluvit prohlídku {EXTERNAL}</a><span class="enquiry-hint">Přejdete na konkrétní inzerát na Sreality.cz.</span><hr><div class="property-enquiry-owner"><b>Prodáváte vlastní nemovitost?</b><p>Probereme, jestli má smysl před prodejem rekonstruovat.</p><a class="text-link" href="../poptavka.html">Posoudit můj dům {ARROW}</a></div></aside></div><section class="other-property shell"><div class="estate-section-heading"><h2>Další nemovitost v nabídce</h2><a class="text-link" href="../nemovitosti.html">Celá nabídka {ARROW}</a></div><div class="estate-grid estate-grid--single">{property_card(other,'../')}</div></section><dialog id="property-lightbox" class="property-lightbox" aria-label="Fotogalerie nemovitosti"><div class="lightbox-top"><span id="lightbox-count"></span><button type="button" data-lightbox-close aria-label="Zavřít fotogalerii">Zavřít <span aria-hidden="true">×</span></button></div><div class="lightbox-image-wrap"><button type="button" data-lightbox-prev aria-label="Předchozí fotografie">←</button><img id="lightbox-image" alt=""><button type="button" data-lightbox-next aria-label="Další fotografie">→</button></div><p id="lightbox-caption" aria-live="polite"></p></dialog></main>{footer}</body></html>'''
+
+def sync_services():
+    for name in ['jak-to-funguje','pro-majitele','pro-maklere','kalkulacka','faq','poptavka']:
+        path=ROOT/(name+'.html')
+        source=path.read_text(encoding='utf-8')
+        header,footer=chrome(name+'.html')
+        source=re.sub(r'<header class="site-header">.*?</header>\s*<nav class="mobile-menu".*?</nav>',lambda _:header,source,flags=re.S)
+        source=re.sub(r'<footer class="site-footer">.*?</footer>',lambda _:footer,source,flags=re.S)
+        source=re.sub(r'<link\s+href="https://fonts.googleapis.com/css2\?[^\"]+"\s+rel="stylesheet"\s*/?>','<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">',source)
+        source=re.sub(r'<link rel="stylesheet" href="assets/css/(?:estate|service-pages).css[^\"]*"\s*/?>\s*','',source)
+        source=source.replace('</head>',f'<link rel="stylesheet" href="assets/css/estate.css?v={VERSION}"><link rel="stylesheet" href="assets/css/service-pages.css?v={VERSION}">\n</head>')
+        source=re.sub(r'assets/js/main.js\?v=[^\"]+',f'assets/js/main.js?v={VERSION}',source)
+        source=re.sub(r'assets/js/ui.js\?v=[^\"]+',f'assets/js/ui.js?v={VERSION}',source)
+        path.write_text(source,encoding='utf-8')
+
+def main():
+    properties=json.loads((ROOT/'content/properties.json').read_text(encoding='utf-8'))['properties']
+    (ROOT/'index.html').write_text(build_home(properties),encoding='utf-8')
+    (ROOT/'nemovitosti.html').write_text(build_catalog(properties),encoding='utf-8')
+    (ROOT/'nemovitosti').mkdir(exist_ok=True)
+    for i,p in enumerate(properties):
+        (ROOT/'nemovitosti'/(p['slug']+'.html')).write_text(build_detail(p,properties[1-i]),encoding='utf-8')
+    if '--all' in sys.argv:
+        sync_services()
+        build_articles.main()
+    print('Built homepage, property catalogue and two property details.')
+
+if __name__=='__main__':
+    main()

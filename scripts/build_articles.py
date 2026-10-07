@@ -76,7 +76,7 @@ def head(title, description, url, graph, article=False):
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css?v=7"><link rel="stylesheet" href="../assets/css/premium.css?v=7">
 <link rel="stylesheet" href="../assets/css/journal.css?v=1">
-<link rel="stylesheet" href="../assets/css/estate.css?v=20261006">
+<link rel="stylesheet" href="../assets/css/estate.css?v=20261007">
 <script src="../assets/js/main.js?v=20261006" defer></script><script src="../assets/js/journal.js?v=1" defer></script>
 <script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@graph':graph}, ensure_ascii=False).replace('<','\\u003c')}</script>
 </head>'''

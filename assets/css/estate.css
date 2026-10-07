@@ -22,3 +22,11 @@ html{scroll-padding-top:95px}body{background:var(--bg);color:var(--ink);font-siz
 
 @media(max-width:850px){body:has(.mobile-cta) .site-footer{padding-bottom:90px}}
 @media(max-width:700px){.estate-grid--single .estate-card{display:block}.estate-grid--single .estate-card-photo img{height:auto;min-height:0}.estate-grid--single .estate-card-content{padding:20px}.lightbox-image-wrap{grid-template-columns:44px minmax(0,1fr) 44px}.lightbox-image-wrap button{width:44px;height:44px}.property-heading-price .property-status{margin-top:6px}}
+
+/* Explain who pays and when the uplift is shared in the first viewport. */
+.estate-hero-copy>.hero-model-statement{font-size:22px;line-height:1.4;font-weight:650;color:var(--ink);margin:0 0 16px;max-width:510px;letter-spacing:-.025em}
+.hero-explainer a{display:inline-flex;align-items:center;gap:8px;min-height:32px;color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.hero-explainer svg{width:16px;height:16px}
+.finance-teaser-copy .finance-formula{font-size:13px;line-height:1.8;border-left:2px solid #a8bba5;padding-left:15px;margin-top:20px}
+@media(max-width:850px){.estate-hero-copy>.hero-model-statement{font-size:19px}}
+@media(max-width:700px){.estate-hero-copy>.hero-model-statement{font-size:21px}.finance-teaser-copy .finance-formula{font-size:12px}}
